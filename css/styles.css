@@ -1,24 +1,19 @@
-.jumbotron {
+.header {
   top: 0;
   height: 450px;
   padding: 0;
   width: 100%;
   overflow: hidden;
-  /*background: #28a4c9 url('../test4.jpg') center center;
-  background-size: cover;
-  /*transition: all 200ms linear;*/
   z-index: 1;
   position: fixed;
-
   background: #05bffc; /* Old Browsers */
   background: -webkit-linear-gradient(bottom left,#05bffc,#efd662); /*Safari 5.1-6*/
   background: -o-linear-gradient(bottom left,#05bffc,#efd662); /*Opera 11.1-12*/
   background: -moz-linear-gradient(bottom left,#05bffc,#efd662); /*Fx 3.6-15*/
   background: linear-gradient(bottom left, #05bffc, #efd662); /*Standard*/
-
 }
 
-.jumbotron .mask {
+.header-title {
   transform: rotate(-7deg);
   position: absolute;
   width: 107%;
@@ -29,7 +24,7 @@
   /*transition: all 200ms linear;*/
 }
 
-.jumbotron h1 {
+.header-title h1 {
   color: #fff;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
@@ -42,26 +37,65 @@
   margin: 0;
 }
 
-.jumbotron .navig {
-/*  text-align: right; */
+
+.header nav {
+  position: absolute;
+}
+.header .nav-secondary {
+  right: 0;
 }
 
-.jumbotron .navig a {
+.header nav a {
   color: #fff;
-  font-weight: bold;
-  border-top: 5px solid #fff;
   display:  inline-block;
-  margin: 0 5px;
-  padding: 10px 20px;
+  height: 50px;
+  margin: 5px 5px 0 5px;
+  padding: 15px 20px 0 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  transition: all 50ms linear;
 }
-.jumbotron .navig a:hover {
+.header nav a:hover,
+.header nav a:focus,
+.header nav a:active,
+.header nav a.active {
   background-color: #fff;
   color: #19C1F0;
-  padding-bottom: 15px;
   text-decoration: none;
+  border-top: none;
+}
+
+.header .nav-secondary a {
+  margin: 0;
+  height: 55px;
+  padding-top: 18px;
 }
 
 
 .main {
   margin-top: 450px;
+
+/*  margin-top: 400px;
+  z-index: 2;
+  position: absolute;
+  width: 100%;*/
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+
 }
