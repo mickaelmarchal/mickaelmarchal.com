@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .header {
   top: 0;
   height: 450px;
@@ -21,7 +25,6 @@
   bottom: -120px;
   background: #fff;
   height: 240px;
-  /*transition: all 200ms linear;*/
 }
 
 .header-title h1 {
@@ -33,7 +36,6 @@
   position: relative;
   top: -107px;
   text-align: center;
-  /*transition: all 200ms linear;*/
   margin: 0;
 }
 
@@ -71,7 +73,12 @@
   height: 55px;
   padding-top: 18px;
 }
-
+.header .nav-secondary a:hover,
+.header .nav-secondary a:focus,
+.header .nav-secondary a:active,
+.header .nav-secondary a.active {
+  color: #efd662;
+}
 
 .main {
   margin-top: 450px;
@@ -98,4 +105,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
 
+}
+
+.btn-arrow {
+  width: 200px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.btn-arrow span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 200ms;
+}
+
+.btn-arrow span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 200ms;
+}
+
+.btn-arrow:hover span {
+  padding-right: 25px;
+}
+
+.btn-arrow:hover span:after {
+  opacity: 1;
+  right: 0;
 }
