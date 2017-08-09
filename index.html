@@ -29,7 +29,7 @@
 </nav>
 
 <header class="header" id="header">
-  <div class="header-title">
+  <div class="header-title" id="header-title">
     <h1>Mickaël Marchal</h1>
   </div>
 </header>
@@ -195,73 +195,89 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script>
-  var $jumbotron = $('#header'),
+  var $header = $('#header'),
     $body = $(document.body),
     $html = $('html'),
-    $mask = $('#header .header-title'),
-    $h1 = $('#header h1');
+    $headerTitle = $('#header-title'),
+    $headerH1 = $('#header-title h1');
 
-  var socialOffset, contactOffset;
+  // ranges for header animation
+  var animateRange  = { start: 30, end: 340 },
+    headerHeight,
+    headerTitleBottom, headerTitleAngle, headerTitleHeight,
+    headerH1Scaling,
+    socialOffset, contactOffset;
+
   $(window).resize(function () {
+
+    // Get scroll position for sections
     socialOffset = $("#social").offset().top;
     contactOffset = $("#contact").offset().top;
+
+    // Change animation settings and state of nav menu
+    if( $(this).width() >= 1120) {
+      headerHeight = { start: 450, end: 55 };
+      headerTitleBottom = { start: -120, end: -15 };
+      headerTitleAngle = { start: -7, end: 0 };
+      headerTitleHeight = { start: 240, end: 0};
+      headerH1Scaling = { start: 1, end: 0.2 };
+
+      $('.nav-menu-btn').removeClass('active');
+      $('.nav-menu').show();
+
+    } else if( $(this).width() >= 750) {
+      headerHeight = { start: 450, end: 55 };
+      headerTitleBottom = { start: -120, end: -3 };
+      headerTitleAngle = { start: -7, end: 0 };
+      headerTitleHeight = { start: 240, end: 0};
+      headerH1Scaling = { start: 1, end: 0.3 };
+
+      $('.nav-menu-btn').removeClass('active');
+      $('.nav-menu').hide();
+
+    } else {
+      headerHeight = { start: 450, end: 55 };
+      headerTitleBottom = { start: -120, end: 8 };
+      headerTitleAngle = { start: -7, end: 0 };
+      headerTitleHeight = { start: 240, end: 0};
+      headerH1Scaling = { start: 1, end: 0.4 };
+
+      $('.nav-menu-btn').removeClass('active');
+      $('.nav-menu').hide();
+    }
+
   }).trigger('resize');
+
+
+  function interpolate(range, scrollRatio) {
+    if (scrollRatio <= 0) {
+      return range.start;
+    } else if (scrollRatio >= 1) {
+      return range.end;
+    } else {
+      return range.start + (( range.end - range.start ) * scrollRatio);
+    }
+  }
 
   $(window).scroll(function () {
 
+    // 1. Handle header animation on scroll
     var scrollTop = $body.scrollTop() || $html.scrollTop();
-    var jumbotronProps, maskProps, h1Props;
+    var scrollRatio = (scrollTop - animateRange.start) / (animateRange.end - animateRange.start);
 
-    if(scrollTop <= 30) {
-      jumbotronProps = {
-        height: '450px'
-      };
-      maskProps = {
-        transform: 'rotate(-7deg)',
-        height: '240px',
-        bottom: '-120px'
-      };
-      h1Props = {
-        transform: 'scale(1, 1)'
-      };
+    $header.css({
+      height: interpolate(headerHeight, scrollRatio) + 'px'
+    });
+    $headerTitle.css({
+      transform: 'rotate(' + interpolate(headerTitleAngle, scrollRatio) + 'deg)',
+      height: interpolate(headerTitleHeight, scrollRatio) + 'px',
+      bottom: interpolate(headerTitleBottom, scrollRatio) + 'px'
+    });
+    $headerH1.css({
+      transform: 'scale(' + interpolate(headerH1Scaling, scrollRatio) + ',' + interpolate(headerH1Scaling, scrollRatio) + ')'
+    });
 
-    } else if(scrollTop <= 340) {
-
-      var scrollRatio = 1 - ((scrollTop - 30) / 310);
-
-      jumbotronProps = {
-        height: ((scrollRatio * (450 - 55)) + 55) + 'px'
-      };
-      maskProps = {
-        transform: 'rotate(' + (scrollRatio * -7) + 'deg)',
-        height: (scrollRatio * 240) + 'px',
-        bottom: (-(scrollRatio * (120 - 15)) - 15) + 'px'
-      };
-
-      h1Props = {
-        transform: 'scale(' + ((scrollRatio * (1 - 0.2)) + 0.2) + ',' + ((scrollRatio * (1 - 0.2)) + 0.2) + ')'
-      };
-
-    } else {
-
-      jumbotronProps = {
-        height: '55px'
-      };
-      maskProps = {
-        transform: 'rotate(0deg)',
-        height: '0',
-        bottom: '-15px'
-      };
-      h1Props = {
-        transform: 'scale(0.2, 0.2)'
-      };
-
-    }
-
-    $jumbotron.css(jumbotronProps);
-    $mask.css(maskProps);
-    $h1.css(h1Props);
-
+    // 2. Handle hilighting of menu items on scroll
     if(scrollTop > contactOffset - 80) {
       $('#nav-link-contact').addClass('active');
       $('#nav-link-profile, #nav-link-social').removeClass('active');
@@ -276,28 +292,32 @@
     }
   }).trigger('scroll');
 
-  $(function () {
-    $('#glg-details').popover({
-      placement: 'top',
-      trigger: 'hover focus',
-      html: true,
-      content:
-        "<p>Crée en 2007, Grand Luxury Group propose la réservation des plus beaux hôtels du monde, ainsi qu'une gamme de services exclusifs à ses clients, afin de rendre leur voyage inoubliable.</p>"
-      + "<p></p>"
-      + "<p><a href=\"https://www.grandluxuryhotels.com\">Visiter le site &raquo;</a></p>"
-    });
 
+  $(function () {
+
+    // Manage nav menu button
     $('.nav-menu-btn').click(function (e) {
       e.stopPropagation();
       $(this).addClass('active');
       $('.nav-menu').show();
     });
-
     $(window).click(function () {
-      $('.nav-menu-btn').removeClass('active');
-      $('.nav-menu').hide();
-    })
+      if ($('.nav-menu-btn:visible').length) {
+        $('.nav-menu-btn').removeClass('active');
+        $('.nav-menu').hide();
+      }
+    });
 
+    // Popovers and tooltips
+    $('#glg-details').popover({
+      placement: 'top',
+      trigger: 'hover focus',
+      html: true,
+      content:
+      "<p>Crée en 2007, Grand Luxury Group propose la réservation des plus beaux hôtels du monde, ainsi qu'une gamme de services exclusifs à ses clients, afin de rendre leur voyage inoubliable.</p>"
+      + "<p></p>"
+      + "<p><a href=\"https://www.grandluxuryhotels.com\">Visiter le site &raquo;</a></p>"
+    });
 
   });
 
