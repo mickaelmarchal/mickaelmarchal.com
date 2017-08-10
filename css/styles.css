@@ -132,7 +132,7 @@
   width: 107%;
   height: 240px;
   bottom: -120px;
-  left: -1.5%;
+  left: 0%;
   background: #fff;
 }
 
@@ -174,13 +174,17 @@
 
 
 .main {
-  margin-top: 450px;
-
-/*  margin-top: 400px;
-  z-index: 2;
-  position: absolute;
-  width: 100%;*/
-
+  margin-top: 150px;
+}
+@media screen and (min-width: 750px) {
+  .main {
+    margin-top: 300px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .main {
+    margin-top: 450px;
+  }
 }
 
 

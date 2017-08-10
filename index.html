@@ -7,7 +7,7 @@
 
   <meta name="description" content="Profil et page personnelle de Mickaël Marchal, CTO et développeur full-stack chez Grand Luxury Group.">
   <meta name="author" content="Mickaël Marchal">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.png">
 
   <title>Mickaël Marchal, CTO + Full Stack geek</title>
 
@@ -205,7 +205,7 @@
   var animateRange  = { start: 30, end: 340 },
     headerHeight,
     headerTitleBottom, headerTitleAngle, headerTitleHeight,
-    headerH1Scaling,
+    headerH1Scaling, headerH1Top,
     socialOffset, contactOffset;
 
   $(window).resize(function () {
@@ -216,35 +216,43 @@
 
     // Change animation settings and state of nav menu
     if( $(this).width() >= 1120) {
+      animateRange  = { start: 30, end: 340 }
       headerHeight = { start: 450, end: 55 };
       headerTitleBottom = { start: -120, end: -15 };
       headerTitleAngle = { start: -7, end: 0 };
       headerTitleHeight = { start: 240, end: 0};
       headerH1Scaling = { start: 1, end: 0.2 };
+      headerH1Top = { start: -107, end: -107 };
 
       $('.nav-menu-btn').removeClass('active');
       $('.nav-menu').show();
 
     } else if( $(this).width() >= 750) {
-      headerHeight = { start: 450, end: 55 };
+      animateRange  = { start: 15, end: 200 }
+      headerHeight = { start: 300, end: 55 };
       headerTitleBottom = { start: -120, end: -3 };
       headerTitleAngle = { start: -7, end: 0 };
       headerTitleHeight = { start: 240, end: 0};
       headerH1Scaling = { start: 1, end: 0.3 };
+      headerH1Top = { start: -72, end: -72 };
 
       $('.nav-menu-btn').removeClass('active');
       $('.nav-menu').hide();
 
     } else {
-      headerHeight = { start: 450, end: 55 };
-      headerTitleBottom = { start: -120, end: 8 };
+      animateRange  = { start: 10, end: 120 }
+      headerHeight = { start: 150, end: 55 };
+      headerTitleBottom = { start: -240, end: -5 };
       headerTitleAngle = { start: -7, end: 0 };
-      headerTitleHeight = { start: 240, end: 0};
+      headerTitleHeight = { start: 300, end: 0};
       headerH1Scaling = { start: 1, end: 0.4 };
+      headerH1Top = { start: -45, end: -58 };
 
       $('.nav-menu-btn').removeClass('active');
       $('.nav-menu').hide();
     }
+
+    $(window).trigger('scroll');
 
   }).trigger('resize');
 
@@ -274,7 +282,8 @@
       bottom: interpolate(headerTitleBottom, scrollRatio) + 'px'
     });
     $headerH1.css({
-      transform: 'scale(' + interpolate(headerH1Scaling, scrollRatio) + ',' + interpolate(headerH1Scaling, scrollRatio) + ')'
+      transform: 'scale(' + interpolate(headerH1Scaling, scrollRatio) + ',' + interpolate(headerH1Scaling, scrollRatio) + ')',
+      top: interpolate(headerH1Top, scrollRatio)
     });
 
     // 2. Handle hilighting of menu items on scroll
