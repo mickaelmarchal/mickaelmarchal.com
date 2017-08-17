@@ -23,7 +23,7 @@
   <ul class="nav-menu">
     <li><a href="#cv" id="nav-link-profile">Profil</a></li>
     <li><a href="#social" id="nav-link-social">Social</a></li>
-    <li><a href="#contact" id="nav-link-contact">Contact</a></li>
+    <li><a href="#resources" id="nav-link-contact">Ressources</a></li>
     <li class="language"><a href="">English</a></li>
   </ul>
 </nav>
@@ -37,10 +37,10 @@
 <div class="main">
 <div class="container">
 
-  <div class="row" id="cv">
+  <div class="row cv-overview" id="cv">
 
     <div class="col-md-4">
-      <img src="http://via.placeholder.com/250x250">
+      <img src="test2.jpg" class="cv-overview-image">
     </div>
 
     <div class="col-md-7 .col-md-offset-1">
@@ -50,32 +50,38 @@
         Product Owner et référent métier.</strong></p>
 
       <p><a id="glg-details" tabindex="0" role="button" title="Grand Luxury Group">Grand Luxury Group</a>
-        propose à la réservation 450 hôtels d'exception à travers le monde. En 10 ans, et en s'appuyant sur sa plateforme technique, il est devenu le 2<sup>ème</sup> apporteur d'affaires mondial pour les hôtels de Paris, Londres et Milan &mdash; avec seulement 45 salariés.</p>
+        propose la réservation de 450 hôtels d'exception à travers le monde. En 10 ans, et en s'appuyant sur sa plateforme technique, il est devenu le 2<sup>ème</sup> apporteur d'affaires mondial pour les hôtels de Paris, Londres et Milan &mdash; avec seulement 45 salariés.</p>
 
-      <p><strong>Aujourd'hui je dirige l'équipe R&D et définit la stratégie tech de l'entreprise, sans jamais avoir abandonné mon rôle de développeur web full-stack.</strong></p>
+      <p><strong>Aujourd'hui je dirige l'équipe R&D et définis la stratégie tech de l'entreprise, sans jamais avoir abandonné mon rôle de développeur web full-stack.</strong></p>
 
-      <p><a href="" class="btn btn-primary btn-arrow"><span>Me contacter</span></a>
-        <a class="btn btn-default" href="">Télécharger mon CV</a>
-        <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
-      </p>
+      <div class="cv-contact-cta">
+        <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
+        Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>
+
+        <p><a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal"><span>Me contacter</span></a>
+          <a class="btn btn-default" href="">Télécharger mon CV</a>
+          <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
+        </p>
+      </div>
 
     </div>
   </div>
 
-  <h2>Concevoir, comprendre et délivrer le produit, puis l’optimiser en continu</h2>
-  <p>Mon leitmotiv quotidien :</p>
+  <h2>Comprendre, concevoir et délivrer le produit, puis l’optimiser en continu</h2>
+  <p>Je place chacun des projets au coeur d'un cercle vertueux : </p>
   <ul>
+    <li>comprendre et reformuler les besoins en travaillant étroitement avec les porteurs de projets</li>
     <li>concevoir un produit attractif, efficace et moderne grâce aux technos les plus récentes</li>
     <li>délivrer le produit avec le meilleur compromis coût/qualité</li>
-    <li>l'améliorer en continu pour en multiplier le retour sur investissement</li>
-    <li>constituer une équipe projet efficace, passionnée, et ambitieuse</li>
+    <li>multiplier le ROI en analysant les usages et en améliorant en continu</li>
+    <li>accélérer le cycle en constituant une équipe projet efficace, passionnée, et ambitieuse</li>
   </ul>
 
   <h3>Ma trousse à outils :</h3>
-  <p>Technos : <span>Symfony 3</span> <span>Angular (1 et 2+)</span> <span>PHP 7</span> <span>Javascript/ES2016</span> <span>Typescript</span> <span>HTML5/CSS3</span> <span>AMP</span> et plus.</p>
-  <p>Ops : <span>Docker</span> <span>Debian</span> <span>Apache</span> <span>MySQL</span> <span>CI / CD</span> <span>NewRelic</span></p>
-  <p>Savoir-faire : <span>RESTful APIs</span> <span>CRO</span> <span>SEO</span> <span>Caching et CDN</span> <span>SPAs et PWAs</span> <span>Paiement en ligne</span> <span>Test</span></p>
-  <p>Métiers : <span>Architecte</span> <span>Formateur</span> <span>Manager on-site/offshore</span> <span>Product owner</span> <span>Scrum Master</span> <span>Recruteur</span></p>
+  <p class="cv-techs">Dev  : <span>Symfony 3</span> <span>Angular (1 et 2+)</span> <span>PHP 7</span> <span>Javascript/ES2016</span> <span>Typescript</span> <span>HTML5 + CSS3</span> <span>Ionic + Cordova</span> et plus.</p>
+  <p class="cv-techs">Ops : <span>Docker</span> <span>Debian</span> <span>Apache</span> <span>MySQL</span> <span>Jenkins</span> <span>Gitlab + Gitlab CI</span> <span>NewRelic</span></p>
+  <p class="cv-techs">Savoir-faire : <span>RESTful APIs</span> <span><abbr title="Conversion Rate Optimization">CRO</abbr></span> <span><abbr title="Search Engine Optimisation">SEO</abbr></span> <span>Caching et CDN</span> <span><abbr title="Single Page Applications, Progressive Web Apps">SPAs et PWAs</abbr></span> <span>Paiement en ligne</span> <span>Test</span> <span>Scrum et agilité</span></p>
+  <p class="cv-techs">Métiers : <span>Architecte</span> <span>UX Design</span> <span>Manager in-house/offshore</span> <span>Product Owner</span> <span>Scrum Master</span> <span>Recruteur</span></p>
 
   <p><a href="" class="btn btn-primary">Me contacter</a>
     <a class="btn btn-default" href="">Télécharger mon CV</a>
@@ -84,33 +90,57 @@
 
 </div>
 
-<hr style="border-top:15px solid #05bffc; margin: 30px 0 0 0; position:absolute; width:100%; left:0">
-<hr style="border-top:15px solid #79caaf; margin: 48px 0 0 0; position:absolute; width:100%; left: 0">
-<hr style="border-top:15px solid #efd662; margin: 66px 0 30px 0; position:absolute; width:100%; left: 0">
+<hr class="separator" id="social">
 
-<div class="container" id="social">
+<div class="container">
+
+  <h1>Social</h1>
 
   <div class="row">
-    <div class="col-md-3">
-      <h3>CV</h3>
-      <p><span class="glyphicon glyphicon-download"></span></p>
-    </div>
-
-    <div class="col-md-3">
-      <h3>LinkedIn</h3>
-      <p><span class="glyphicon glyphicon-link"></span></p>
-    </div>
-
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h3>Github</h3>
+      <p><a href="https://github.com/mickaelmarchal">@mickaelmarchal</a></p>
+      <ul>
+        <li>10 repositories</li>
+        <li>5 stars</li>
+        <li>130 commits</li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <h3>StackOverflow</h3>
+      <p><a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a></p>
+      <ul>
+        <li>16rep
+        <li>5 answers repositories</li>
+        <li>5 stars</li>
+        <li>130 commits</li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Medium</h3>
       <p><span class="glyphicon glyphicon-cog"></span></p>
     </div>
 
-    <div class="col-md-3">
-      <h3>StackOverflow</h3>
-      <p><span class="glyphicon glyphicon-refresh"></span></p>
-    </div>
   </div>
+
+
+  <h1>Activité récente:</h1>
+
+  <pre>
+A mettre :
+    - commits Github
+    - questions / réponses Stackoverflow
+    - ajouts Pocket
+    - stars github
+    - favoris / coups de coeur Medium
+    - photos instagram
+
+
+  </pre>
+
+
 
   <div class="row">
 
@@ -130,7 +160,7 @@
 
   </div>
 
-  <div class="row">
+  <div class="row" id="resources">
 
     <div class="col-md-6">
       <img src="http://via.placeholder.com/350x200">
@@ -148,36 +178,48 @@
 
   </div>
 
-
 </div>
 
-<div class="jumbotron">
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="contact-modal-title">Me contacter</h4>
+        </div>
+        <div class="modal-body">
 
-  <div class="container">
-  <h2 id="contact">Me contacter</h2>
+          <p>Vous pouvez également me <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
 
-  <p>Vous pouvez également me <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
+          <form action="" method="post">
 
-  <form action="" method="post">
-
-    <p>
-      <label for="name">Votre nom</label>
-      <input type="text" name="name" id="name" required />
-    </p>
-    <p>
-      <label for="email">Votre e-mail</label>
-      <input type="email" name="email" id="email" required />
-    </p>
-    <p>
-      <label for="message">Message</label>
-      <textarea name="message" id="message" required></textarea>
-    </p>
-    <p><button type="submit">Envoyer</button></p>
+            <p>
+              <label for="name">Votre nom</label>
+              <input type="text" name="name" id="name" required />
+            </p>
+            <p>
+              <label for="email">Votre e-mail</label>
+              <input type="email" name="email" id="email" required />
+            </p>
+            <p>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" required></textarea>
+            </p>
+            <p><button type="submit">Envoyer</button></p>
 
 
-  </form>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
+          <button type="button" class="btn btn-primary">Envoyer</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+
 
 <div class="container">
 
@@ -212,12 +254,12 @@
 
     // Get scroll position for sections
     socialOffset = $("#social").offset().top;
-    contactOffset = $("#contact").offset().top;
+    contactOffset = $("#resources").offset().top;
 
     // Change animation settings and state of nav menu
     if( $(this).width() >= 1120) {
-      animateRange  = { start: 30, end: 340 }
-      headerHeight = { start: 450, end: 55 };
+      animateRange  = { start: 10, end: 340 };
+      headerHeight = { start: 440, end: 55 };
       headerTitleBottom = { start: -120, end: -15 };
       headerTitleAngle = { start: -7, end: 0 };
       headerTitleHeight = { start: 240, end: 0};
@@ -228,7 +270,7 @@
       $('.nav-menu').show();
 
     } else if( $(this).width() >= 750) {
-      animateRange  = { start: 15, end: 200 }
+      animateRange  = { start: 15, end: 200 };
       headerHeight = { start: 300, end: 55 };
       headerTitleBottom = { start: -120, end: -3 };
       headerTitleAngle = { start: -7, end: 0 };
@@ -240,7 +282,7 @@
       $('.nav-menu').hide();
 
     } else {
-      animateRange  = { start: 10, end: 120 }
+      animateRange  = { start: 10, end: 120 };
       headerHeight = { start: 150, end: 55 };
       headerTitleBottom = { start: -240, end: -5 };
       headerTitleAngle = { start: -7, end: 0 };
@@ -322,10 +364,19 @@
       placement: 'top',
       trigger: 'hover focus',
       html: true,
+      width: 300,
       content:
-      "<p>Crée en 2007, Grand Luxury Group propose la réservation des plus beaux hôtels du monde, ainsi qu'une gamme de services exclusifs à ses clients, afin de rendre leur voyage inoubliable.</p>"
-      + "<p></p>"
-      + "<p><a href=\"https://www.grandluxuryhotels.com\">Visiter le site &raquo;</a></p>"
+        "Crée en 2007, Grand Luxury Group est le spécialiste européen du voyage de luxe sur internet."
+        + "<p></p>"
+        + "<ul>"
+        + "  <li>Les plus beaux hôtels du monde, triés sur le volet.</li>"
+        + "  <li>Un service personnalisé via un conseiller dédié.</li>"
+        + "  <li>Des avantages exclusifs pour les membres du L Club.</li>"
+        + "  <li>Un suivi attentif de chaque client dès la réservation.</li>"
+        + "  <li>Partenaire des plus grands chaînes hôtelières du monde.</li>"
+        + "</ul>"
+        + "<p></p>"
+        + "<a href=\"https://www.grandluxuryhotels.com\">Visiter le site &raquo;</a>"
     });
 
   });

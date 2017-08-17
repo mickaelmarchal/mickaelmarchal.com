@@ -57,7 +57,6 @@
   color: #f8f8f8;
 }
 
-
 @media screen and (min-width: 1120px) {
 
   .nav-menu-btn {
@@ -95,12 +94,10 @@
     position: absolute;
     right: 0;
   }
-
   .nav-menu .language a {
     height: 55px;
     padding-top: 18px;
   }
-
   .nav-menu .language a:hover,
   .nav-menu .language a:focus,
   .nav-menu .language a:active,
@@ -132,7 +129,7 @@
   width: 107%;
   height: 240px;
   bottom: -120px;
-  left: 0%;
+  left: 0;
   background: #fff;
 }
 
@@ -171,8 +168,6 @@
   }
 }
 
-
-
 .main {
   margin-top: 150px;
 }
@@ -187,7 +182,12 @@
   }
 }
 
+/***** BOOTSTRAP TYPOGRAPHY/UI OVERRIDES *****/
 
+body {
+  font-size: 16px;
+  line-height: 1.3em;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -201,22 +201,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-
+  background: #05bffc;
 }
 
+/*** Buttons with arrows on hover ***/
 .btn-arrow {
   width: 200px;
   transition: all 200ms;
   cursor: pointer;
 }
-
 .btn-arrow span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 200ms;
 }
-
 .btn-arrow span:after {
   content: '\00bb';
   position: absolute;
@@ -225,12 +224,64 @@ h1, h2, h3, h4, h5, h6 {
   right: -20px;
   transition: 200ms;
 }
-
-.btn-arrow:hover span {
+.btn-arrow:hover span,
+.btn-arrow:focus span,
+.btn-arrow:active span {
   padding-right: 25px;
 }
-
-.btn-arrow:hover span:after {
+.btn-arrow:hover span:after,
+.btn-arrow:focus span:after,
+.btn-arrow:active span:after {
   opacity: 1;
   right: 0;
+}
+
+
+/***** SECTION: CV *****/
+
+.cv-overview h1 {
+  margin-top: 0;
+  font-size: 48px;
+}
+.cv-overview p {
+  margin: 1.3em 0;
+}
+.cv-overview strong {
+  font-size: 18px;
+}
+.cv-overview-image {
+  width: 100%;
+}
+
+.cv-contact-cta {
+  border: 3px solid #05bffc;
+  padding: 15px;
+  border-radius: 5px;
+}
+.cv-contact-cta :first-child {
+  margin-top: 0;
+}
+.cv-contact-cta :last-child {
+  margin-bottom: 0;
+}
+
+
+.cv-techs span {
+  display: inline-block;
+  /*background: #ccc;*/
+  padding: 1px 7px;
+  font-size: 12px;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.separator {
+  display: block;
+  border-top:5px solid #05bffc;
+  height: 5px;
+  background-color: #79caaf;
+  border-bottom: 5px solid #efd662;
+
 }
