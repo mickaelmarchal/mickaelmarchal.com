@@ -121,6 +121,7 @@
   background: -o-linear-gradient(bottom left,#05bffc,#efd662); /*Opera 11.1-12*/
   background: -moz-linear-gradient(bottom left,#05bffc,#efd662); /*Fx 3.6-15*/
   background: linear-gradient(bottom left, #05bffc, #efd662); /*Standard*/
+  background: url('../fond.png') center center;
 }
 
 .header-title {
@@ -236,8 +237,18 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
+.jumbotron p {
+  margin-bottom: 10px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 
 /***** SECTION: CV *****/
+
+.cv-overview {
+  margin-bottom: 70px;
+}
 
 .cv-overview h1 {
   margin-top: 0;
@@ -257,12 +268,29 @@ h1, h2, h3, h4, h5, h6 {
   border: 3px solid #05bffc;
   padding: 15px;
   border-radius: 5px;
+  text-align: center;
 }
 .cv-contact-cta :first-child {
   margin-top: 0;
 }
 .cv-contact-cta :last-child {
   margin-bottom: 0;
+}
+
+.cv-details {
+  background-image: url('../test3.jpg');
+}
+.cv-details .row {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.cv-details .cv-contact-cta {
+  border: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
 }
 
 
