@@ -1,0 +1,23 @@
+{
+  "name": "mickaelmarchal.com",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickaelmarchal/mickaelmarchal.com.git"
+  },
+  "author": "Mickael Marchal",
+  "license": "Proprietary",
+  "bugs": {
+    "url": "https://github.com/mickaelmarchal/mickaelmarchal.com/issues"
+  },
+  "homepage": "https://github.com/mickaelmarchal/mickaelmarchal.com#readme"
+}
