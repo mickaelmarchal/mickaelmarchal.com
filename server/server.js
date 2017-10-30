@@ -1,14 +1,19 @@
 const express = require('express');
-const github = require('./github');
-const stackoverflow = require('./stackoverflow');
+const fs = require('fs');
 
 const app = express();
 
-app.get('/', function (req, res) {
+app.get('/feed', function (req, res) {
 
-    github.github(response => { res.send(response)}, error => { console.log(error)});
-    //stackoverflow.stackoverflow(response => { res.send(response) }, error => { console.log(error) });
+    fs.readFile('./feed.json', (err, data) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.contentType = 'application/json';
+            res.json(JSON.parse(data));
+        }
 
+    })
 });
 
 app.listen(3000, function () {

@@ -1,40 +1,77 @@
-var https = require('https');
+var request = require('request');
+
+var fs = require('fs');
 
 /**
  * Get profile info from stackoverflow
  */
-exports.stackoverflow = function (onResult, onError) {
+exports.stackoverflow = function () {
 
-    var options = {
-        host: 'api.stackexchange.com',
-        port: 443,
-        path: '/2.2/users/8545056/network-activity',
+    const options = {
         method: 'GET',
+        uri: 'https://api.stackexchange.com/2.2/users/8545056/network-activity',
+        gzip: true,
         headers: {
             accept: 'application/json',
-            'User-Agent': 'NodeJS'
+            'User-Agent': 'NodeJS',
+            'Accept-Encoding': 'gzip,deflate'
         }
     };
 
-    let response = '';
-    let req = https.request(options, function (res) {
+    /**
+     * Process result
+     * 
+     * @param [] result 
+     */
+    function processResult(result) {
 
-        res.on('data', function (chunk) {
-            response += chunk;
+        var feed = [];
+
+        result.items.forEach((element) => {
+
+            let item = null;
+
+            // Answer posted
+            if (element.activity_type === 'answer_posted') {
+                item = {
+                    type: 'stackoverflowAnswer',
+                    date: new Date(element.creation_date * 1000),
+                    data: {
+                        answerLink: element.link,
+                        answerDescription: element.description,
+                        questionTitle: element.title,
+                        questionTags: element.tags
+                    }
+                }
+            }
+
+            // Badge earned
+            if (element.activity_type === 'badge_earned') {
+                item = {
+                    type: 'stackoverflowBadge',
+                    date: new Date(element.creation_date * 1000),
+                    data: {
+                        badgeTitle: element.title
+                    }
+                }
+            }
+            
+            if (item) {
+                feed.push(item);
+            }
+
         });
 
-        res.on('end', function () {
-            let obj = JSON.parse(response);
+        return feed;
+    }
 
-            // TODO clear/standardize info
-            // TODO does not come out as JSON string, investigate this. 
-            onResult(obj);
+    return new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if(error) {
+                reject(error);
+            } else {                
+                resolve(processResult(JSON.parse(body)));
+            }
         });
-
-    });
-    req.end();
-
-    req.on('error', function (e) {
-        onError(e);
     });
 };
