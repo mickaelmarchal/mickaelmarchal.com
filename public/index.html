@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
   <meta name="author" content="Mickaël Marchal">
   <link rel="icon" href="favicon.png">
 
-  <title>Mickaël Marchal, CTO + Full Stack geek</title>
+  <title>Mickaël Marchal, CTO + full stack geek</title>
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -18,93 +19,160 @@
 
 <body>
 
-<nav class="nav-main">
-  <a class="nav-menu-btn"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
-  <ul class="nav-menu">
-    <li><a href="#cv" id="nav-link-profile">Profil</a></li>
-    <li><a href="#social" id="nav-link-social">Social</a></li>
-    <li><a href="#resources" id="nav-link-contact">Ressources</a></li>
-    <li class="language"><a href="">English</a></li>
-  </ul>
-</nav>
+  <nav class="nav-main">
+    <a class="nav-menu-btn">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </a>
+    <ul class="nav-menu">
+      <li>
+        <a href="#cv" id="nav-link-profile">Profil</a>
+      </li>
+      <li>
+        <a href="#social" id="nav-link-social">Social</a>
+      </li>
+      <li>
+        <a href="#resources" id="nav-link-contact">Ressources</a>
+      </li>
+      <li class="language">
+        <a href="">English</a>
+      </li>
+    </ul>
+  </nav>
 
-<header class="header" id="header">
-  <div class="header-title" id="header-title">
-    <h1>Mickaël Marchal</h1>
-  </div>
-</header>
-
-<div class="main">
-<div class="container">
-  <div class="row cv-overview" id="cv">
-    <div class="col-md-5">
-      <img src="webdev.jpg" class="cv-overview-image">
-    </div>    
-    <div class="col-md-7">
-      <h1>CTO + full stack geek</h1>
-      <h2>@Grand Luxury Group.</h2>
-      <p>Premier salarié chez <a href="#" data-toggle="modal" data-target="#glg-details">Grand Luxury Group</a> et unique dev durant 5 ans &bull; Conception et réalisation de la platorme e-commerce de la société &bull;
-        Optimisation des performances et du taux de conversion &bull;
-        Product Owner et référent métier.</p>
-      <p><strong>Aujourd'hui je dirige l'équipe R&amp;D et pilote la stratégie tech de l'entreprise, sans jamais avoir abandonné mon rôle d'architecte et de développeur web full-stack.</strong></p>
-
-      <!-- <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
-      Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
-  
-      <p class="cv-overview-cta">
-        <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal"><span>Me contacter</span></a>
-        <a class="btn btn-default" href="cv.pdf">Télécharger mon CV</a>
-        <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
-      </p>
+  <header class="header" id="header">
+    <div class="header-title" id="header-title">
+      <h1>Mickaël Marchal</h1>
     </div>
-  </div>
-</div>
+  </header>
 
-<div class="jumbotron cv-details">
-<div class="container">
-  <div class="row">
-    <div class="col-md-3"></div>
-          
-    <div class="col-md-9">
-      <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
-      <h2>Une approche complète des projets web.</h2>
-      <p>Mon profil hybride me permet de <strong>mettre les technologies les plus performantes au service
-        de la création de valeur et du succès d'un produit</strong>.</p>
-      
-      <p class="cv-techs">Dev Back : <span>Symfony 3</span> <span>PHP 7</span> <span>NodeJS</span> <span>SQL et NoSQL</span> <span><abbr title="Global Distribution System">GDS</abbr> et Booking engine</span></p>  
-      <p class="cv-techs">Dev Front : <span>Angular 2+</span> <span>Typescript</span> <span>Javascript/ES2016</span> <span>HTML5 + CSS3</span> <span>Ionic + Cordova</span></p>
-      <p class="cv-techs">Architecture : <span>RESTful APIs</span> <span>Microservices</span> <span><abbr title="Single Page Applications, Progressive Web Apps">SPAs et PWAs</abbr></span> <span>Caching et CDN</span></p>      
-      <p class="cv-techs">Qualité : <span>Scrum Master</span> <span>Tests unitaires</span> <span>Jenkins</span> <span>Gitlab + Gitlab CI</span></p>
-      <p class="cv-techs">Opérations : <span>Docker</span> <span>Debian</span> <span>Apache</span> <span>MySQL</span> <span>Bash scripting</span></p>
-      <p class="cv-techs">Produit et métier : <span>UX Design</span> <span><abbr title="Conversion Rate Optimization">CRO</abbr></span> <span><abbr title="Search Engine Optimisation">SEO</abbr></span>  <span>Product Owner</span> <span>Analytics</span></p>
-      <p class="cv-techs">Management : <span>Conduite de projet in-house/offshore</span> <span>Recrutement</span> <span>Gestion d'équipe</span></p>
-      
-      <div class="cv-contact-cta">
+  <div class="main">
+    <div class="container">
+      <div class="row cv-overview" id="cv">
+        <div class="col-md-5">
+          <img src="webdev.jpg" class="cv-overview-image">
+        </div>
+        <div class="col-md-7">
+          <h1>CTO + full stack geek</h1>
+          <h2>@Grand Luxury Group.</h2>
+          <p>Premier salarié chez
+            <a href="#" data-toggle="modal" data-target="#glg-details">Grand Luxury Group</a> et unique dev durant 5 ans &bull; Conception et réalisation de la platorme e-commerce
+            de la société &bull; Optimisation des performances et du taux de conversion &bull; Product Owner et référent
+            métier.</p>
+          <p>
+            <strong>Aujourd'hui je dirige l'équipe R&amp;D et pilote la stratégie tech de l'entreprise, sans jamais avoir abandonné
+              mon rôle d'architecte et de développeur web full-stack.</strong>
+          </p>
+
           <!-- <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
-          Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
-    
-          <p><a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal"><span>Me contacter</span></a>
-            <a class="btn btn-default" href="">Télécharger mon CV</a>
+      Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
+
+          <p class="cv-overview-cta">
+            <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal">
+              <span>Me contacter</span>
+            </a>
+            <a class="btn btn-default" href="cv.pdf">Télécharger mon CV</a>
             <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
           </p>
         </div>
-  
+      </div>
     </div>
-  </div>
-</div>
-</div>
+
+    <div class="jumbotron cv-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+
+          <div class="col-md-9">
+            <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
+            <h2>Une approche complète des projets web.</h2>
+            <p>Mon profil hybride me permet de
+              <strong>mettre les technologies les plus performantes au service de la création de valeur et du succès d'un produit</strong>.</p>
+
+            <p class="cv-techs">Dev Back :
+              <span>Symfony 3</span>
+              <span>PHP 7</span>
+              <span>NodeJS</span>
+              <span>SQL et NoSQL</span>
+              <span>
+                <abbr title="Global Distribution System">GDS</abbr> et Booking engine</span>
+            </p>
+            <p class="cv-techs">Dev Front :
+              <span>Angular 2+</span>
+              <span>Typescript</span>
+              <span>Javascript/ES2016</span>
+              <span>HTML5 + CSS3</span>
+              <span>Ionic + Cordova</span>
+            </p>
+            <p class="cv-techs">Architecture :
+              <span>RESTful APIs</span>
+              <span>Microservices</span>
+              <span>
+                <abbr title="Single Page Applications, Progressive Web Apps">SPAs et PWAs</abbr>
+              </span>
+              <span>Caching et CDN</span>
+            </p>
+            <p class="cv-techs">Qualité :
+              <span>Scrum Master</span>
+              <span>Tests unitaires</span>
+              <span>Jenkins</span>
+              <span>Gitlab + Gitlab CI</span>
+            </p>
+            <p class="cv-techs">Opérations :
+              <span>Docker</span>
+              <span>Debian</span>
+              <span>Apache</span>
+              <span>MySQL</span>
+              <span>Bash scripting</span>
+            </p>
+            <p class="cv-techs">Produit et métier :
+              <span>UX Design</span>
+              <span>
+                <abbr title="Conversion Rate Optimization">CRO</abbr>
+              </span>
+              <span>
+                <abbr title="Search Engine Optimisation">SEO</abbr>
+              </span>
+              <span>Product Owner</span>
+              <span>Analytics</span>
+            </p>
+            <p class="cv-techs">Management :
+              <span>Conduite de projet in-house/offshore</span>
+              <span>Recrutement</span>
+              <span>Gestion d'équipe</span>
+            </p>
+
+            <div class="cv-contact-cta">
+              <!-- <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
+          Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
+
+              <p>
+                <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal">
+                  <span>Me contacter</span>
+                </a>
+                <a class="btn btn-default" href="">Télécharger mon CV</a>
+                <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="glg-details">
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="glg-details">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <h3 class="modal-title">Grand Luxury Group</h3>
           </div>
           <div class="modal-body">
-            <p>Crée en 2007, Grand Luxury Group est le spécialiste européen du voyage de luxe sur internet :
-              La société propose la réservation de 450 hôtels d'exception à travers le monde.</p>
+            <p>Crée en 2007, Grand Luxury Group est le spécialiste européen du voyage de luxe sur internet : La société propose
+              la réservation de 450 hôtels d'exception à travers le monde.</p>
             <ul>
               <li>Les plus beaux hôtels du monde, triés sur le volet.</li>
               <li>Un service personnalisé via un conseiller dédié.</li>
@@ -112,56 +180,74 @@
               <li>Un suivi attentif de chaque client dès la réservation.</li>
               <li>Partenaire des plus grands chaînes hôtelières du monde.</li>
             </ul>
-            <p><strong>En 10 ans, et en s'appuyant sur sa plateforme technique, Grand Luxury est devenu le 2<sup>ème</sup> apporteur d'affaires mondial pour les hôtels de Paris, Londres et Milan &mdash; avec seulement 60 salariés.</strong></p>
-            <p>On en parle sur : <a href="https://www.forbes.fr/luxe/grand-luxury-hotels-une-nouvelle-idee-du-luxe/">Forbes</a> | <a href="http://bfmbusiness.bfmtv.com/mediaplayer/video/le-rendez-vous-du-luxe-grand-luxury-hotels-un-site-de-reservation-d-hotels-selectif-1809-982037.html">BFM Business</a></p>
-            <p><a href="https://fr.grandluxuryhotels.com">Visiter Grand Luxury Hotels</a></p>
+            <p>
+              <strong>En 10 ans, et en s'appuyant sur sa plateforme technique, Grand Luxury est devenu le 2
+                <sup>ème</sup> apporteur d'affaires mondial pour les hôtels de Paris, Londres et Milan &mdash; avec seulement
+                60 salariés.</strong>
+            </p>
+            <p>On en parle sur :
+              <a href="https://www.forbes.fr/luxe/grand-luxury-hotels-une-nouvelle-idee-du-luxe/">Forbes</a> |
+              <a href="http://bfmbusiness.bfmtv.com/mediaplayer/video/le-rendez-vous-du-luxe-grand-luxury-hotels-un-site-de-reservation-d-hotels-selectif-1809-982037.html">BFM Business</a>
+            </p>
+            <p>
+              <a href="https://fr.grandluxuryhotels.com">Visiter Grand Luxury Hotels</a>
+            </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
           </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-<div class="container" id="social">
-
-  <h1>Social</h1>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h3>Github</h3>
-      <p><a href="https://github.com/mickaelmarchal">@mickaelmarchal</a></p>
-      <ul>
-        <li>10 repositories</li>
-        <li>5 stars</li>
-        <li>130 commits</li>
-      </ul>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
     </div>
+    <!-- /.modal -->
 
-    <div class="col-md-4">
-      <h3>StackOverflow</h3>
-      <p><a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a></p>
-      <ul>
-        <li>16rep
-        <li>5 answers repositories</li>
-        <li>5 stars</li>
-        <li>130 commits</li>
-      </ul>
-    </div>
+    <div class="container" id="social">
 
-    <div class="col-md-4">
-      <h3>Medium</h3>
-      <p><span class="glyphicon glyphicon-cog"></span></p>
-    </div>
+      <h1>Social</h1>
 
-  </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Github</h3>
+          <p>
+            <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
+          </p>
+          <ul>
+            <li>10 repositories</li>
+            <li>5 stars</li>
+            <li>130 commits</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h3>StackOverflow</h3>
+          <p>
+            <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
+          </p>
+          <ul>
+            <li>16rep
+              <li>5 answers repositories</li>
+              <li>5 stars</li>
+              <li>130 commits</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h3>Medium</h3>
+          <p>
+            <span class="glyphicon glyphicon-cog"></span>
+          </p>
+        </div>
+
+      </div>
 
 
-  <h1>Activité récente:</h1>
+      <h1>Activité récente:</h1>
 
-  <div id="js-feed-placeholder"></div>
+      <div id="js-feed-placeholder"></div>
 
-  <pre>
+      <pre>
 A mettre :
     - commits Github
     - questions / réponses Stackoverflow
@@ -193,261 +279,269 @@ A mettre :
 
 
 
-  <div class="row">
+      <div class="row">
 
-    <div class="col-md-6">
-      <img src="http://via.placeholder.com/350x200">
-      <h2>GL Extranet</h2>
-      <p>Angular4 Symfony3 PWAs</p>
-      <a href="" class="btn">More details</a>
-    </div>
-
-    <div class="col-md-6">
-      <img src="http://via.placeholder.com/350x200">
-      <h2>Google AMP Hackhathon</h2>
-      <p>Angular4 Symfony3 PWAs</p>
-      <a href="" class="btn">More details</a>
-    </div>
-
-  </div>
-
-  <div class="row" id="resources">
-
-    <div class="col-md-6">
-      <img src="http://via.placeholder.com/350x200">
-      <h2>Grand Luxury Hotels</h2>
-      <p>ZendFramework MySQL jQuery CSS3 HTML5 AMP</p>
-      <a href="" class="btn">More details</a>
-    </div>
-
-    <div class="col-md-6">
-      <img src="http://via.placeholder.com/350x200">
-      <h2>Grand Luxury E-butler</h2>
-      <p>Ionic Framework Angular1 Cordova</p>
-      <a href="" class="btn">More details</a>
-    </div>
-
-  </div>
-
-</div>
-
-  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="contact-modal-title">Me contacter</h4>
+        <div class="col-md-6">
+          <img src="http://via.placeholder.com/350x200">
+          <h2>GL Extranet</h2>
+          <p>Angular4 Symfony3 PWAs</p>
+          <a href="" class="btn">More details</a>
         </div>
-        <div class="modal-body">
 
-          <p>Vous pouvez également me <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
-
-          <form action="" method="post">
-
-            <p>
-              <label for="name">Votre nom</label>
-              <input type="text" name="name" id="name" required />
-            </p>
-            <p>
-              <label for="email">Votre e-mail</label>
-              <input type="email" name="email" id="email" required />
-            </p>
-            <p>
-              <label for="message">Message</label>
-              <textarea name="message" id="message" required></textarea>
-            </p>
-            <p><button type="submit">Envoyer</button></p>
-
-
-          </form>
-
+        <div class="col-md-6">
+          <img src="http://via.placeholder.com/350x200">
+          <h2>Google AMP Hackhathon</h2>
+          <p>Angular4 Symfony3 PWAs</p>
+          <a href="" class="btn">More details</a>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
-          <button type="button" class="btn btn-primary">Envoyer</button>
+
+      </div>
+
+      <div class="row" id="resources">
+
+        <div class="col-md-6">
+          <img src="http://via.placeholder.com/350x200">
+          <h2>Grand Luxury Hotels</h2>
+          <p>ZendFramework MySQL jQuery CSS3 HTML5 AMP</p>
+          <a href="" class="btn">More details</a>
+        </div>
+
+        <div class="col-md-6">
+          <img src="http://via.placeholder.com/350x200">
+          <h2>Grand Luxury E-butler</h2>
+          <p>Ionic Framework Angular1 Cordova</p>
+          <a href="" class="btn">More details</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="contact-modal-title">Me contacter</h4>
+          </div>
+          <div class="modal-body">
+
+            <p>Vous pouvez également me
+              <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
+
+            <form action="" method="post">
+
+              <p>
+                <label for="name">Votre nom</label>
+                <input type="text" name="name" id="name" required />
+              </p>
+              <p>
+                <label for="email">Votre e-mail</label>
+                <input type="email" name="email" id="email" required />
+              </p>
+              <p>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required></textarea>
+              </p>
+              <p>
+                <button type="submit">Envoyer</button>
+              </p>
+
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
+            <button type="button" class="btn btn-primary">Envoyer</button>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <hr class="separator">
+
+    <div class="container">
+      <footer>
+        <p>&copy; 2001-2017 Mickaël Marchal. Tous droits réservés.</p>
+      </footer>
+    </div>
+
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-<hr class="separator">
-  
-<div class="container">
-  <footer>
-    <p>&copy; 2001-2017 Mickaël Marchal. Tous droits réservés.</p>
-  </footer>
-</div>
+  <script>
+    var $header = $('#header'),
+      $body = $(document.body),
+      $html = $('html'),
+      $headerTitle = $('#header-title'),
+      $headerH1 = $('#header-title h1');
 
-</div>
+    // ranges for header animation
+    var animateRange = { start: 30, end: 340 },
+      headerHeight,
+      headerTitleBottom, headerTitleAngle, headerTitleHeight,
+      headerH1Scaling, headerH1Top,
+      socialOffset, contactOffset;
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    $(window).resize(function () {
 
-<script>
-  var $header = $('#header'),
-    $body = $(document.body),
-    $html = $('html'),
-    $headerTitle = $('#header-title'),
-    $headerH1 = $('#header-title h1');
+      // Get scroll position for sections
+      socialOffset = $("#social").offset().top;
+      contactOffset = $("#resources").offset().top;
 
-  // ranges for header animation
-  var animateRange  = { start: 30, end: 340 },
-    headerHeight,
-    headerTitleBottom, headerTitleAngle, headerTitleHeight,
-    headerH1Scaling, headerH1Top,
-    socialOffset, contactOffset;
+      // Change animation settings and state of nav menu
+      if ($(this).width() >= 1120) {
+        animateRange = { start: 10, end: 340 };
+        headerHeight = { start: 440, end: 55 };
+        headerTitleBottom = { start: -120, end: -15 };
+        headerTitleAngle = { start: -7, end: 0 };
+        headerTitleHeight = { start: 240, end: 0 };
+        headerH1Scaling = { start: 1, end: 0.2 };
+        headerH1Top = { start: -107, end: -107 };
 
-  $(window).resize(function () {
+        $('.nav-menu-btn').removeClass('active');
+        $('.nav-menu').show();
 
-    // Get scroll position for sections
-    socialOffset = $("#social").offset().top;
-    contactOffset = $("#resources").offset().top;
+      } else if ($(this).width() >= 750) {
+        animateRange = { start: 15, end: 200 };
+        headerHeight = { start: 300, end: 55 };
+        headerTitleBottom = { start: -120, end: -3 };
+        headerTitleAngle = { start: -7, end: 0 };
+        headerTitleHeight = { start: 240, end: 0 };
+        headerH1Scaling = { start: 1, end: 0.3 };
+        headerH1Top = { start: -72, end: -72 };
 
-    // Change animation settings and state of nav menu
-    if( $(this).width() >= 1120) {
-      animateRange  = { start: 10, end: 340 };
-      headerHeight = { start: 440, end: 55 };
-      headerTitleBottom = { start: -120, end: -15 };
-      headerTitleAngle = { start: -7, end: 0 };
-      headerTitleHeight = { start: 240, end: 0};
-      headerH1Scaling = { start: 1, end: 0.2 };
-      headerH1Top = { start: -107, end: -107 };
+        $('.nav-menu-btn').removeClass('active');
+        $('.nav-menu').hide();
 
-      $('.nav-menu-btn').removeClass('active');
-      $('.nav-menu').show();
+      } else {
+        animateRange = { start: 10, end: 120 };
+        headerHeight = { start: 150, end: 55 };
+        headerTitleBottom = { start: -240, end: -5 };
+        headerTitleAngle = { start: -7, end: 0 };
+        headerTitleHeight = { start: 300, end: 0 };
+        headerH1Scaling = { start: 1, end: 0.4 };
+        headerH1Top = { start: -45, end: -58 };
 
-    } else if( $(this).width() >= 750) {
-      animateRange  = { start: 15, end: 200 };
-      headerHeight = { start: 300, end: 55 };
-      headerTitleBottom = { start: -120, end: -3 };
-      headerTitleAngle = { start: -7, end: 0 };
-      headerTitleHeight = { start: 240, end: 0};
-      headerH1Scaling = { start: 1, end: 0.3 };
-      headerH1Top = { start: -72, end: -72 };
-
-      $('.nav-menu-btn').removeClass('active');
-      $('.nav-menu').hide();
-
-    } else {
-      animateRange  = { start: 10, end: 120 };
-      headerHeight = { start: 150, end: 55 };
-      headerTitleBottom = { start: -240, end: -5 };
-      headerTitleAngle = { start: -7, end: 0 };
-      headerTitleHeight = { start: 300, end: 0};
-      headerH1Scaling = { start: 1, end: 0.4 };
-      headerH1Top = { start: -45, end: -58 };
-
-      $('.nav-menu-btn').removeClass('active');
-      $('.nav-menu').hide();
-    }
-
-    $(window).trigger('scroll');
-
-  }).trigger('resize');
-
-
-  function interpolate(range, scrollRatio) {
-    if (scrollRatio <= 0) {
-      return range.start;
-    } else if (scrollRatio >= 1) {
-      return range.end;
-    } else {
-      return range.start + (( range.end - range.start ) * scrollRatio);
-    }
-  }
-
-  $(window).scroll(function () {
-
-    // 1. Handle header animation on scroll
-    var scrollTop = $body.scrollTop() || $html.scrollTop();
-    var scrollRatio = (scrollTop - animateRange.start) / (animateRange.end - animateRange.start);
-
-    $header.css({
-      height: interpolate(headerHeight, scrollRatio) + 'px'
-    });
-    $headerTitle.css({
-      transform: 'rotate(' + interpolate(headerTitleAngle, scrollRatio) + 'deg)',
-      height: interpolate(headerTitleHeight, scrollRatio) + 'px',
-      bottom: interpolate(headerTitleBottom, scrollRatio) + 'px'
-    });
-    $headerH1.css({
-      transform: 'scale(' + interpolate(headerH1Scaling, scrollRatio) + ',' + interpolate(headerH1Scaling, scrollRatio) + ')',
-      top: interpolate(headerH1Top, scrollRatio)
-    });
-
-    // 2. Handle hilighting of menu items on scroll
-    if(scrollTop > contactOffset - 80) {
-      $('#nav-link-contact').addClass('active');
-      $('#nav-link-profile, #nav-link-social').removeClass('active');
-    } else if(scrollTop > socialOffset - 40) {
-      $('#nav-link-social').addClass('active');
-      $('#nav-link-profile, #nav-link-contact').removeClass('active');
-    } else if(scrollTop > 350) {
-      $('#nav-link-profile').addClass('active');
-      $('#nav-link-social, #nav-link-contact').removeClass('active');
-    } else {
-      $('#nav-link-profile, #nav-link-social, #nav-link-contact').removeClass('active');
-    }
-  }).trigger('scroll');
-
-  // feed builders
-  var buildFunctions = {
-    buildPocketAdd: function (data) {
-      return '<h3>' + data.title + '</h3>' + '<p>Added to pocket</p>';
-    }, 
-
-    buildGithubPush: function (data) {
-      return '<h3>Pushed to repo ' + data.repoName + '</h3>';
-    }, 
-
-    buildGithubCreate: function (data) {
-      return '<h3>Created repo ' + data.repoName + '</h3>';
-    },
-
-    buildStackoverflowAnswer: function (data) {
-      return '<h3>Answered to ' + data.questionTitle + '</h3>';
-    },
-
-    buildStackoverflowBadge: function (data) {
-      return '<h3>Earned badge ' + data.badgeTitle + '</h3>';
-    }
-  };
-  
-  $(function () {
-
-    // Manage nav menu button
-    $('.nav-menu-btn').click(function (e) {
-      e.stopPropagation();
-      $(this).addClass('active');
-      $('.nav-menu').show();
-    });
-    $(window).click(function () {
-      if ($('.nav-menu-btn:visible').length) {
         $('.nav-menu-btn').removeClass('active');
         $('.nav-menu').hide();
       }
-    });
 
-    // load feed
-    try {
-      $.getJSON('feed.json').then(function(data) {
-        var feedItems = [];
-        data.forEach(function(element) {
-          var typeFunc = 'build' + element.type.charAt(0).toUpperCase() + element.type.slice(1);
-          feedItems.push('<li>' + buildFunctions[typeFunc](element.data) + '</li>');
-        }, this);
-        if(feedItems.length) {
-          $('#js-feed-placeholder').html('<ul>' + feedItems.join('') + '</ul>');
+      $(window).trigger('scroll');
+
+    }).trigger('resize');
+
+
+    function interpolate(range, scrollRatio) {
+      if (scrollRatio <= 0) {
+        return range.start;
+      } else if (scrollRatio >= 1) {
+        return range.end;
+      } else {
+        return range.start + ((range.end - range.start) * scrollRatio);
+      }
+    }
+
+    // Handle animations on scroll
+    $(window).scroll(function () {
+
+      // 1. Handle header animation on scroll
+      var scrollTop = $body.scrollTop() || $html.scrollTop();
+      var scrollRatio = (scrollTop - animateRange.start) / (animateRange.end - animateRange.start);
+
+      $header.css({
+        height: interpolate(headerHeight, scrollRatio) + 'px'
+      });
+      $headerTitle.css({
+        transform: 'rotate(' + interpolate(headerTitleAngle, scrollRatio) + 'deg)',
+        height: interpolate(headerTitleHeight, scrollRatio) + 'px',
+        bottom: interpolate(headerTitleBottom, scrollRatio) + 'px'
+      });
+      $headerH1.css({
+        transform: 'scale(' + interpolate(headerH1Scaling, scrollRatio) + ',' + interpolate(headerH1Scaling, scrollRatio) + ')',
+        top: interpolate(headerH1Top, scrollRatio)
+      });
+
+      // 2. Handle hilighting of menu items on scroll
+      if (scrollTop > contactOffset - 80) {
+        $('#nav-link-contact').addClass('active');
+        $('#nav-link-profile, #nav-link-social').removeClass('active');
+      } else if (scrollTop > socialOffset - 40) {
+        $('#nav-link-social').addClass('active');
+        $('#nav-link-profile, #nav-link-contact').removeClass('active');
+      } else if (scrollTop > 350) {
+        $('#nav-link-profile').addClass('active');
+        $('#nav-link-social, #nav-link-contact').removeClass('active');
+      } else {
+        $('#nav-link-profile, #nav-link-social, #nav-link-contact').removeClass('active');
+      }
+    }).trigger('scroll');
+
+    // Feed builders
+    var feedBuilders = {
+      pocketAdd: function (data) {
+        return '<h3>' + data.title + '</h3>' + '<p>Added to pocket</p>';
+      },
+
+      githubPush: function (data) {
+        return '<h3>Pushed to repo ' + data.repoName + '</h3>';
+      },
+
+      githubCreate: function (data) {
+        return '<h3>Created repo ' + data.repoName + '</h3>';
+      },
+
+      stackoverflowAnswer: function (data) {
+        return '<h3>Answered to ' + data.questionTitle + '</h3>';
+      },
+
+      stackoverflowBadge: function (data) {
+        return '<h3>Earned badge ' + data.badgeTitle + '</h3>';
+      }
+    };
+
+    $(function () {
+
+      // Manage nav menu button
+      $('.nav-menu-btn').click(function (e) {
+        e.stopPropagation();
+        $(this).addClass('active');
+        $('.nav-menu').show();
+      });
+      $(window).click(function () {
+        if ($('.nav-menu-btn:visible').length) {
+          $('.nav-menu-btn').removeClass('active');
+          $('.nav-menu').hide();
         }
       });
-    } catch (e) { }
 
-  });
+      // Load feed
+      try {
+        $.getJSON('feed.json').then(function (data) {
+          var feedItems = [];
+          data.forEach(function (element) {
+            if (typeof buildFunctions[element.type] != 'undefined') {
+              feedItems.push('<li>' + feedBuilders[element.type](element.data) + '</li>');
+            }
+          }, this);
+          if (feedItems.length) {
+            $('#js-feed-placeholder').html('<ul>' + feedItems.join('') + '</ul>');
+          }
+        });
+      } catch (e) { }
 
-</script>
+    });
+
+  </script>
 
 </body>
+
 </html>
