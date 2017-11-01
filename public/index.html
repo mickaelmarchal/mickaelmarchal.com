@@ -159,6 +159,8 @@
 
   <h1>Activité récente:</h1>
 
+  <div id="js-feed-placeholder"></div>
+
   <pre>
 A mettre :
     - commits Github
@@ -167,6 +169,9 @@ A mettre :
     - stars github
     - favoris / coups de coeur Medium
     - photos instagram
+    - news custom
+    - limiter à X résultats
+    - pouvoir bloquer un item tout en haut du feed
 
     idee design :
     - webdev.jpg en fond anthracite dans le jublotron
@@ -388,7 +393,29 @@ A mettre :
     }
   }).trigger('scroll');
 
+  // feed builders
+  var buildFunctions = {
+    buildPocketAdd: function (data) {
+      return '<h3>' + data.title + '</h3>' + '<p>Added to pocket</p>';
+    }, 
 
+    buildGithubPush: function (data) {
+      return '<h3>Pushed to repo ' + data.repoName + '</h3>';
+    }, 
+
+    buildGithubCreate: function (data) {
+      return '<h3>Created repo ' + data.repoName + '</h3>';
+    },
+
+    buildStackoverflowAnswer: function (data) {
+      return '<h3>Answered to ' + data.questionTitle + '</h3>';
+    },
+
+    buildStackoverflowBadge: function (data) {
+      return '<h3>Earned badge ' + data.badgeTitle + '</h3>';
+    }
+  };
+  
   $(function () {
 
     // Manage nav menu button
@@ -403,6 +430,20 @@ A mettre :
         $('.nav-menu').hide();
       }
     });
+
+    // load feed
+    try {
+      $.getJSON('feed.json').then(function(data) {
+        var feedItems = [];
+        data.forEach(function(element) {
+          var typeFunc = 'build' + element.type.charAt(0).toUpperCase() + element.type.slice(1);
+          feedItems.push('<li>' + buildFunctions[typeFunc](element.data) + '</li>');
+        }, this);
+        if(feedItems.length) {
+          $('#js-feed-placeholder').html('<ul>' + feedItems.join('') + '</ul>');
+        }
+      });
+    } catch (e) { }
 
   });
 

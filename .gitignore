@@ -1,7 +1,7 @@
 ### app-specific
-server/feed.json
-server/medium-access-token.js
-server/pocket-access-token.js
+public/feed.json
+feed-builder/medium-access-token.js
+feed-builder/pocket-access-token.js
 
 
 ### npm template

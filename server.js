@@ -3,7 +3,9 @@ const fs = require('fs');
 
 const app = express();
 
-app.get('/feed', function (req, res) {
+app.use(express.static('public'));
+
+/*app.get('/feed', function (req, res) {
 
     fs.readFile('./feed.json', (err, data) => {
         if(err) {
@@ -14,8 +16,8 @@ app.get('/feed', function (req, res) {
         }
 
     })
-});
+});*/
 
 app.listen(3000, function () {
-    console.log('Listening on port 3000!')
+    console.log('Listening on port 3000!');
 });

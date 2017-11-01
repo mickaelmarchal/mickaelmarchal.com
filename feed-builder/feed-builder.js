@@ -27,5 +27,10 @@ getAll().then(results => {
         return b.date.getTime() - a.date.getTime(); 
     });
 
-    fs.writeFileSync('./feed.json', JSON.stringify(concatResults));
+    var filePath = __dirname + '/../public/feed.json';
+    console.log('Writing feed to ' + filePath);
+    
+    fs.writeFileSync(filePath, JSON.stringify(concatResults));
+    
+    console.log('Done!');
 });
