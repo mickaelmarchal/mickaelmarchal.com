@@ -279,7 +279,6 @@ p.cv-overview-cta {
 
 .cv-details {
   background-color: #79caaf;
-/*  background-color: #81CEAD;*/
   color: #fff;
 }
 .cv-details h2 {
@@ -291,21 +290,10 @@ p.cv-overview-cta {
   margin: 0 0 -2px 0;
 }
 
-.cv-details .row {
-/*  background: rgba(255, 255, 255, 0.5);
-  padding: 25px;
-  margin-left: 100px;
-  margin-right: 100px; */
-}
-.cv-details .cv-contact-cta {
-  border: 0;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-  border-radius: 5px;
-}
 
 
-.cv-techs span {
+.cv-techs span,
+.cv-techs a {
   display: inline-block;
   /*background: #ccc;*/
   padding: 1px 7px;
@@ -326,6 +314,12 @@ p.cv-overview-cta {
 }
 
 
+.cv-details .cv-contact-cta {
+  border: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+}
 
 .cv-contact-cta {
   border: 3px solid #05bffc;
@@ -339,3 +333,4 @@ p.cv-overview-cta {
 .cv-contact-cta :last-child {
   margin-bottom: 0;
 }
+

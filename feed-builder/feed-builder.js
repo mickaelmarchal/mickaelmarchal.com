@@ -13,6 +13,20 @@ function getAll() {
 
         // disabled, not usable at the moment
         // medium.medium(),
+
+        //TODO instagram, twitter
+        /*
+        A mettre :
+    - commits Github
+    - questions / réponses Stackoverflow
+    - ajouts Pocket
+    - stars github
+    - favoris / coups de coeur Medium
+    - photos instagram
+    - news custom
+    - limiter à X résultats
+    - pouvoir bloquer un item tout en haut du feed
+*/
     ]);
 }
 

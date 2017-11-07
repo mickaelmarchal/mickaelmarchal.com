@@ -57,10 +57,11 @@
           <p>Premier salarié chez
             <a href="#" data-toggle="modal" data-target="#glg-details">Grand Luxury Group</a> et unique dev durant 5 ans &bull; Conception et réalisation de la platorme e-commerce
             de la société &bull; Optimisation des performances et du taux de conversion &bull; Product Owner et référent
-            métier.</p>
+            métier.
+          </p>
           <p>
             <strong>Aujourd'hui je dirige l'équipe R&amp;D et pilote la stratégie tech de l'entreprise, sans jamais avoir abandonné
-              mon rôle d'architecte et de développeur web full-stack.</strong>
+              mon rôle d'architecte et de développeur full-stack.</strong>
           </p>
 
           <!-- <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
@@ -86,26 +87,32 @@
             <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
             <h2>Une approche complète des projets web.</h2>
             <p>Mon profil hybride me permet de
-              <strong>mettre les technologies les plus performantes au service de la création de valeur et du succès d'un produit</strong>.</p>
+              <strong>mettre les outils les plus performants au service de la création de valeur et du succès d'un produit</strong>.</p>
 
             <p class="cv-techs">Dev Back :
               <span>Symfony 3</span>
               <span>PHP 7</span>
-              <span>NodeJS</span>
-              <span>SQL et NoSQL</span>
+              <span>Express</span>
+              <span>Node.js</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
               <span>
                 <abbr title="Global Distribution System">GDS</abbr> et Booking engine</span>
             </p>
             <p class="cv-techs">Dev Front :
-              <span>Angular 2+</span>
+              <span>Angular 5 + Universal</span>
               <span>Typescript</span>
-              <span>Javascript/ES2016</span>
-              <span>HTML5 + CSS3</span>
+              <span>Javascript/ES2017</span>
+              <span>Sass</span>
               <span>Ionic + Cordova</span>
+              <span>
+                <abbr title="Accelerated Mobile Pages">AMP</abbr>
+              </span>
             </p>
             <p class="cv-techs">Architecture :
               <span>RESTful APIs</span>
-              <span>Microservices</span>
+              <span>Redux</span>
+              <span>Reactive Programming</span>
               <span>
                 <abbr title="Single Page Applications, Progressive Web Apps">SPAs et PWAs</abbr>
               </span>
@@ -119,10 +126,10 @@
             </p>
             <p class="cv-techs">Opérations :
               <span>Docker</span>
+              <span>Google Cloud Platform</span>
               <span>Debian</span>
               <span>Apache</span>
-              <span>MySQL</span>
-              <span>Bash scripting</span>
+              <span>Bash</span>
             </p>
             <p class="cv-techs">Produit et métier :
               <span>UX Design</span>
@@ -158,6 +165,8 @@
         </div>
       </div>
     </div>
+
+
 
 
 
@@ -201,14 +210,16 @@
       </div>
       <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
 
     <div class="container" id="social">
 
-      <h1>Social</h1>
-
       <div class="row">
-        <div class="col-md-4">
+        <div class="col col-md-10">
+
+          <h1>Activité récente</h1>
+          <div id="js-feed-placeholder"></div>
+        </div>
+        <div class="col col-md-2">
           <h3>Github</h3>
           <p>
             <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
@@ -218,9 +229,7 @@
             <li>5 stars</li>
             <li>130 commits</li>
           </ul>
-        </div>
 
-        <div class="col-md-4">
           <h3>StackOverflow</h3>
           <p>
             <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
@@ -231,52 +240,19 @@
               <li>5 stars</li>
               <li>130 commits</li>
           </ul>
-        </div>
 
-        <div class="col-md-4">
           <h3>Medium</h3>
           <p>
             <span class="glyphicon glyphicon-cog"></span>
           </p>
+
         </div>
 
       </div>
 
+    </div>
 
-      <h1>Activité récente:</h1>
-
-      <div id="js-feed-placeholder"></div>
-
-      <pre>
-A mettre :
-    - commits Github
-    - questions / réponses Stackoverflow
-    - ajouts Pocket
-    - stars github
-    - favoris / coups de coeur Medium
-    - photos instagram
-    - news custom
-    - limiter à X résultats
-    - pouvoir bloquer un item tout en haut du feed
-
-    idee design :
-    - webdev.jpg en fond anthracite dans le jublotron
-    - eb bas à droite de la page, et peut etre disséminé partout : ordi, livre code, etc.
-
-    autre idée design
-    - une grille de 6 cases de large, avec pour chacune
-    -- un theme (front dev, back dev, voyage, luxe, etc.)
-    -- une couleur de bg différente
-    -- une explication
-    -- tags technologies
-    -- liens vers les projets réalisés
-
-    -- et pourquoi pas au dessus de cela, des cases à cocher "je recherche un..."
-       (on pourrait les mettre dans la zone verte à la place du texte)
-    -- quand on décoche les cases, ca filtre
-    -- mettre une case avec une blague dedans "je recherche un castor => désolé c'est pas ici"
-  </pre>
-
+    <div class="container" id="resources">
 
 
       <div class="row">
@@ -297,7 +273,7 @@ A mettre :
 
       </div>
 
-      <div class="row" id="resources">
+      <div class="row">
 
         <div class="col-md-6">
           <img src="http://via.placeholder.com/350x200">
@@ -528,15 +504,19 @@ A mettre :
         $.getJSON('feed.json').then(function (data) {
           var feedItems = [];
           data.forEach(function (element) {
-            if (typeof buildFunctions[element.type] != 'undefined') {
-              feedItems.push('<li>' + feedBuilders[element.type](element.data) + '</li>');
+            if (typeof feedBuilders[element.type] != 'undefined') {
+              feedItems.push('<li>'
+                + '<span>' + (new Date(element.date)).toLocaleString() + '</span>'
+                + feedBuilders[element.type](element.data) + '</li>');
             }
           }, this);
           if (feedItems.length) {
             $('#js-feed-placeholder').html('<ul>' + feedItems.join('') + '</ul>');
           }
         });
-      } catch (e) { }
+      } catch (e) {
+        console.log(e);
+      }
 
     });
 
