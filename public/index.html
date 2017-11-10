@@ -25,13 +25,13 @@
     </a>
     <ul class="nav-menu">
       <li>
-        <a href="#cv" id="nav-link-profile">Profil</a>
+        <a href="#profile" class="js-nav-link js-nav-link-profile">Profil</a>
       </li>
       <li>
-        <a href="#social" id="nav-link-social">Social</a>
+        <a href="#social" class="js-nav-link js-nav-link-social">Social</a>
       </li>
       <li>
-        <a href="#resources" id="nav-link-contact">Ressources</a>
+        <a href="#contact" class="js-nav-link js-nav-link-contact">Contact</a>
       </li>
       <li class="language">
         <a href="">English</a>
@@ -47,7 +47,7 @@
 
   <div class="main">
     <div class="container">
-      <div class="row cv-overview" id="cv">
+      <div class="row cv-overview js-nav-profile" id="profile">
         <div class="col-md-5">
           <img src="webdev.jpg" class="cv-overview-image">
         </div>
@@ -211,13 +211,13 @@
       <!-- /.modal-dialog -->
     </div>
 
-    <div class="container" id="social">
+    <div class="container js-nav-social" id="social">
 
       <div class="row">
         <div class="col col-md-10">
 
           <h1>Activité récente</h1>
-          <div id="js-feed-placeholder"></div>
+          <div class="js-feed-placeholder"></div>
         </div>
         <div class="col col-md-2">
           <h3>Github</h3>
@@ -252,7 +252,7 @@
 
     </div>
 
-    <div class="container" id="resources">
+    <div class="container js-nav-contact" id="contact">
 
 
       <div class="row">
@@ -370,8 +370,8 @@
     $(window).resize(function () {
 
       // Get scroll position for sections
-      socialOffset = $("#social").offset().top;
-      contactOffset = $("#resources").offset().top;
+      socialOffset = $(".js-nav-social").first().offset().top;
+      contactOffset = $(".js-nav-contact").first().offset().top;
 
       // Change animation settings and state of nav menu
       if ($(this).width() >= 1120) {
@@ -448,16 +448,16 @@
 
       // 2. Handle hilighting of menu items on scroll
       if (scrollTop > contactOffset - 80) {
-        $('#nav-link-contact').addClass('active');
-        $('#nav-link-profile, #nav-link-social').removeClass('active');
+        $('.js-nav-link').removeClass('active');
+        $('.js-nav-link-contact').addClass('active');
       } else if (scrollTop > socialOffset - 40) {
-        $('#nav-link-social').addClass('active');
-        $('#nav-link-profile, #nav-link-contact').removeClass('active');
+        $('.js-nav-link').removeClass('active');
+        $('.js-nav-link-social').addClass('active');
       } else if (scrollTop > 350) {
-        $('#nav-link-profile').addClass('active');
-        $('#nav-link-social, #nav-link-contact').removeClass('active');
+        $('.js-nav-link').removeClass('active');
+        $('.js-nav-link-profile').addClass('active');
       } else {
-        $('#nav-link-profile, #nav-link-social, #nav-link-contact').removeClass('active');
+        $('.js-nav-link').removeClass('active');
       }
     }).trigger('scroll');
 
@@ -511,7 +511,7 @@
             }
           }, this);
           if (feedItems.length) {
-            $('#js-feed-placeholder').html('<ul>' + feedItems.join('') + '</ul>');
+            $('.js-feed-placeholder').first().html('<ul>' + feedItems.join('') + '</ul>');
           }
         });
       } catch (e) {
