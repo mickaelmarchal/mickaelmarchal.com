@@ -1,3 +1,64 @@
+/***** BOOTSTRAP TYPOGRAPHY/UI OVERRIDES *****/
+
+body {
+  font-size: 16px;
+  line-height: 1.3em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background: #05bffc;
+}
+
+.jumbotron p {
+  margin-bottom: 10px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/*** Buttons with arrows on hover ***/
+.btn-arrow {
+  width: 200px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.btn-arrow span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 200ms;
+}
+.btn-arrow span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 200ms;
+}
+.btn-arrow:hover span,
+.btn-arrow:focus span,
+.btn-arrow:active span {
+  padding-right: 25px;
+}
+.btn-arrow:hover span:after,
+.btn-arrow:focus span:after,
+.btn-arrow:active span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
 
 /***** MAIN NAV *****/
@@ -170,6 +231,9 @@
   }
 }
 
+
+/***** MAIN ZONE *****/
+
 .main {
   margin-top: 150px;
 }
@@ -182,66 +246,6 @@
   .main {
     margin-top: 450px;
   }
-}
-
-/***** BOOTSTRAP TYPOGRAPHY/UI OVERRIDES *****/
-
-body {
-  font-size: 16px;
-  line-height: 1.3em;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-.btn {
-  border-radius: 0;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 10px 20px;
-}
-
-.btn-primary {
-  background: #05bffc;
-}
-
-/*** Buttons with arrows on hover ***/
-.btn-arrow {
-  width: 200px;
-  transition: all 200ms;
-  cursor: pointer;
-}
-.btn-arrow span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 200ms;
-}
-.btn-arrow span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 200ms;
-}
-.btn-arrow:hover span,
-.btn-arrow:focus span,
-.btn-arrow:active span {
-  padding-right: 25px;
-}
-.btn-arrow:hover span:after,
-.btn-arrow:focus span:after,
-.btn-arrow:active span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.jumbotron p {
-  margin-bottom: 10px;
-  font-size: inherit;
-  font-weight: inherit;
 }
 
 
@@ -334,3 +338,91 @@ p.cv-overview-cta {
   margin-bottom: 0;
 }
 
+/***** SECTION: FEED *****/
+
+.feed ul {
+  list-style: none;
+  margin: 0;
+}
+
+.feed .feed-item {
+  margin: 0;
+  padding: 20px 0 20px 40px;
+  border-left: 7px solid #eee;
+  position: relative;
+}
+
+.feed .feed-item .date {
+  margin: 0;
+  font-size: 12px;
+}
+
+.feed .feed-item h3 {
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.feed .feed-item p {
+  font-size: 14px;
+}
+.feed .feed-item p:last-child {
+  margin-bottom: 0;
+}
+
+.feed .feed-item .icon {
+  position: absolute;
+  left: -24px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 7px;
+}
+
+.feed-item.pocket .icon {
+  background-color: #ba3336;
+  padding-top: 10px;
+  font-size: 22px;
+}
+.feed-item.github .icon {
+  background-color: #6a2d82;
+  padding-top: 8px;
+  padding-left: 1px;
+}
+.feed-item.stackoverflow .icon {
+  background-color: #ffa841;
+  padding-top: 7px;
+  font-size: 22px;
+}
+.feed-item.stackoverflow-badge .icon {
+  background-color: #efd662;
+  padding-top: 9px;
+  font-size: 22px;
+}
+
+
+.feed .feed-item {
+  border-left: 2px solid #ddd;
+}
+.feed .feed-item .icon {
+  left: -21px;
+}
+
+
+/*
+.feed-item.pocket {
+  border-color: #ba3336;
+}
+.feed-item.github {
+  border-color: #6a2d82;
+}
+.feed-item.stackoverflow {
+  border-color: #ffa841;
+}
+.feed-item.stackoverflow-badge {
+  border-color: #efd662;
+}*/

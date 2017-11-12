@@ -12,18 +12,19 @@
 
   <title>Mickaël Marchal, CTO + full stack geek</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="css/styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:900|Yanone+Kaffeesatz:700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
 
   <nav class="nav-main">
-    <a class="nav-menu-btn">
-      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    <a class="js-nav-menu-btn nav-menu-btn">
+      <span class="fa fa-bars"></span>
     </a>
-    <ul class="nav-menu">
+    <ul class="js-nav-menu nav-menu">
       <li>
         <a href="#profile" class="js-nav-link js-nav-link-profile">Profil</a>
       </li>
@@ -39,15 +40,16 @@
     </ul>
   </nav>
 
-  <header class="header" id="header">
-    <div class="header-title" id="header-title">
+  <header class="header" id="js-header">
+    <div class="header-title" id="js-header-title">
       <h1>Mickaël Marchal</h1>
     </div>
   </header>
 
   <div class="main">
-    <div class="container">
-      <div class="row cv-overview js-nav-profile" id="profile">
+
+    <div class="cv-overview js-nav-profile container" id="profile">
+      <div class="row" >
         <div class="col-md-5">
           <img src="webdev.jpg" class="cv-overview-image">
         </div>
@@ -64,9 +66,6 @@
               mon rôle d'architecte et de développeur full-stack.</strong>
           </p>
 
-          <!-- <p>Je cherche à élargir mes horizons et relever d'autres défis dans une nouvelle structure.<br />
-      Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
-
           <p class="cv-overview-cta">
             <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal">
               <span>Me contacter</span>
@@ -78,7 +77,7 @@
       </div>
     </div>
 
-    <div class="jumbotron cv-details">
+    <div class="cv-details jumbotron">
       <div class="container">
         <div class="row">
           <div class="col-md-3"></div>
@@ -166,10 +165,6 @@
       </div>
     </div>
 
-
-
-
-
     <div class="modal fade" tabindex="-1" role="dialog" id="glg-details">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -211,13 +206,13 @@
       <!-- /.modal-dialog -->
     </div>
 
-    <div class="container js-nav-social" id="social">
+    <div class="js-nav-social container" id="social">
 
       <div class="row">
         <div class="col col-md-10">
 
           <h1>Activité récente</h1>
-          <div class="js-feed-placeholder"></div>
+          <div class="js-feed-placeholder feed"></div>
         </div>
         <div class="col col-md-2">
           <h3>Github</h3>
@@ -243,7 +238,7 @@
 
           <h3>Medium</h3>
           <p>
-            <span class="glyphicon glyphicon-cog"></span>
+            <span class="fa fa-cog"></span>
           </p>
 
         </div>
@@ -252,7 +247,7 @@
 
     </div>
 
-    <div class="container js-nav-contact" id="contact">
+    <div class="js-nav-contact container" id="contact">
 
 
       <div class="row">
@@ -349,16 +344,16 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js" integrity="sha256-zG8v+NWiZxmjNi+CvUYnZwKtHzFtdO8cAKUIdB8+U9I=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/locale/fr.js" integrity="sha256-DJpVvSniFq7HyHLFi3n3thaGrgI4XiEsDnQwyY3BnIo=" crossorigin="anonymous"></script>
 
   <script>
-    var $header = $('#header'),
+    var $header = $('#js-header'),
       $body = $(document.body),
       $html = $('html'),
-      $headerTitle = $('#header-title'),
-      $headerH1 = $('#header-title h1');
+      $headerTitle = $('#js-header-title'),
+      $headerH1 = $('#js-header-title h1');
 
     // ranges for header animation
     var animateRange = { start: 30, end: 340 },
@@ -383,8 +378,8 @@
         headerH1Scaling = { start: 1, end: 0.2 };
         headerH1Top = { start: -107, end: -107 };
 
-        $('.nav-menu-btn').removeClass('active');
-        $('.nav-menu').show();
+        $('.js-nav-menu-btn').removeClass('active');
+        $('.js-nav-menu').show();
 
       } else if ($(this).width() >= 750) {
         animateRange = { start: 15, end: 200 };
@@ -395,8 +390,8 @@
         headerH1Scaling = { start: 1, end: 0.3 };
         headerH1Top = { start: -72, end: -72 };
 
-        $('.nav-menu-btn').removeClass('active');
-        $('.nav-menu').hide();
+        $('.js-nav-menu-btn').removeClass('active');
+        $('.js-nav-menu').hide();
 
       } else {
         animateRange = { start: 10, end: 120 };
@@ -407,8 +402,8 @@
         headerH1Scaling = { start: 1, end: 0.4 };
         headerH1Top = { start: -45, end: -58 };
 
-        $('.nav-menu-btn').removeClass('active');
-        $('.nav-menu').hide();
+        $('.js-nav-menu-btn').removeClass('active');
+        $('.js-nav-menu').hide();
       }
 
       $(window).trigger('scroll');
@@ -464,38 +459,86 @@
     // Feed builders
     var feedBuilders = {
       pocketAdd: function (data) {
-        return '<h3>' + data.title + '</h3>' + '<p>Added to pocket</p>';
+        
+        var html = '<h3>' + data.title + '</h3>';
+        if(data.excerpt) {
+          html += '<p>' + data.excerpt + '</p>';
+        }
+        if(data.tags.length) {
+          html += '<p>';
+          for(var i = 0; i < data.tags.length; i++) {
+            html += '<span>' + data.tags[i];
+          }
+          html += '</p>';
+        }
+        
+        return {
+          icon: 'get-pocket',
+          className: 'pocket',
+          action: 'added to pocket',
+          html: html
+        };
       },
 
       githubPush: function (data) {
-        return '<h3>Pushed to repo ' + data.repoName + '</h3>';
+
+        var html = '<h3>Pushed to repo ' + data.repoName + '</h3>';
+        for (var i = 0; i < Math.min(3, data.messages.length); i++) {
+          html += '<p>' + data.messages[i] + '</p>';
+        }
+        if (data.messages.length > 3) {
+          html += '<p>and ' + (data.messages.length - 3) + 'more</p>';
+        }
+
+        return {
+          icon: 'github',
+          className: 'github',
+          action: 'pushed ' + data.messages.length + ' commit'
+            + (data.messages.length > 1 ? 's' : '') + ' to github',
+          html: html
+        };
       },
 
       githubCreate: function (data) {
-        return '<h3>Created repo ' + data.repoName + '</h3>';
+        return {
+          icon: 'github',
+          className: 'github',
+          action: 'created github repository',
+          html: '<h3>Created repo ' + data.repoName + '</h3>'
+        };
       },
 
       stackoverflowAnswer: function (data) {
-        return '<h3>Answered to ' + data.questionTitle + '</h3>';
+        return {
+          icon: 'stack-overflow',
+          className: 'stackoverflow',
+          action: 'answered stackoverflow question',
+          html: '<h3>Answered to ' + data.questionTitle + '</h3><p>' + data.answerDescription + '</p>'
+        };
       },
 
       stackoverflowBadge: function (data) {
-        return '<h3>Earned badge ' + data.badgeTitle + '</h3>';
+        return {
+          icon: 'trophy',
+          className: 'stackoverflow-badge',
+          action: 'earned stackoverflow badge',
+          html: '<h3>Earned badge ' + data.badgeTitle + '</h3><p>from stackoverflow</p>'
+        };
       }
     };
 
     $(function () {
 
       // Manage nav menu button
-      $('.nav-menu-btn').click(function (e) {
+      $('.js-nav-menu-btn').click(function (e) {
         e.stopPropagation();
         $(this).addClass('active');
-        $('.nav-menu').show();
+        $('.js-nav-menu').show();
       });
       $(window).click(function () {
-        if ($('.nav-menu-btn:visible').length) {
-          $('.nav-menu-btn').removeClass('active');
-          $('.nav-menu').hide();
+        if ($('.js-nav-menu-btn:visible').length) {
+          $('.js-nav-menu-btn').removeClass('active');
+          $('.js-nav-menu').hide();
         }
       });
 
@@ -505,9 +548,15 @@
           var feedItems = [];
           data.forEach(function (element) {
             if (typeof feedBuilders[element.type] != 'undefined') {
-              feedItems.push('<li>'
-                + '<span>' + (new Date(element.date)).toLocaleString() + '</span>'
-                + feedBuilders[element.type](element.data) + '</li>');
+              feedItem = feedBuilders[element.type](element.data);
+              feedItems.push(
+                '<li class="feed-item '+ feedItem.className +'">'
+                + '<div class="icon"><span class="fa fa-' + feedItem.icon + '"></span></div>'
+                + '<span class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
+                + ' — ' + feedItem.action + '</span>'
+                + feedItem.html
+                + '</li>'
+              );
             }
           }, this);
           if (feedItems.length) {
