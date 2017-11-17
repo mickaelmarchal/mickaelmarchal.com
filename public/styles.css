@@ -7,6 +7,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+h1 {
+  font-size: 75px;
+}
+h2 {
+  font-size: 60px;
+}
 
 .btn {
   border-radius: 0;
@@ -257,10 +263,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .cv-overview h1 {
   margin: 0;
-  font-size: 75px;
 }
-.cv-overview h2 {
+.cv-overview h1 .subtitle {
   margin: -8px 0 40px 0;
+  font-size: 30px;
 }
 
 .cv-overview p {
@@ -286,7 +292,6 @@ p.cv-overview-cta {
   color: #fff;
 }
 .cv-details h2 {
-  font-size: 60px;
   margin: 0 0 20px 0;
 }
 .cv-details h4 {
@@ -355,6 +360,7 @@ p.cv-overview-cta {
 .feed .feed-item .date {
   margin: 0;
   font-size: 12px;
+  color: #777;
 }
 
 .feed .feed-item h3 {
@@ -364,7 +370,7 @@ p.cv-overview-cta {
   font-weight: bold;
 }
 .feed .feed-item p {
-  font-size: 14px;
+  font-size: 13px;
 }
 .feed .feed-item p:last-child {
   margin-bottom: 0;
@@ -403,7 +409,16 @@ p.cv-overview-cta {
   padding-top: 9px;
   font-size: 22px;
 }
-
+.feed-item.medium .icon {
+  background-color: #17b375;
+  padding-top: 9px;
+  font-size: 22px;
+}
+.feed-item.instagram .icon {
+  background-color: #00c;
+  padding-top: 9px;
+  font-size: 22px;
+}
 
 .feed .feed-item {
   border-left: 2px solid #ddd;
@@ -412,17 +427,32 @@ p.cv-overview-cta {
   left: -21px;
 }
 
+.feed-item .instagram-picture {
+  float: left;
+  padding: 0 6px 20px 0;
+}
 
-/*
-.feed-item.pocket {
-  border-color: #ba3336;
+
+/* TODO merge with tags from CV */
+.feed .feed-item p.tags > span {
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 10px 3px 3px 10px;
+  padding: 0 4px;
+  font-size: 10px;
+  color: #333;
+
 }
-.feed-item.github {
-  border-color: #6a2d82;
+
+.feed .feed-item p.commit {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 3px 0 3px 10px;
 }
-.feed-item.stackoverflow {
-  border-color: #ffa841;
+.feed .feed-item p.more {
+  font-size: 10px;
+  line-height: 13px;
+  color: #777;
+  margin: 2px 0 0 10px; 
 }
-.feed-item.stackoverflow-badge {
-  border-color: #efd662;
-}*/
+

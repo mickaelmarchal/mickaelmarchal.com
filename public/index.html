@@ -13,7 +13,7 @@
   <title>Mickaël Marchal, CTO + full stack geek</title>
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:900|Yanone+Kaffeesatz:700" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -29,10 +29,10 @@
         <a href="#profile" class="js-nav-link js-nav-link-profile">Profil</a>
       </li>
       <li>
-        <a href="#social" class="js-nav-link js-nav-link-social">Social</a>
+        <a href="#social" class="js-nav-link js-nav-link-social">Activité</a>
       </li>
       <li>
-        <a href="#contact" class="js-nav-link js-nav-link-contact">Contact</a>
+        <a href="#publications" class="js-nav-link js-nav-link-publications">Publications</a>
       </li>
       <li class="language">
         <a href="">English</a>
@@ -54,8 +54,9 @@
           <img src="webdev.jpg" class="cv-overview-image">
         </div>
         <div class="col-md-7">
-          <h1>CTO + full stack geek</h1>
-          <h2>@Grand Luxury Group.</h2>
+          <h1>CTO + full stack geek
+            <div class="subtitle">@Grand Luxury Group.</div>
+          </h1>
           <p>Premier salarié chez
             <a href="#" data-toggle="modal" data-target="#glg-details">Grand Luxury Group</a> et unique dev durant 5 ans &bull; Conception et réalisation de la platorme e-commerce
             de la société &bull; Optimisation des performances et du taux de conversion &bull; Product Owner et référent
@@ -211,7 +212,7 @@
       <div class="row">
         <div class="col col-md-10">
 
-          <h1>Activité récente</h1>
+          <h2>Activité récente</h2>
           <div class="js-feed-placeholder feed"></div>
         </div>
         <div class="col col-md-2">
@@ -247,21 +248,22 @@
 
     </div>
 
-    <div class="js-nav-contact container" id="contact">
+    <div class="js-nav-publications container" id="publications">
 
+      <h2>Articles &amp; publications</h2>
 
       <div class="row">
 
         <div class="col-md-6">
           <img src="http://via.placeholder.com/350x200">
-          <h2>GL Extranet</h2>
+          <h3>GL Extranet</h3>
           <p>Angular4 Symfony3 PWAs</p>
           <a href="" class="btn">More details</a>
         </div>
 
         <div class="col-md-6">
           <img src="http://via.placeholder.com/350x200">
-          <h2>Google AMP Hackhathon</h2>
+          <h3>Google AMP Hackhathon</h3>
           <p>Angular4 Symfony3 PWAs</p>
           <a href="" class="btn">More details</a>
         </div>
@@ -272,14 +274,14 @@
 
         <div class="col-md-6">
           <img src="http://via.placeholder.com/350x200">
-          <h2>Grand Luxury Hotels</h2>
+          <h3>Grand Luxury Hotels</h3>
           <p>ZendFramework MySQL jQuery CSS3 HTML5 AMP</p>
           <a href="" class="btn">More details</a>
         </div>
 
         <div class="col-md-6">
           <img src="http://via.placeholder.com/350x200">
-          <h2>Grand Luxury E-butler</h2>
+          <h3>Grand Luxury E-butler</h3>
           <p>Ionic Framework Angular1 Cordova</p>
           <a href="" class="btn">More details</a>
         </div>
@@ -360,13 +362,13 @@
       headerHeight,
       headerTitleBottom, headerTitleAngle, headerTitleHeight,
       headerH1Scaling, headerH1Top,
-      socialOffset, contactOffset;
+      socialOffset, publicationsOffset;
 
     $(window).resize(function () {
 
       // Get scroll position for sections
       socialOffset = $(".js-nav-social").first().offset().top;
-      contactOffset = $(".js-nav-contact").first().offset().top;
+      publicationsOffset = $(".js-nav-publications").first().offset().top;
 
       // Change animation settings and state of nav menu
       if ($(this).width() >= 1120) {
@@ -442,9 +444,9 @@
       });
 
       // 2. Handle hilighting of menu items on scroll
-      if (scrollTop > contactOffset - 80) {
+      if (scrollTop > publicationsOffset - 80) {
         $('.js-nav-link').removeClass('active');
-        $('.js-nav-link-contact').addClass('active');
+        $('.js-nav-link-publications').addClass('active');
       } else if (scrollTop > socialOffset - 40) {
         $('.js-nav-link').removeClass('active');
         $('.js-nav-link-social').addClass('active');
@@ -465,9 +467,9 @@
           html += '<p>' + data.excerpt + '</p>';
         }
         if(data.tags.length) {
-          html += '<p>';
+          html += '<p class="tags">';
           for(var i = 0; i < data.tags.length; i++) {
-            html += '<span>' + data.tags[i];
+            html += '<span><span class="fa fa-circle-o"></span> ' + data.tags[i];
           }
           html += '</p>';
         }
@@ -475,26 +477,26 @@
         return {
           icon: 'get-pocket',
           className: 'pocket',
-          action: 'added to pocket',
+          action: 'added bookmark to pocket',
           html: html
         };
       },
 
       githubPush: function (data) {
 
-        var html = '<h3>Pushed to repo ' + data.repoName + '</h3>';
+        var html = '<h3>Pushed to branch ' + data.branch + ' of ' + data.repoName + '</h3>';
         for (var i = 0; i < Math.min(3, data.messages.length); i++) {
-          html += '<p>' + data.messages[i] + '</p>';
+          html += '<p class="commit">' + data.messages[i] + '</p>';
         }
         if (data.messages.length > 3) {
-          html += '<p>and ' + (data.messages.length - 3) + 'more</p>';
+          html += '<p class="more">and ' + (data.messages.length - 3) + ' more</p>';
         }
 
         return {
           icon: 'github',
           className: 'github',
           action: 'pushed ' + data.messages.length + ' commit'
-            + (data.messages.length > 1 ? 's' : '') + ' to github',
+            + (data.messages.length > 1 ? 's' : '') + ' to github.com',
           html: html
         };
       },
@@ -503,7 +505,7 @@
         return {
           icon: 'github',
           className: 'github',
-          action: 'created github repository',
+          action: 'created github.com repository',
           html: '<h3>Created repo ' + data.repoName + '</h3>'
         };
       },
@@ -523,6 +525,31 @@
           className: 'stackoverflow-badge',
           action: 'earned stackoverflow badge',
           html: '<h3>Earned badge ' + data.badgeTitle + '</h3><p>from stackoverflow</p>'
+        };
+      },
+
+      mediumArticle: function (data) {
+        return {
+          icon: 'medium',
+          className: 'medium',
+          action: 'published nex article on medium.com',
+          html: '<h3>' + data.title + '</h3>'
+        };
+      },
+
+      instagramPicture: function (data) {
+
+        var html = '';
+        data.images.forEach((image) => {
+          html += '<div class="instagram-picture"><h3>' + image.location + '</h3>'
+            + '<p><img src="' + image.url + '" width="' + Math.floor(image.width / 2) + '" height="' + Math.floor(image.height / 2) + '" alt="' + (image.location ? image.location : '') + '" /></p></div>';
+        });
+
+        return {
+          icon: 'instagram',
+          className: 'instagram',
+          action: 'posted new instagram picture' + (data.images.length > 1 ? 's':''),
+          html: html + '<div class="clearfix"></div>'
         };
       }
     };
@@ -552,8 +579,8 @@
               feedItems.push(
                 '<li class="feed-item '+ feedItem.className +'">'
                 + '<div class="icon"><span class="fa fa-' + feedItem.icon + '"></span></div>'
-                + '<span class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
-                + ' — ' + feedItem.action + '</span>'
+                + '<div class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
+                + ' — ' + feedItem.action + '</div>'
                 + feedItem.html
                 + '</li>'
               );
@@ -562,6 +589,10 @@
           if (feedItems.length) {
             $('.js-feed-placeholder').first().html('<ul>' + feedItems.join('') + '</ul>');
           }
+
+          // Update scroll position for sections
+          socialOffset = $(".js-nav-social").first().offset().top;
+          publicationsOffset = $(".js-nav-publications").first().offset().top;
         });
       } catch (e) {
         console.log(e);
