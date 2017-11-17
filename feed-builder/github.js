@@ -29,7 +29,7 @@ exports.github = function () {
 
             let item = null;
 
-            // Github push
+            // Github push.
             if(element.type === 'PushEvent') {
                 
                 messages = [];
@@ -43,7 +43,8 @@ exports.github = function () {
                     data: {
                         repoName: element.repo.name,
                         repoUrl: element.repo.url,
-                        messages: messages
+                        branch: element.payload.ref.substr(element.payload.ref.lastIndexOf('/') + 1),
+                        messages: messages,
                     }
                 }
             }

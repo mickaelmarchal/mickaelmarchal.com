@@ -1,6 +1,13 @@
 # mickaelmarchal.com
 My personal website, as seen on [https://www.mickaelmarchal.com](https://www.mickaelmarchal.com).
 
+
+1. install dependencies: `npm install`
+2. generate feed json: `npm run update-feed`
+3. run server: `npm start`
+
+-----
+
 Copyright (c) 2017 by Mickaël Marchal.
 Please not that this project is **NOT free/open source software**, even if the code is publicly accessible.
 

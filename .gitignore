@@ -2,6 +2,8 @@
 public/feed.json
 feed-builder/medium-access-token.js
 feed-builder/pocket-access-token.js
+feed-builder/instagram-access-token.js
+
 public/webdev.jpg
 
 ### npm template

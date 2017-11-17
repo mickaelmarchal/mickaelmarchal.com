@@ -44,27 +44,41 @@ exports.pocket = function () {
             var element = result.list[key];
 
             var tags = [];
+            var allowElement = true;
             if (element.tags) {
                 Object.keys(element.tags).forEach((tagKey) => {
                     var tag = element.tags[tagKey];
                     tags.push(tag.tag);
+
+                    // only allow some tags
+                    if(! tag.tag.startsWith('dev-')
+                        && ! tag.tag.startsWith('frontend-')
+                        && ! tag.tag.startsWith('front-')
+                        && ! tag.tag.startsWith('back-')
+                        && ! tag.tag.startsWith('pro-')
+                        && ! tag.tag.startsWith('ops-')
+                    ) {
+                        allowElement = false;
+                    }
                 });
             }
 
-            item = {
-                type: 'pocketAdd',
-                date: new Date(element.time_added * 1000),
-                data: {
-                    title: element.resolved_title ? element.resolved_title : element.given_title,
-                    url: element.resolved_url ? element.resolved_url : element.given_url,
-                    excerpt: element.excerpt && element.excerpt.length >= 20 ? element.excerpt : null,
-                    imageUrl: element.image && element.image.src ? element.image.src : null,
-                    tags: tags
-                }
-            };
+            if(allowElement && tags.length) {
+                item = {
+                    type: 'pocketAdd',
+                    date: new Date(element.time_added * 1000),
+                    data: {
+                        title: element.resolved_title ? element.resolved_title : element.given_title,
+                        url: element.resolved_url ? element.resolved_url : element.given_url,
+                        excerpt: element.excerpt && element.excerpt.length >= 20 ? element.excerpt : null,
+                        imageUrl: element.image && element.image.src ? element.image.src : null,
+                        tags: tags
+                    }
+                };
 
-            if(item && item.data.title.length >= 5 && item.data.url.length >= 10) {
-                feed.push(item);
+                if(item && item.data.title.length >= 5 && item.data.url.length >= 10) {
+                    feed.push(item);
+                }
             }
 
         });
