@@ -541,7 +541,7 @@
 
         var html = '';
         data.images.forEach((image) => {
-          html += '<div class="instagram-picture"><h3>' + image.location + '</h3>'
+          html += '<div class="instagram-picture">' + (image.location ? '<h3>' + image.location + '</h3>' : '')
             + '<p><img src="' + image.url + '" width="' + Math.floor(image.width / 2) + '" height="' + Math.floor(image.height / 2) + '" alt="' + (image.location ? image.location : '') + '" /></p></div>';
         });
 
