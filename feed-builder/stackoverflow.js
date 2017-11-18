@@ -1,4 +1,5 @@
 var request = require('request');
+var config = require('../server-config').config.feed.stackoverflow;
 
 /**
  * Get profile info from stackoverflow
@@ -7,7 +8,7 @@ exports.stackoverflow = function () {
 
     const options = {
         method: 'GET',
-        uri: 'https://api.stackexchange.com/2.2/users/8545056/network-activity',
+        uri: 'https://api.stackexchange.com/2.2/users/' + config.userId + '/network-activity',
         gzip: true,
         headers: {
             accept: 'application/json',

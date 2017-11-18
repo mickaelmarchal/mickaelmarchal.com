@@ -1,4 +1,5 @@
 var request = require('request');
+var config = require('../server-config').config.feed.github;
 
 /**
  * Get profile info from github
@@ -7,7 +8,7 @@ exports.github = function () {
 
     const options = {
         method: 'GET',
-        uri: 'https://api.github.com/users/mickaelmarchal/events',
+        uri: 'https://api.github.com/users/' + config.username +'/events',
         gzip: true,
         headers: {
             accept: 'application/json',

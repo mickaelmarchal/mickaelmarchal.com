@@ -1,4 +1,5 @@
 var Feed = require('rss-to-json');
+var config = require('../server-config').config.feed.medium;
 
 /**
  * Get last articles info from medium
@@ -37,7 +38,7 @@ exports.medium = function () {
 
     return new Promise((resolve, reject) => {
         
-        Feed.load('https://medium.com/feed/@mickaelmarchal', function(error, rss) {
+        Feed.load('https://medium.com/feed/@' + config.username, function(error, rss) {
             if(error) {
                 reject(error);
             } else {         

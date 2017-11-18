@@ -1,11 +1,5 @@
 var request = require('request');
-
-/**
- * To use, create a pocket-access-token.js file in the same directory
- * with the following content:
- * exports.token = 'YOUR_POCKET_API_ACCESS_TOKEN_HERE';
- */
-var accessToken = require('./pocket-access-token');
+var config = require('../server-config').config.feed.pocket;
 
 
 /**
@@ -20,14 +14,12 @@ exports.pocket = function () {
             "content-type": "application/x-www-form-urlencoded"
         },
         form: {
-            consumer_key : "71958-8f110d43eefe00ddc4ee3a92",
-            access_token : accessToken.token,
-            state        : 'unread',
+            consumer_key: config.consumerKey,
+            access_token: config.accessToken,
+            state: 'unread',
             count: 20,
             sort: "newest",
-            detailType: "complete",
-            // TODO enable this once cleaning in pocket is done :)
-            // favorite: 1
+            detailType: "complete"
         }
     };
 

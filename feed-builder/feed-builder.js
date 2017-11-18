@@ -4,6 +4,7 @@ const stackoverflow = require('./stackoverflow');
 const medium = require('./medium-rss');
 const pocket = require('./pocket');
 const instagram = require('./instagram');
+var config = require('../server-config').config.feed;
 
 function getAll() {
     return Promise.all([
@@ -46,6 +47,7 @@ function mergeGithub(items) {
         } else {
             if(lastItem) {
                 mergedItems.push(lastItem);
+                lastItem = null;
             }
             if(item.type != 'githubPush') {
                 mergedItems.push(item);
@@ -81,7 +83,7 @@ getAll().then(results => {
     feed = mergeGithub(feed);
 
     // only keep the 20 most recent enties
-    feed = feed.slice(0, 20);
+    feed = feed.slice(0, config.maxElements);
 
 
     var filePath = __dirname + '/../public/feed.json';

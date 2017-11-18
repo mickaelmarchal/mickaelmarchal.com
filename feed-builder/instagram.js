@@ -1,16 +1,5 @@
 var request = require('request');
-
-
-https://api.instagram.com/oauth/authorize/?client_id=9b4e4d243e174cefbafaf54427e7c075&redirect_uri=localhost&response_type=code
-
-/**
- * To use:
- * - create a instagram-access-token.js file in the same directory
- * - go to /instagram-auth, login to your account and get the token 
- * - past the following content in instagram-access-token.js :
- * exports.token = 'YOUR_INSTAGRAM_API_ACCESS_TOKEN_HERE';
- */
-var accessToken = require('./instagram-access-token');
+var config = require('../server-config').config.feed.instagram;
 
 /**
  * Get latest pictures from instagram
@@ -19,7 +8,7 @@ exports.instagram = function () {
 
     const options = {
         method: 'GET',
-        uri: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + accessToken.token,
+        uri: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + config.accessToken,
         gzip: true,
         headers: {
             accept: 'application/json',
