@@ -216,31 +216,83 @@
           <div class="js-feed-placeholder feed"></div>
         </div>
         <div class="col col-md-2">
-          <h3>Github</h3>
-          <p>
-            <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
-          </p>
-          <ul>
-            <li>10 repositories</li>
-            <li>5 stars</li>
-            <li>130 commits</li>
-          </ul>
 
-          <h3>StackOverflow</h3>
-          <p>
-            <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
-          </p>
-          <ul>
-            <li>16rep
-              <li>5 answers repositories</li>
+          <div class="feed-source">
+            <label for="js-feed-filter-github">
+              <input type="checkbox" class="feed-filter" id="js-feed-filter-github" checked />
+              <div class="feed-icon github"><span class="fa fa-github"></span></div>  
+              <h3>Github</h3>
+              <p>
+                <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
+              </p>
+            </label>
+            <ul>
+              <li>10 repositories</li>
               <li>5 stars</li>
               <li>130 commits</li>
-          </ul>
+           </ul>
+          </div>
 
-          <h3>Medium</h3>
-          <p>
-            <span class="fa fa-cog"></span>
-          </p>
+          <div class="feed-source">
+            <label for="js-feed-filter-stackoverflow">
+              <input type="checkbox" class="feed-filter" id="js-feed-filter-stackoverflow" checked />
+              <div class="feed-icon stackoverflow"><span class="fa fa-stack-overflow"></span></div>
+              <h3>StackOverflow</h3>
+              <p>
+                <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
+              </p>
+            </label>
+            <ul>
+              <li>16 reputation</li>
+              <li>5 answers</li>
+              <li>5 badges earned</li>
+            </ul>
+          </div>
+
+          <div class="feed-source">
+            <label for="js-feed-filter-medium">
+              <input type="checkbox" class="feed-filter" id="js-feed-filter-medium" checked />
+              <div class="feed-icon medium"><span class="fa fa-medium"></span></div>            
+              <h3>Medium</h3>
+              <p>
+                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
+              </p>
+            </label>
+            <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>
+          </div>
+
+          <div class="feed-source">
+            <label for="js-feed-filter-instagram">
+              <input type="checkbox" class="feed-filter" id="js-feed-filter-instagram" checked />
+              <div class="feed-icon instagram"><span class="fa fa-instagram"></span></div>            
+              <h3>Instagram</h3>
+              <p>
+                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
+              </p>
+            </label>
+            <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>
+          </div>
+
+          <div class="feed-source">
+            <label for="js-feed-filter-pocket">
+              <input type="checkbox" class="feed-filter" id="js-feed-filter-pocket" checked />
+              <div class="feed-icon pocket"><span class="fa fa-get-pocket"></span></div>            
+              <h3>Pocket</h3>
+              <p>
+                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
+              </p>
+            </label>
+            <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>
+          </div>
 
         </div>
 
@@ -577,8 +629,8 @@
             if (typeof feedBuilders[element.type] != 'undefined') {
               feedItem = feedBuilders[element.type](element.data);
               feedItems.push(
-                '<li class="feed-item '+ feedItem.className +'">'
-                + '<div class="icon"><span class="fa fa-' + feedItem.icon + '"></span></div>'
+                '<li class="feed-item">'
+                + '<div class="feed-icon '+ feedItem.className +'"><span class="fa fa-' + feedItem.icon + '"></span></div>'
                 + '<div class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
                 + ' — ' + feedItem.action + '</div>'
                 + feedItem.html

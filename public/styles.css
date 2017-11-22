@@ -350,91 +350,38 @@ p.cv-overview-cta {
   margin: 0;
 }
 
-.feed .feed-item {
+.feed-item {
   margin: 0;
   padding: 20px 0 20px 40px;
-  border-left: 7px solid #eee;
   position: relative;
+  border-left: 2px solid #ddd;
 }
 
-.feed .feed-item .date {
+.feed-item .date {
   margin: 0;
   font-size: 12px;
   color: #777;
 }
 
-.feed .feed-item h3 {
+.feed-item h3 {
   margin: 0;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: bold;
 }
-.feed .feed-item p {
+.feed-item p {
   font-size: 13px;
 }
-.feed .feed-item p:last-child {
+.feed-item p:last-child {
   margin-bottom: 0;
 }
-
-.feed .feed-item .icon {
-  position: absolute;
-  left: -24px;
-  top: 30px;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  color: #fff;
-  text-align: center;
-  font-size: 25px;
-  padding-top: 7px;
-}
-
-.feed-item.pocket .icon {
-  background-color: #ba3336;
-  padding-top: 10px;
-  font-size: 22px;
-}
-.feed-item.github .icon {
-  background-color: #6a2d82;
-  padding-top: 8px;
-  padding-left: 1px;
-}
-.feed-item.stackoverflow .icon {
-  background-color: #ffa841;
-  padding-top: 7px;
-  font-size: 22px;
-}
-.feed-item.stackoverflow-badge .icon {
-  background-color: #efd662;
-  padding-top: 9px;
-  font-size: 22px;
-}
-.feed-item.medium .icon {
-  background-color: #17b375;
-  padding-top: 9px;
-  font-size: 22px;
-}
-.feed-item.instagram .icon {
-  background-color: #00c;
-  padding-top: 9px;
-  font-size: 22px;
-}
-
-.feed .feed-item {
-  border-left: 2px solid #ddd;
-}
-.feed .feed-item .icon {
-  left: -21px;
-}
-
 .feed-item .instagram-picture {
   float: left;
   padding: 0 6px 20px 0;
 }
 
-
 /* TODO merge with tags from CV */
-.feed .feed-item p.tags > span {
+.feed-item p.tags > span {
   display: inline-block;
   border: 1px solid #333;
   border-radius: 10px 3px 3px 10px;
@@ -444,15 +391,95 @@ p.cv-overview-cta {
 
 }
 
-.feed .feed-item p.commit {
+.feed-item p.commit {
   font-size: 12px;
   line-height: 16px;
   margin: 3px 0 3px 10px;
 }
-.feed .feed-item p.more {
+.feed-item p.more {
   font-size: 10px;
   line-height: 13px;
   color: #777;
   margin: 2px 0 0 10px; 
 }
 
+
+
+.feed-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+.feed-item .feed-icon {
+  position: absolute;
+  left: -21px;
+  top: 30px;
+}
+.feed-icon.pocket {
+  background-color: #ba3336;
+  padding-top: 10px;
+}
+.feed-icon.github {
+  background-color: #6a2d82;
+  padding-top: 8px;
+  font-size: 25px;
+}
+.feed-icon.stackoverflow {
+  background-color: #ffa841;
+  padding-top: 8px;
+  font-size: 20px;
+}
+.feed-icon.stackoverflow-badge {
+  background-color: #efd662;
+  padding-top: 9px;
+}
+.feed-icon.medium {
+  background-color: #17b375;
+  padding-top: 9px;
+}
+.feed-icon.instagram {
+  background-color: #00c;
+  padding-top: 9px;
+}
+
+.feed-source {
+  margin-bottom: 30px;
+}
+.feed-source:first-child {
+  margin-top: 130px;
+}
+
+.feed-source .feed-icon {
+  float: left;
+  margin-top: 3px;
+}
+.feed-source h3,
+.feed-source p {
+  margin: 0;
+  padding: 0 0 0 73px;
+}
+
+.feed-source p {
+  font-size: 13px;
+  line-height: 1.1em;
+  margin: 3px 0 10px;
+}
+
+input[type=checkbox].feed-filter {
+  display: block;
+  float: left;
+  margin: 15px 10px 0 0;
+}
+
+.feed-source ul {
+  list-style: square;
+  margin: 0;
+  padding-left: 65px;
+}
+.feed-source li {
+  padding-left: 8px;
+  font-size: 12px;
+}
