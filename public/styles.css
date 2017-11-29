@@ -11,6 +11,7 @@ h1 {
   font-size: 75px;
 }
 h2 {
+  margin: 50px 0 30px 0;
   font-size: 60px;
 }
 
@@ -298,7 +299,9 @@ p.cv-overview-cta {
   font-size: 28px;
   margin: 0 0 -2px 0;
 }
-
+.cv-details .subtitle {
+  margin: -12px 0 28px 0;
+}
 
 
 .cv-techs span,
@@ -328,6 +331,7 @@ p.cv-overview-cta {
   background: rgba(255, 255, 255, 0.8);
   padding: 15px;
   border-radius: 5px;
+  margin-top: 38px;
 }
 
 .cv-contact-cta {
@@ -379,7 +383,16 @@ p.cv-overview-cta {
   float: left;
   padding: 0 6px 20px 0;
 }
-
+.feed-item .instagram-picture h3 {
+  margin-bottom: 3px;
+}
+.feed-item .location {
+  display: inline-block;
+  margin-left: 20px;
+  color: #aaa;
+  font-size: 14px;
+  font-weight: normal;
+}
 /* TODO merge with tags from CV */
 .feed-item p.tags > span {
   display: inline-block;
@@ -445,11 +458,36 @@ p.cv-overview-cta {
   padding-top: 9px;
 }
 
+.feed-end {
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  background-color: #ddd;
+  position: relative;
+  left: -4px;
+}
+
+
+
+.feed-show-all,
+.feed-show-all:hover {
+  display: inline-block;
+  background: #ddd;
+  padding: 2px 20px;
+  border-radius: 4px;
+  color: #666;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.feed-source-title {
+  margin-top: 83px;
+  margin-bottom: 15px;
+}
+
+
 .feed-source {
   margin-bottom: 30px;
-}
-.feed-source:first-child {
-  margin-top: 130px;
 }
 
 .feed-source .feed-icon {
@@ -459,19 +497,13 @@ p.cv-overview-cta {
 .feed-source h3,
 .feed-source p {
   margin: 0;
-  padding: 0 0 0 73px;
+  padding: 0 0 0 55px;
 }
 
 .feed-source p {
   font-size: 13px;
   line-height: 1.1em;
   margin: 3px 0 10px;
-}
-
-input[type=checkbox].feed-filter {
-  display: block;
-  float: left;
-  margin: 15px 10px 0 0;
 }
 
 .feed-source ul {
@@ -482,4 +514,18 @@ input[type=checkbox].feed-filter {
 .feed-source li {
   padding-left: 8px;
   font-size: 12px;
+}
+
+
+/***** FOOTER *****/
+footer {
+  margin-bottom: 20px;
+}
+.legal-terms {
+  font-size: 12px;
+  margin: 20px;
+}
+.legal-terms p {
+  line-height: 1.1em;
+  margin: 0.8em;  
 }

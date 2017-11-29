@@ -12,6 +12,14 @@
 
   <title>Mickaël Marchal, CTO + full stack geek</title>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-286065-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-286065-2', { 'anonymize_ip': true });
+  </script>
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:900|Yanone+Kaffeesatz:700" rel="stylesheet">
@@ -29,10 +37,10 @@
         <a href="#profile" class="js-nav-link js-nav-link-profile">Profil</a>
       </li>
       <li>
-        <a href="#social" class="js-nav-link js-nav-link-social">Activité</a>
-      </li>
-      <li>
         <a href="#publications" class="js-nav-link js-nav-link-publications">Publications</a>
+      </li>  
+      <li>
+        <a href="#social" class="js-nav-link js-nav-link-social">Activité</a>
       </li>
       <li class="language">
         <a href="">English</a>
@@ -86,7 +94,7 @@
           <div class="col-md-9">
             <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
             <h2>Une approche complète des projets web.</h2>
-            <p>Mon profil hybride me permet de
+            <p class="subtitle">Mon profil hybride me permet de
               <strong>mettre les outils les plus performants au service de la création de valeur et du succès d'un produit</strong>.</p>
 
             <p class="cv-techs">Dev Back :
@@ -207,101 +215,9 @@
       <!-- /.modal-dialog -->
     </div>
 
-    <div class="js-nav-social container" id="social">
-
-      <div class="row">
-        <div class="col col-md-10">
-
-          <h2>Activité récente</h2>
-          <div class="js-feed-placeholder feed"></div>
-        </div>
-        <div class="col col-md-2">
-
-          <div class="feed-source">
-            <label for="js-feed-filter-github">
-              <input type="checkbox" class="feed-filter" id="js-feed-filter-github" checked />
-              <div class="feed-icon github"><span class="fa fa-github"></span></div>  
-              <h3>Github</h3>
-              <p>
-                <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
-              </p>
-            </label>
-            <ul>
-              <li>10 repositories</li>
-              <li>5 stars</li>
-              <li>130 commits</li>
-           </ul>
-          </div>
-
-          <div class="feed-source">
-            <label for="js-feed-filter-stackoverflow">
-              <input type="checkbox" class="feed-filter" id="js-feed-filter-stackoverflow" checked />
-              <div class="feed-icon stackoverflow"><span class="fa fa-stack-overflow"></span></div>
-              <h3>StackOverflow</h3>
-              <p>
-                <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
-              </p>
-            </label>
-            <ul>
-              <li>16 reputation</li>
-              <li>5 answers</li>
-              <li>5 badges earned</li>
-            </ul>
-          </div>
-
-          <div class="feed-source">
-            <label for="js-feed-filter-medium">
-              <input type="checkbox" class="feed-filter" id="js-feed-filter-medium" checked />
-              <div class="feed-icon medium"><span class="fa fa-medium"></span></div>            
-              <h3>Medium</h3>
-              <p>
-                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
-              </p>
-            </label>
-            <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>
-          </div>
-
-          <div class="feed-source">
-            <label for="js-feed-filter-instagram">
-              <input type="checkbox" class="feed-filter" id="js-feed-filter-instagram" checked />
-              <div class="feed-icon instagram"><span class="fa fa-instagram"></span></div>            
-              <h3>Instagram</h3>
-              <p>
-                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
-              </p>
-            </label>
-            <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>
-          </div>
-
-          <div class="feed-source">
-            <label for="js-feed-filter-pocket">
-              <input type="checkbox" class="feed-filter" id="js-feed-filter-pocket" checked />
-              <div class="feed-icon pocket"><span class="fa fa-get-pocket"></span></div>            
-              <h3>Pocket</h3>
-              <p>
-                <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
-              </p>
-            </label>
-            <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
 
     <div class="js-nav-publications container" id="publications">
-
+        
       <h2>Articles &amp; publications</h2>
 
       <div class="row">
@@ -341,6 +257,88 @@
       </div>
 
     </div>
+        
+    <hr />
+
+    <div class="js-nav-social container" id="social">
+
+      <div class="row">
+        <div class="col col-md-10">
+
+          <h2>Activité récente</h2>
+          <div class="js-feed-placeholder feed"></div>
+        </div>
+        <div class="col col-md-2">
+
+          <h3 class="feed-source-title">Retrouvez-moi sur...</h3>
+
+          <div class="feed-source">
+            <div class="feed-icon medium"><span class="fa fa-medium"></span></div>            
+            <h3>Medium</h3>
+            <p>
+              <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
+            </p>
+            <!-- <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>-->
+          </div>
+
+          <div class="feed-source">
+            <div class="feed-icon github"><span class="fa fa-github"></span></div>  
+            <h3>Github</h3>
+            <p>
+              <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
+            </p>
+            <!-- <ul>
+              <li>10 repositories</li>
+              <li>5 stars</li>
+              <li>130 commits</li>
+           </ul>-->
+          </div>
+
+          <div class="feed-source">
+            <div class="feed-icon instagram"><span class="fa fa-instagram"></span></div>            
+            <h3>Instagram</h3>
+            <p>
+              <a href="https://www.instagram.com/mickamarchal/">@mickamarchal</a>
+            </p>
+            <!-- <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>-->
+          </div>
+
+          <div class="feed-source">
+            <div class="feed-icon pocket"><span class="fa fa-get-pocket"></span></div>            
+            <h3>Pocket</h3>
+            <p>
+              <a href="https://getpocket.com/@mickaelmarchal">@mickaelmarchal</a>
+            </p>
+            <!-- <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul> -->
+          </div>
+
+          <div class="feed-source">
+            <div class="feed-icon stackoverflow"><span class="fa fa-stack-overflow"></span></div>
+            <h3>StackOverflow</h3>
+            <p>
+              <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
+            </p>
+            <!-- <ul>
+              <li>16 reputation</li>
+              <li>5 answers</li>
+              <li>5 badges earned</li>
+            </ul> -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title">
       <div class="modal-dialog" role="document">
@@ -360,15 +358,15 @@
 
               <p>
                 <label for="name">Votre nom</label>
-                <input type="text" name="name" id="name" required />
+                <input type="text" name="name" id="name" required placeholder="Elon Musk" />
               </p>
               <p>
                 <label for="email">Votre e-mail</label>
-                <input type="email" name="email" id="email" required />
+                <input type="email" name="email" id="email" required placeholder="elon@space-x.com" />
               </p>
               <p>
                 <label for="message">Message</label>
-                <textarea name="message" id="message" required></textarea>
+                <textarea name="message" id="message" required placeholder="Votre message ici"></textarea>
               </p>
               <p>
                 <button type="submit">Envoyer</button>
@@ -391,7 +389,17 @@
 
     <div class="container">
       <footer>
-        <p>&copy; 2001-2017 Mickaël Marchal. Tous droits réservés.</p>
+        <p>&copy; 2001-2017 Mickaël Marchal. Tous droits réservés. &mdash; <a id="js-show-legal-terms" href="#legal-terms">Mentions légales</a></p>
+        <div class="legal-terms hidden" id="legal-terms">
+          <p>Site hébergé par Gandi.net - 63-65 boulevard Masséna 75013 Paris - Tel +33 (0) 1 70.37.76.61</p>
+          <p>Ce site utilise les projets open-source
+            <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>,
+            <a href="http://fontawesome.io" rel="nofollow">Font Awesome</a>,
+            <a href="https://jquery.com" rel="nofollow">jQuery</a>,
+            <a href="https://momentjs.com" rel="nofollow">moment.js</a>,
+            <a href="https://piwik.org" rel="nofollow">Piwik</a>.
+          </p>
+        </div>  
       </footer>
     </div>
 
@@ -496,12 +504,12 @@
       });
 
       // 2. Handle hilighting of menu items on scroll
-      if (scrollTop > publicationsOffset - 80) {
-        $('.js-nav-link').removeClass('active');
-        $('.js-nav-link-publications').addClass('active');
-      } else if (scrollTop > socialOffset - 40) {
+      if (scrollTop > socialOffset - 40) {
         $('.js-nav-link').removeClass('active');
         $('.js-nav-link-social').addClass('active');
+      } else if (scrollTop > publicationsOffset - 80) {
+        $('.js-nav-link').removeClass('active');
+        $('.js-nav-link-publications').addClass('active');
       } else if (scrollTop > 350) {
         $('.js-nav-link').removeClass('active');
         $('.js-nav-link-profile').addClass('active');
@@ -529,26 +537,26 @@
         return {
           icon: 'get-pocket',
           className: 'pocket',
-          action: 'added bookmark to pocket',
+          action: 'marque-page ajouté à pocket',
           html: html
         };
       },
 
       githubPush: function (data) {
 
-        var html = '<h3>Pushed to branch ' + data.branch + ' of ' + data.repoName + '</h3>';
+        var html = '<h3>Push dans la branche ' + data.branch + ' de ' + data.repoName + '</h3>';
         for (var i = 0; i < Math.min(3, data.messages.length); i++) {
           html += '<p class="commit">' + data.messages[i] + '</p>';
         }
         if (data.messages.length > 3) {
-          html += '<p class="more">and ' + (data.messages.length - 3) + ' more</p>';
+          html += '<p class="more">…et ' + (data.messages.length - 3) + ' de plus.</p>';
         }
 
         return {
           icon: 'github',
           className: 'github',
-          action: 'pushed ' + data.messages.length + ' commit'
-            + (data.messages.length > 1 ? 's' : '') + ' to github.com',
+          action: 'push de ' + data.messages.length + ' commit'
+            + (data.messages.length > 1 ? 's' : '') + ' sur github.com',
           html: html
         };
       },
@@ -557,8 +565,8 @@
         return {
           icon: 'github',
           className: 'github',
-          action: 'created github.com repository',
-          html: '<h3>Created repo ' + data.repoName + '</h3>'
+          action: 'dépôt github.com crée',
+          html: '<h3>Dépôt ' + data.repoName + ' crée</h3>'
         };
       },
 
@@ -566,8 +574,8 @@
         return {
           icon: 'stack-overflow',
           className: 'stackoverflow',
-          action: 'answered stackoverflow question',
-          html: '<h3>Answered to ' + data.questionTitle + '</h3><p>' + data.answerDescription + '</p>'
+          action: 'réponse à une question stackoverflow',
+          html: '<h3>Réponse à "' + data.questionTitle + '"</h3><p>' + data.answerDescription + '</p>'
         };
       },
 
@@ -575,8 +583,8 @@
         return {
           icon: 'trophy',
           className: 'stackoverflow-badge',
-          action: 'earned stackoverflow badge',
-          html: '<h3>Earned badge ' + data.badgeTitle + '</h3><p>from stackoverflow</p>'
+          action: 'badge stackoverflow obtenu',
+          html: '<h3>Bagde "' + data.badgeTitle + '" obtenu</h3><p>sur stackoverflow</p>'
         };
       },
 
@@ -584,7 +592,7 @@
         return {
           icon: 'medium',
           className: 'medium',
-          action: 'published nex article on medium.com',
+          action: 'nouvel article publié sur medium.com',
           html: '<h3>' + data.title + '</h3>'
         };
       },
@@ -593,14 +601,28 @@
 
         var html = '';
         data.images.forEach((image) => {
-          html += '<div class="instagram-picture">' + (image.location ? '<h3>' + image.location + '</h3>' : '')
+          
+          var title = '';
+          if(image.title) {
+            title = image.title;
+            if(image.location) {
+              title += '<span class="location"><i class="fa fa-map-marker"></i> ' + image.location + '</span>';
+            }
+          } else if (image.location) {
+            title = image.location;
+          }
+          if(title) {
+            title = '<h3>' + title + '</h3>';
+          }
+        
+          html += '<div class="instagram-picture">' + title
             + '<p><img src="' + image.url + '" width="' + Math.floor(image.width / 2) + '" height="' + Math.floor(image.height / 2) + '" alt="' + (image.location ? image.location : '') + '" /></p></div>';
         });
 
         return {
           icon: 'instagram',
           className: 'instagram',
-          action: 'posted new instagram picture' + (data.images.length > 1 ? 's':''),
+          action: 'photo' + (data.images.length > 1 ? 's':'') + ' publiée' + (data.images.length > 1 ? 's':'') + ' sur instagram',
           html: html + '<div class="clearfix"></div>'
         };
       }
@@ -629,7 +651,7 @@
             if (typeof feedBuilders[element.type] != 'undefined') {
               feedItem = feedBuilders[element.type](element.data);
               feedItems.push(
-                '<li class="feed-item">'
+                '<li class="feed-item js-feed-item">'
                 + '<div class="feed-icon '+ feedItem.className +'"><span class="fa fa-' + feedItem.icon + '"></span></div>'
                 + '<div class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
                 + ' — ' + feedItem.action + '</div>'
@@ -639,7 +661,16 @@
             }
           }, this);
           if (feedItems.length) {
-            $('.js-feed-placeholder').first().html('<ul>' + feedItems.join('') + '</ul>');
+            $('.js-feed-placeholder').first().html('<ul><li class="feed-end"></li>'
+              + feedItems.join('') + '<li class="feed-end hidden"></li></ul><a id="js-feed-show-all" class="feed-show-all">Afficher plus...</a>');
+            $('.js-feed-item').slice(15).hide();
+
+            // show all feed entries
+            $("#js-feed-show-all").click(function() {
+              $('.js-feed-item').show();
+              $('.feed-end').removeClass('hidden');
+              $(this).hide();
+            });
           }
 
           // Update scroll position for sections
@@ -650,6 +681,10 @@
         console.log(e);
       }
 
+      $("#js-show-legal-terms").click(function(e) {
+        $(".legal-terms").toggleClass('hidden');
+      });
+      $(".legal-terms").addClass('hidden');
     });
 
   </script>
