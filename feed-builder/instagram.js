@@ -37,6 +37,7 @@ exports.instagram = function () {
             // new element is less than 72hr before previous one : group them
             if(firstTimestamp && firstTimestamp - elementTimestamp < (86400*3)) {
                 item.data.images.push({
+                    title: element.caption ? (element.caption.text ? element.caption.text : null) : null,
                     url: element.images.standard_resolution.url,
                     width: element.images.standard_resolution.width,
                     height: element.images.standard_resolution.height,
@@ -53,6 +54,7 @@ exports.instagram = function () {
                     date: new Date(element.created_time * 1000),
                     data: {
                         images: [{
+                            title: element.caption ? (element.caption.text ? element.caption.text : null) : null,
                             url: element.images.standard_resolution.url,
                             width: element.images.standard_resolution.width,
                             height: element.images.standard_resolution.height,

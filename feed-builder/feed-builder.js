@@ -83,7 +83,7 @@ getAll().then(results => {
     // merge contiguous items of the same type in one item
     feed = mergeGithub(feed);
 
-    // only keep the 20 most recent enties
+    // only keep the most recent entries
     feed = feed.slice(0, config.maxElements);
 
 
