@@ -7,6 +7,14 @@ exports.config = {
         baseUrl: 'http://localhost:3000'
     },
 
+    gmailSend: {
+        user: 'username@gmail.com',
+        pass: 'abcdefghijklmnop',
+        to:   'username@gmail.com',
+        subject: 'Message',
+    },
+
+
     feed: {
 
         maxElements: 100,

@@ -2,13 +2,50 @@ const express = require('express');
 const fs = require('fs');
 const request = require('request');
 var config = require('./server-config').config;
+var bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.use(express.static('public'));
 
+/**
+ * Callback for contact form
+ */
+app.post('/send-message', function(req, res) {
+    
+    var send = require('gmail-send')(config.gmailSend);
+    var text = 
+        'Name:  ' + req.body.name + "\n"
+        + 'Email: ' + req.body.email + "\n"
+        + 'Message: ' + "\n----------------------------------\n"
+        + req.body.message + "\n----------------------------------\n";
+    
+    send({text: text}, function (err, result) {
+        var isXhr = req.headers['x-requested-with'] === "XMLHttpRequest";
+        if(err) {
+            console.log('Error when sending email:' + err);
+            if(isXhr) {
+                res.json({success: false});                
+            } else {
+                res.send('<h1>An error has occurred</h1><p>Your message could not be sent.</p><p><a href="/">Back</a></p>');
+            }
+        } else {
+            if(isXhr) {
+                res.json({success: true});                
+            } else {
+                res.send('<h1>Message sent !</h1><p><a href="/">Back</a></p>');
+            }
+        }
+    });
+});
 
-
+/**
+ * Instagram oAuth2 authentication
+ */
 app.get('/instagram-auth', function(req, res) {
 
     res.send(
@@ -16,8 +53,11 @@ app.get('/instagram-auth', function(req, res) {
         + '<p><a href="https://api.instagram.com/oauth/authorize/?client_id=' + config.feed.instagram.clientId
         + '&redirect_uri=' + encodeURIComponent(config.global.baseUrl) + '%2Finstagram-auth-landing&response_type=code">Click here</a></p>'
     );
-
 });
+
+/**
+ * Instagram oAuth2 landing page
+ */
 app.get('/instagram-auth-landing', function(req, res) {
 
     var code = req.query.code;
@@ -41,15 +81,11 @@ app.get('/instagram-auth-landing', function(req, res) {
     };
 
     request(options, function (error, response, body) {
-        console.log(body);     
         if(error) {
-            console.log(error);
             res.send('<h1>Error</h1><pre>'+ error + '</pre>');
         } else {    
             var json = JSON.parse(body);
-            console.log(json);
-            console.log(body);         
-            res.send('Paste this token into server-config.js feed.instagram.accessToken: <br />'+json.access_token);
+            res.send('Paste this token into server-config.js @ feed.instagram.accessToken: <br />' + json.access_token);
         }
     });
 
