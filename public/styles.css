@@ -191,6 +191,7 @@ h2 {
   background: linear-gradient(bottom left, #05bffc, #efd662); /*Standard*/
   background: url('../fond.png') center center;
   border-bottom: 3px solid #fff;
+  background-size: cover;
 }
 
 .header-title {
@@ -203,6 +204,7 @@ h2 {
   background: #fff;
 }
 
+
 .header-title h1 {
   color: #fff;
   font-family: 'Raleway', sans-serif;
@@ -214,6 +216,11 @@ h2 {
   text-align: center;
   margin: 0;
   white-space: nowrap;
+}
+@media screen and (min-width: 1920px) {
+  .header-title {
+    transform: rotate(-5deg);
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -276,15 +283,41 @@ h2 {
 .cv-overview strong {
   font-size: 18px;
 }
+
 .cv-overview-image {
-  z-index: -1;
-  width: 130%;
-  position: absolute;
-  left: -176px;
-  top: -126px;
+  display: none;
 }
-p.cv-overview-cta {
+@media screen and (min-width: 992px) {
+  .cv-overview-image {
+    display: inline;
+    z-index: -1;
+    width: 130%;
+    position: absolute;
+    left: -126px;
+    top: -67px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .cv-overview-image {
+    left: -176px;
+    top: -126px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  p.cv-overview-cta {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1249px) {
+  .cv-overview-cta .btn.linked-in {
+    display: none;
+  }
+}
+
+.cv-overview-cta {
   margin-top: 40px;
+  line-height: 3;
 }
 
 
@@ -292,9 +325,18 @@ p.cv-overview-cta {
   background-color: #79caaf;
   color: #fff;
 }
+
 .cv-details h2 {
   margin: 0 0 20px 0;
+  font-size: 45px;
 }
+@media screen and (min-width: 992px) {
+  .cv-details h2 {
+    font-size: 60px;
+  }
+}
+
+
 .cv-details h4 {
   font-size: 28px;
   margin: 0 0 -2px 0;
@@ -339,12 +381,22 @@ p.cv-overview-cta {
   padding: 15px;
   border-radius: 5px;
   text-align: center;
+  line-height: 3;
 }
 .cv-contact-cta :first-child {
   margin-top: 0;
 }
 .cv-contact-cta :last-child {
   margin-bottom: 0;
+}
+
+/***** SECTION: PUBLICATIONS *****/
+
+.publication {
+  margin-bottom: 30px;
+}
+.publication img {
+  display: block;
 }
 
 /***** SECTION: FEED *****/
@@ -490,6 +542,13 @@ p.cv-overview-cta {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 991px) {
+  .feed-source {
+    width: 47%;
+    display: inline-block;
+  }  
+}
+
 .feed-source .feed-icon {
   float: left;
   margin-top: 3px;
@@ -528,4 +587,27 @@ footer {
 .legal-terms p {
   line-height: 1.1em;
   margin: 0.8em;  
+}
+
+.contact-loading,
+.contact-success,
+.contact-error {
+  text-align: center;
+}
+
+.contact-loading .fa,
+.contact-success .fa,
+.contact-error .fa {
+  display: block;
+  font-size: 70px;
+  line-height: 1.5;
+}
+.contact-loading .fa {
+  color: #05bffc;  
+}
+.contact-success .fa {
+  color: #17b375;
+}
+.contact-error .fa {
+  color: #ba3336;
 }

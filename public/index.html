@@ -16,6 +16,8 @@
   <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:900|Yanone+Kaffeesatz:700" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="font-awesome-animation.min.css">
+  
 </head>
 
 <body>
@@ -68,11 +70,11 @@
           </p>
 
           <p class="cv-overview-cta">
-            <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal">
+            <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
               <span>Me contacter</span>
             </a>
-            <a class="btn btn-default" href="cv.pdf">Télécharger mon CV</a>
-            <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
+            <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
+            <a class="btn btn-default linked-in" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
           </p>
         </div>
       </div>
@@ -153,10 +155,10 @@
           Echangeons ensemble et voyons comment je peux contribuer à la réussite de vos projets ! </p>-->
 
               <p>
-                <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#contact-modal">
+                <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
                   <span>Me contacter</span>
                 </a>
-                <a class="btn btn-default" href="">Télécharger mon CV</a>
+                <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
                 <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
               </p>
             </div>
@@ -207,45 +209,58 @@
       <!-- /.modal-dialog -->
     </div>
 
-
     <div class="js-nav-publications container" id="publications">
         
       <h2>Articles &amp; publications</h2>
 
       <div class="row">
 
-        <div class="col-md-6">
-          <img src="http://via.placeholder.com/350x200">
+        <div class="col-sm-4 publication">
+          <img src="http://via.placeholder.com/350x200" width="350" height="200">
           <h3>GL Extranet</h3>
           <p>Angular4 Symfony3 PWAs</p>
-          <a href="" class="btn">More details</a>
+          <a href="" class="btn btn-default">More details</a>
         </div>
 
-        <div class="col-md-6">
-          <img src="http://via.placeholder.com/350x200">
+        <div class="col-sm-4 publication">
+          <img src="http://via.placeholder.com/350x200" width="350" height="200">
           <h3>Google AMP Hackhathon</h3>
           <p>Angular4 Symfony3 PWAs</p>
-          <a href="" class="btn">More details</a>
+          <a href="" class="btn btn-default">More details</a>
         </div>
 
+        <div class="col-sm-4 publication">
+            <img src="http://via.placeholder.com/350x200" width="350" height="200">
+            <h3>Google AMP Hackhathon</h3>
+            <p>Angular4 Symfony3 PWAs</p>
+            <a href="" class="btn btn-default">More details</a>
+          </div>
+  
       </div>
 
       <div class="row">
 
-        <div class="col-md-6">
-          <img src="http://via.placeholder.com/350x200">
+        <div class="col-sm-4 publication">
+          <img src="http://via.placeholder.com/350x200" width="350" height="200">
           <h3>Grand Luxury Hotels</h3>
           <p>ZendFramework MySQL jQuery CSS3 HTML5 AMP</p>
-          <a href="" class="btn">More details</a>
+          <a href="" class="btn btn-default">More details</a>
         </div>
 
-        <div class="col-md-6">
-          <img src="http://via.placeholder.com/350x200">
+        <div class="col-sm-4 publication">
+          <img src="http://via.placeholder.com/350x200" width="350" height="200">
           <h3>Grand Luxury E-butler</h3>
           <p>Ionic Framework Angular1 Cordova</p>
-          <a href="" class="btn">More details</a>
+          <a href="" class="btn btn-default">More details</a>
         </div>
 
+        <div class="col-sm-4 publication">
+            <img src="http://via.placeholder.com/350x200" width="350" height="200">
+            <h3>Grand Luxury E-butler</h3>
+            <p>Ionic Framework Angular1 Cordova</p>
+            <a href="" class="btn btn-default">More details</a>
+          </div>
+  
       </div>
 
     </div>
@@ -332,46 +347,94 @@
 
     </div>
 
-    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title">
+    <div class="modal fade" id="js-contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-form-title">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        
+        <div class="modal-content hidden" id="js-contact-form-loading">
+          <div class="modal-header">
+            <h3 class="modal-title">Envoi en cours...</h3>
+          </div>
+          <div class="modal-body">
+            <p class="contact-loading">
+              <span class="fa faa-shake animated fa-envelope-o" aria-hidden="true"></span>
+              Veuillez patienter quelques instants.
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-content hidden" id="js-contact-form-error">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title" id="contact-modal-title">Me contacter</h4>
+            <h3 class="modal-title">Oups.</h3>
           </div>
           <div class="modal-body">
-
-            <p>Vous pouvez également me
-              <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
-
-            <form action="" method="post">
-
-              <p>
-                <label for="name">Votre nom</label>
-                <input type="text" name="name" id="name" required placeholder="Elon Musk" />
+              <p class="contact-error">
+                <span class="fa fa-times" aria-hidden="true"></span>
+                Votre message n'a pu être envoyé, une erreur s'est produite.
+                Mais vous pouvez également me
+                <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a> ;).
               </p>
-              <p>
-                <label for="email">Votre e-mail</label>
-                <input type="email" name="email" id="email" required placeholder="elon@space-x.com" />
-              </p>
-              <p>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required placeholder="Votre message ici"></textarea>
-              </p>
-              <p>
-                <button type="submit">Envoyer</button>
-              </p>
-
-
-            </form>
-
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
-            <button type="button" class="btn btn-primary">Envoyer</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
           </div>
+        </div>
+
+        <div class="modal-content hidden" id="js-contact-form-success">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title">C'est fait !</h3>
+          </div>
+          <div  class="modal-body">
+            <p class="contact-success">
+              <span class="fa faa-vertical animated fa-thumbs-o-up" aria-hidden="true"></span>
+              Votre message a bien été envoyé, merci d'avoir pris le temps de me contacter.
+            </p>
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+
+        <div class="modal-content" id="js-contact">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title" id="contact-form-title">Me contacter</h3>
+          </div>
+          
+          <form action="/send-message" method="post" id="js-contact-form">
+            <div class="modal-body">
+              <p>Vous pouvez également me
+                <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
+              
+              <div class="form-group">
+                <label for="name">Votre nom</label>
+                <input type="text" class="form-control" id="name" required placeholder="Elon Musk">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Votre e-mail</label>
+                <input type="email" class="form-control" id="email" required placeholder="elon@space-x.com">
+              </div>
+
+              <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea class="form-control" id="message" required placeholder="Votre message ici."></textarea>
+              </div>
+                  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>  
         </div>
       </div>
     </div>
@@ -389,7 +452,9 @@
             <a href="http://fontawesome.io" rel="nofollow">Font Awesome</a>,
             <a href="https://jquery.com" rel="nofollow">jQuery</a>,
             <a href="https://momentjs.com" rel="nofollow">moment.js</a>,
-            <a href="https://piwik.org" rel="nofollow">Piwik</a>.
+            <a href="https://piwik.org" rel="nofollow">Piwik</a>,
+            <a href="https://github.com/alykoshin/gmail-send" rel="nofollow">Gmail-send</a>,
+            <a href="http://l-lin.github.io/font-awesome-animation" rel="nofollow">Font Awesome animation</a>.
           </p>
         </div>  
       </footer>
@@ -427,7 +492,11 @@
         animateRange = { start: 10, end: 340 };
         headerHeight = { start: 440, end: 55 };
         headerTitleBottom = { start: -120, end: -15 };
-        headerTitleAngle = { start: -7, end: 0 };
+        if ($(this).width() > 1920) {
+          headerTitleAngle = { start: -5, end: 0 };
+        } else {
+          headerTitleAngle = { start: -7, end: 0 };  
+        }
         headerTitleHeight = { start: 240, end: 0 };
         headerH1Scaling = { start: 1, end: 0.2 };
         headerH1Top = { start: -107, end: -107 };
@@ -673,10 +742,44 @@
         console.log(e);
       }
 
+      // legal terms
       $("#js-show-legal-terms").click(function(e) {
         $(".legal-terms").toggleClass('hidden');
       });
       $(".legal-terms").addClass('hidden');
+
+
+      // send message form
+      $("#js-contact-form").submit(function(e) {
+        e.preventDefault();
+
+        $("#js-contact-form-loading").removeClass("hidden");
+        $("#js-contact").addClass("hidden");
+
+        $.post("/send-message", {
+          name: $("#name").val(),
+          email: $("#email").val(),
+          message: $("#message").val()
+        }).done(function(data) {
+          if(data.success) {
+            $("#js-contact-form-loading").addClass("hidden");
+            $("#js-contact-form-success").removeClass("hidden");
+            setTimeout(function() {
+              $("#js-contact-modal").modal("hide");
+            }, 3000);
+          } else {
+            $("#js-contact-form-loading").addClass("hidden");
+            $("#js-contact-form-error").removeClass("hidden");
+          }
+        }).fail(function(err) {
+          $("#js-contact-form-loading").addClass("hidden");
+          $("#js-contact-form-error").removeClass("hidden");
+        })
+      });
+      $("#js-contact-modal").on('show.bs.modal', function (e) {
+        $("#js-contact-form-loading, #js-contact-form-error, #js-contact-form-success").addClass("hidden");
+        $("#js-contact").removeClass("hidden");
+      });
     });
 
   </script>
