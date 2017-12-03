@@ -612,6 +612,13 @@ h2 {
 .footer h3 {
    margin-top: 0;
 }
+.footer-logo {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
 
 /***** CONTACT FORM *****/
 
