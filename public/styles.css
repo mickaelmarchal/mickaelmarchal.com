@@ -395,9 +395,31 @@ h2 {
 .publication {
   margin-bottom: 30px;
 }
+.publication a,
 .publication img {
   display: block;
 }
+.publication a,
+.publication a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.publication .date {
+  margin: -0.9em 0 0.8em 0;
+  font-size: 12px;
+  color: #777;
+}
+.publication p {
+  line-height: 1.4;
+}
+.publication .read-more {
+  color: #337ab7;
+}
+.publication .read-more:hover {
+  text-decoration: underline;
+}
+
+
 
 /***** SECTION: FEED *****/
 
@@ -577,17 +599,21 @@ h2 {
 
 
 /***** FOOTER *****/
-footer {
+.footer {
   margin-bottom: 20px;
 }
 .legal-terms {
   font-size: 12px;
-  margin: 20px;
+  margin: -0.5em 0 0.5em;
 }
 .legal-terms p {
-  line-height: 1.1em;
-  margin: 0.8em;  
+  margin: 0 1.4em;
 }
+.footer h3 {
+   margin-top: 0;
+}
+
+/***** CONTACT FORM *****/
 
 .contact-loading,
 .contact-success,
