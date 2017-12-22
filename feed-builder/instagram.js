@@ -26,7 +26,6 @@ exports.instagram = function () {
     function processResult(result) {
 
         var feed = [];
-
         var firstTimestamp = null;
         var item = null;
         
