@@ -2,6 +2,7 @@
 public/feed.json
 server-config.js
 
+ui-resources/*
 
 ### npm template
 node_modules
