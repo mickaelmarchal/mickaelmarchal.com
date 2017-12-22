@@ -24,7 +24,13 @@ h2 {
 }
 
 .btn-primary {
-  background: #05bffc;
+  background: #444;
+  border-color: #444;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #000;
+  border-color: #000;
 }
 
 .jumbotron p {
@@ -64,6 +70,13 @@ h2 {
 .btn-arrow:active span:after {
   opacity: 1;
   right: 0;
+}
+
+/*** Modals ***/
+
+.modal-content,
+.form-control {
+  border-radius: 0;
 }
 
 
@@ -289,20 +302,29 @@ h2 {
 }
 @media screen and (min-width: 992px) {
   .cv-overview-image {
-    display: inline;
+    display: inline-block;
     z-index: -1;
-    width: 130%;
+    width: 110%;
     position: absolute;
-    left: -126px;
-    top: -67px;
+    left: -90px;
+    top: 36px;
   }
 }
 @media screen and (min-width: 1120px) {
   .cv-overview-image {
-    left: -176px;
-    top: -126px;
+    left: -140px;
+    top: 18px;
+    width: 125%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .cv-overview-image {
+    left: -150px;
+    top: 0;
+    width: 120%;
+  }
+}
+
 
 @media screen and (max-width: 670px) {
   p.cv-overview-cta {
@@ -323,6 +345,8 @@ h2 {
 
 .cv-details {
   background-color: #79caaf;
+  background-image: url('fond.png');
+  background-size: cover;
   color: #fff;
 }
 
@@ -336,26 +360,37 @@ h2 {
   }
 }
 
-
 .cv-details h4 {
   font-size: 28px;
-  margin: 0 0 -2px 0;
+  margin: 38px 0 -2px 0;
 }
 .cv-details .subtitle {
-  margin: -12px 0 28px 0;
+  margin: -12px 0 48px 0;
 }
 
+.cv-techs-title {
+  float: left;
+  text-align: right;
+  width: 170px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 3px 30px 0 0;
+  margin: 0 0 1em;
+}
+
+.cv-techs p {
+  margin-left: 170px;
+}
 
 .cv-techs span,
 .cv-techs a {
   display: inline-block;
-  /*background: #ccc;*/
   padding: 1px 7px;
   font-size: 12px;
   background: #333;
   color: #fff;
   font-weight: bold;
   border-radius: 3px;
+  margin: 0 0 3px 0;
 }
 
 .separator {
@@ -370,10 +405,10 @@ h2 {
 
 .cv-details .cv-contact-cta {
   border: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
   padding: 15px;
-  border-radius: 5px;
-  margin-top: 38px;
+  border-radius: 0;
+  margin: 38px 0 8px;
 }
 
 .cv-contact-cta {
@@ -390,13 +425,33 @@ h2 {
   margin-bottom: 0;
 }
 
+.visit-gl {
+  margin: 24px 0 0 0;
+}
+
+
 /***** SECTION: PUBLICATIONS *****/
 
 .publication {
   margin-bottom: 30px;
 }
-.publication a,
-.publication img {
+.publication-img {
+  display: block;
+  float: left;
+  width: 33%;
+  min-width: 180px;
+  margin-right: 20px;
+  height: auto;  
+}
+
+@media screen and (min-width: 768px) {
+  .publication-img {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.publication a {
   display: block;
 }
 .publication a,
@@ -418,6 +473,7 @@ h2 {
 .publication .read-more:hover {
   text-decoration: underline;
 }
+
 
 
 
