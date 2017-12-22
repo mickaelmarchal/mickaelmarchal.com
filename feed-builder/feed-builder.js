@@ -87,7 +87,7 @@ getAll().then(results => {
     feed = feed.slice(0, config.maxElements);
 
 
-    var filePath = __dirname + '/../public/feed.json';
+    var filePath = __dirname + '/../dist/feed.json';
     console.log('Writing feed to ' + filePath);
     
     fs.writeFileSync(filePath, JSON.stringify(feed));

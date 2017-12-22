@@ -1,5 +1,5 @@
 ### app-specific
-public/feed.json
+dist/*
 server-config.js
 
 

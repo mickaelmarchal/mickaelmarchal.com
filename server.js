@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 /**
  * Callback for contact form

@@ -4,24 +4,51 @@
   "description": "My personal website",
   "main": "index.js",
   "dependencies": {
+    "autoprefixer": "^7.2.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "gmail-send": "^1.2.11",
+    "moment": "^2.19.4",
+    "node-sass": "^4.7.2",
     "request": "^2.83.0",
     "rss-to-json": "^1.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/async": "^2.0.45",
+    "@types/body-parser": "^1.16.8",
+    "@types/bootstrap": "^3.3.36",
+    "@types/dotenv": "^4.0.2",
+    "@types/express": "^4.0.39",
+    "@types/jquery": "^3.2.16",
+    "@types/node": "^8.0.58",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.12.5",
+    "shelljs": "^0.7.8",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "update-feed": "node feed-builder/feed-builder.js"
+    "start": "npm run build && npm run watch",
+    "build": "npm run build-sass && npm run build-ts && npm run tslint && npm run copy-static-assets",
+    "serve": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve\"",
+    "test": "jest --forceExit",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "build-sass": "node-sass src/public/scss/main.scss dist/public/css/main.css",
+    "watch-sass": "node-sass -w src/public/scss/main.scss dist/public/css/main.css",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "copy-static-assets": "node copy-static-assets.js",
+    "debug": "npm run build && npm run watch-debug",
+    "serve-debug": "nodemon --inspect dist/server.js",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mickaelmarchal/mickaelmarchal.com.git"
   },
-  "author": "Mickael Marchal",
-  "license": "Proprietary",
+  "author": "Mickaël Marchal",
+  "license": "SEE LICENSE IN README.md",
   "bugs": {
     "url": "https://github.com/mickaelmarchal/mickaelmarchal.com/issues"
   },
