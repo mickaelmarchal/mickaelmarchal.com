@@ -12,22 +12,7 @@ function getAll() {
         stackoverflow.stackoverflow(),
         pocket.pocket(),
         medium.medium(),
-        instagram.instagram(),
-
-        //TODO instagram, twitter
-        /*
-        A mettre :
-    - linkedIn ?
-    X commits Github
-    - questions / réponses Stackoverflow => réponses OK, questions ?
-    X ajouts Pocket
-    - stars github
-    - favoris / coups de coeur Medium
-    X photos instagram
-    - news custom ==> medium ?
-    X limiter à X résultats
-    - pouvoir bloquer un item tout en haut du feed
-*/
+        instagram.instagram()
     ]);
 }
 

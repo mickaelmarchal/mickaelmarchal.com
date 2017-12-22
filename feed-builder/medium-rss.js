@@ -3,7 +3,6 @@ var config = require('../server-config').config.feed.medium;
 
 /**
  * Get last articles info from medium
- * 
  */
 exports.medium = function () {
 
