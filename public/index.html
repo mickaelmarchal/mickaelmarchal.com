@@ -599,11 +599,11 @@
       githubCreate: function (data) {
 
         if (data.createdType === 'branch') {
-          var title = 'Branch '+ data.createdName + ' créée';
-          var action = 'Branche '+ data.createdName + ' créée dans ' + data.repoName;
+          var title = 'Branche '+ data.createdName + ' créée';
+          var action = 'nouvelle branche dans ' + data.repoName;
         } else if (data.type === 'tag') {
           var title = 'Tag '+ data.createdName + ' créé';
-          var action = 'Tag '+ data.createdName + ' créé dans ' + data.repoName;
+          var action = 'nouveau tag dans ' + data.repoName;
         } else {
           var title = 'Dépôt ' + data.repoName + ' créé';
           var action = 'dépôt github.com crée';
