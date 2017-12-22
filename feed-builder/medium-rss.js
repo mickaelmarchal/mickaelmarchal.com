@@ -13,26 +13,27 @@ exports.medium = function () {
      */
     function processResult(result) {
 
-        var feed = [];
-        
-            result.items.forEach((element) => {
-    
-                let item = {
-                    type: 'mediumArticle',
-                    date: new Date(element.created),
-                    data: {
-                        title: element.title,
-                        url: element.url.substr(0, element.url.indexOf('?')),
-                    }
+        var feed = [];       
+        result.items.forEach((element) => {
+
+            let item = {
+                type: 'mediumArticle',
+                date: new Date(element.created),
+                data: {
+                    title: element.title,
+                    url: element.url.substr(0, element.url.indexOf('?')),
+                    excerpt: 'Article description here', // TODO is empty
+                    image: 'http://via.placeholder.com/800x600' // TODO is missing
                 }
-                
-                if (item) {
-                    feed.push(item);
-                }
-    
-            });
-    
-            return feed;
+            }
+            
+            if (item) {
+                feed.push(item);
+            }
+
+        });
+
+        return feed;
     }
 
     return new Promise((resolve, reject) => {

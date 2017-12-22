@@ -597,11 +597,23 @@
       },
 
       githubCreate: function (data) {
+
+        if (data.createdType === 'branch') {
+          var title = 'Branch '+ data.createdName + ' créée';
+          var action = 'Branche '+ data.createdName + ' créée dans ' + data.repoName;
+        } else if (data.type === 'tag') {
+          var title = 'Tag '+ data.createdName + ' créé';
+          var action = 'Tag '+ data.createdName + ' créé dans ' + data.repoName;
+        } else {
+          var title = 'Dépôt ' + data.repoName + ' créé';
+          var action = 'dépôt github.com crée';
+        }
+
         return {
           icon: 'github',
           className: 'github',
-          action: 'dépôt github.com crée',
-          html: '<h3>Dépôt ' + data.repoName + ' crée</h3>'
+          action: action,
+          html: '<h3>' + title + '</h3>'
         };
       },
 
@@ -675,10 +687,10 @@
       $('#js-publications').append(
             '<div class="col-sm-4 publication clearfix">'
           + '    <a href="'+ article.data.url +'">'
-          + '      <img class="publication-img" src="http://via.placeholder.com/350x200" width="350" height="200">'
+          + '      <img class="publication-img" src="' + article.data.image + '">'
           + '      <div class="publication-entry">'
           + '        <h3>' + article.data.title + '</h3>'
-          + '        <p class="date">Publié ' + moment(article.date) + 'sur medium.com</p>'
+          + '        <p class="date">Publié ' + moment(article.date).fromNow() + ' sur medium.com</p>'
           + '        <p>' + ((article.data.excerpt.length > 100) ? (article.data.excerpt.substr(0, 100) + '…') : article.data.excerpt)
           + '          <span class="read-more">Lire la suite &raquo;'
           + '        </p>'
