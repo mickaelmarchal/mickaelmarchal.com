@@ -285,6 +285,18 @@
           </div>
 
           <div class="feed-source">
+            <div class="feed-icon twitter"><span class="fa fa-twitter"></span></div>            
+            <h3>Twitter</h3>
+            <p>
+              <a href="https://twitter.com/mickaelmarchal">@mickaelmarchal</a>
+            </p>
+            <!-- <ul>
+              <li>5 stories</li>
+              <li>5 followers</li>
+            </ul>-->
+          </div>
+
+          <div class="feed-source">
             <div class="feed-icon pocket"><span class="fa fa-get-pocket"></span></div>            
             <h3>Pocket</h3>
             <p>
@@ -644,6 +656,21 @@
         };
       },
 
+      tweet: function (data) {
+
+        var text = '';
+        for(var i = 0; i < data.tweets.length; i++) {
+          text += '<p class="tweet">' + data.tweets[i].text + '</p>';
+        }
+
+        return {
+          icon: 'twitter',
+          className: 'twitter',
+          action: 'nouveau post sur twitter',
+          html: text
+        };
+      },
+
       instagramPicture: function (data) {
 
         var html = '';
@@ -684,7 +711,7 @@
       }
       publicationsCounter ++;
 
-      $('#js-publications').append(
+      var html = 
             '<div class="col-sm-4 publication clearfix">'
           + '    <a href="'+ article.data.url +'">'
           + '      <img class="publication-img" src="' + article.data.image + '">'
@@ -696,7 +723,12 @@
           + '        </p>'
           + '      </div>'
           + '    </a>'
-          + '</div>');
+          + '</div>'
+
+      if(publicationsCounter === 4) {
+        html = '<div class="clearfix"></div>' + html;
+      }
+      $('#js-publications').append(html);
     }
 
 

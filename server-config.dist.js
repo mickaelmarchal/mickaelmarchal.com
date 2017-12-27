@@ -39,6 +39,12 @@ exports.config = {
         stackoverflow: {
             userId: ''
         },
-        
+        twitter: {
+            consumerKey: '',
+            consumerSecret: '',
+            accessTokenKey: '',
+            accessTokenSecret : '',
+            screenName: ''
+        }
     }
 };

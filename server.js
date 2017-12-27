@@ -88,9 +88,8 @@ app.get('/instagram-auth-landing', function(req, res) {
             res.send('Paste this token into server-config.js @ feed.instagram.accessToken: <br />' + json.access_token);
         }
     });
+});
 
-
-})
 
 app.listen(3000, function () {
     console.log('Listening on port 3000!');

@@ -402,27 +402,13 @@ h2 {
 
 }
 
-
-.cv-details .cv-contact-cta {
+.cv-contact-cta {
+  display: inline-block;
   border: 0;
   background: rgba(255, 255, 255, 0.3);
-  padding: 15px;
+  padding: 18px 18px 8px;
   border-radius: 0;
-  margin: 38px 0 8px;
-}
-
-.cv-contact-cta {
-  border: 3px solid #05bffc;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 3;
-}
-.cv-contact-cta :first-child {
-  margin-top: 0;
-}
-.cv-contact-cta :last-child {
-  margin-bottom: 0;
+  margin: 38px 0 8px 150px;
 }
 
 .visit-gl {
@@ -545,6 +531,10 @@ h2 {
   color: #777;
   margin: 2px 0 0 10px; 
 }
+.feed-item p.tweet {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
 
 
 
@@ -585,6 +575,10 @@ h2 {
 }
 .feed-icon.instagram {
   background-color: #00c;
+  padding-top: 9px;
+}
+.feed-icon.twitter {
+  background-color: #0bf;
   padding-top: 9px;
 }
 

@@ -4,6 +4,7 @@ const stackoverflow = require('./stackoverflow');
 const medium = require('./medium-rss');
 const pocket = require('./pocket');
 const instagram = require('./instagram');
+const twitter = require('./twitter');
 var config = require('../server-config').config.feed;
 
 function getAll() {
@@ -12,7 +13,8 @@ function getAll() {
         stackoverflow.stackoverflow(),
         pocket.pocket(),
         medium.medium(),
-        instagram.instagram()
+        instagram.instagram(),
+        twitter.twitter()
     ]);
 }
 
