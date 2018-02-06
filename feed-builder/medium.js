@@ -54,7 +54,7 @@ exports.medium = function () {
                         excerpt: $(article).find('.graf--trailing').text(),            
                         time: $(article).find('time').text(),
                         timeISO: $(article).find('time').attr('datetime'),
-                        image: image ? `https://cdn-images-1.medium.com/max/900/${image}` : null,
+                        image: image ? `https://cdn-images-1.medium.com/max/640/${image}` : null,
                         url: $(article).find('.postArticle-readMore').find('a').attr('href').split('?')[0]
                     });
                 });

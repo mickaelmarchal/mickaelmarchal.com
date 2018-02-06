@@ -16,7 +16,8 @@ exports.pocket = function () {
         form: {
             consumer_key: config.consumerKey,
             access_token: config.accessToken,
-            state: 'unread',
+            state: 'all',
+            favorite: 1,
             count: 20,
             sort: "newest",
             detailType: "complete"
@@ -29,6 +30,8 @@ exports.pocket = function () {
      * @param [] result 
      */
     function processResult(result) {
+
+console.log(result);
 
         var feed = [];
         Object.keys(result.list).forEach((key) => {
@@ -43,12 +46,12 @@ exports.pocket = function () {
                     tags.push(tag.tag);
 
                     // only allow some tags
-                    if(! tag.tag.startsWith('dev-')
-                        && ! tag.tag.startsWith('frontend-')
-                        && ! tag.tag.startsWith('front-')
-                        && ! tag.tag.startsWith('back-')
-                        && ! tag.tag.startsWith('pro-')
-                        && ! tag.tag.startsWith('ops-')
+                    if(! tag.tag.startsWith('archi/')
+                        && ! tag.tag.startsWith('dev/')
+                        && ! tag.tag.startsWith('devtools/')
+                        && ! tag.tag.startsWith('ops/')
+                        && ! tag.tag.startsWith('pro/')
+                        && ! tag.tag.startsWith('web/')
                     ) {
                         allowElement = false;
                     }
@@ -82,7 +85,7 @@ exports.pocket = function () {
         request(options, function (error, response, body) {
             if(error) {
                 reject(error);
-            } else {                
+            } else {            
                 resolve(processResult(JSON.parse(body)));
             }
         });

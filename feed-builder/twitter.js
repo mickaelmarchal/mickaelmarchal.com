@@ -30,7 +30,7 @@ exports.twitter = function () {
             for(var i = 0; i < element.entities.urls.length; i++) {
 
                 var url = element.entities.urls[i];
-                var link = '<a href="'+ url.expanded_url+'">'+ url.display_url +'</a>';
+                var link = '<a href="'+ url.expanded_url+'">'+ url.url +'</a>';
                 tweetText = tweetText.substr(0, url.indices[0] + offsetToAdd)
                           + link
                           + tweetText.substr(url.indices[1] + 1 + offsetToAdd);
