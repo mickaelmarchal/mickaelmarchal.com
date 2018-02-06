@@ -10,25 +10,32 @@
   <meta name="author" content="Mickaël Marchal">
   <link rel="icon" href="favicon.png">
 
+  <!--
+  <link rel="alternate" hreflang="fr" href="https://mickaelmarchal.com/fr.html" />
+  <link rel="alternate" hreflang="en" href="https://mickaelmarchal.com/en.html" />
+  -->
+
   <title>Mickaël Marchal, CTO + full stack geek</title>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-286065-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-286065-2', { 'anonymize_ip': true });
   </script>
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
   <link href="styles.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:900|Yanone+Kaffeesatz:700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900%7CYanone+Kaffeesatz:700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="font-awesome-animation.min.css">
-  
+
 </head>
 
-<body>
+<body itemscope="" itemtype="http://schema.org/Person">
 
   <nav class="nav-main">
     <a class="js-nav-menu-btn nav-menu-btn">
@@ -38,34 +45,39 @@
       <li>
         <a href="#profile" class="js-nav-link js-nav-link-profile">Profil</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#publications" class="js-nav-link js-nav-link-publications">Publications</a>
-      </li>  
+      </li> -->
       <li>
         <a href="#social" class="js-nav-link js-nav-link-social">Activité</a>
       </li>
-      <li class="language">
+      <!-- <li class="language">
         <a href="">English</a>
-      </li>
+      </li> -->
     </ul>
   </nav>
 
   <header class="header" id="js-header">
     <div class="header-title" id="js-header-title">
-      <h1>Mickaël Marchal</h1>
+      <h1 itemprop="name">
+        <span itemprop="givenName">Mickaël</span>
+        <span itemprop="familyName"></span>Marchal</h1>
     </div>
   </header>
 
   <div class="main">
 
     <div class="cv-overview js-nav-profile container" id="profile">
-      <div class="row" >
+
+
+
+      <div class="row">
         <div class="col-md-5">
-          <img src="profile-img.png" class="cv-overview-image">
+          <img src="profile-img.png" class="cv-overview-image" alt="CTO + full stack geek">
         </div>
         <div class="col-md-7">
-          <h1>CTO + full stack geek
-            <div class="subtitle">@Grand Luxury Hotels.</div>
+          <h1 itemprop="jobTitle">CTO + full stack geek
+            <span class="subtitle">@Grand Luxury Hotels.</span>
           </h1>
           <p>Premier salarié chez
             <a href="#" data-toggle="modal" data-target="#glg-details">Grand Luxury Hotels</a> et unique dev durant 5 ans &bull; Conception et réalisation de la platorme e-commerce
@@ -90,98 +102,106 @@
 
     <div class="cv-details jumbotron">
       <div class="container">
-        
-            <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
-            <h2>Une approche complète des projets web.</h2>
-            <p class="subtitle">Mon profil hybride me permet de
-              <strong>mettre les outils les plus performants au service de la création de valeur et du succès d'un produit</strong>.</p>
 
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Dev Back</h5>
-              <p>
-                <span>Symfony 3</span>
-                <span>PHP 7</span>
-                <span>MySQL</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>REST</span>
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Dev Front</h5>
-              <p>
-                <span>Angular 5 + Universal</span>
-                <span>TypeScript / JS / ES2017</span>
-                <span>Redux + RxJs</span>
-                <span>CSS3 / Sass</span>
-                <span><abbr title="Progressive Web Apps">PWAs</abbr></span>
-                <span>HTML 5 + <abbr title="Accelerated Mobile Pages">AMP</abbr></span>
-                <span>Ionic + Cordova</span>
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Infra et outils</h5>
-              <p>
-                <span>Docker</span>
-                <span>Google Cloud Platform</span>
-                <span>Debian</span>
-                <span>Bash</span>
-                <span>Apache</span>
-                <span>Cloudflare</span>
-                <span>Webpack</span>
-                <span>Git</span>
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Qualité</h5>
-              <p>
-                <span>Scrum Master</span>
-                <span>Tests unitaires</span>
-                <span>New Relic</span>
-                <span>Gitlab CI</span>
-                <span>Jenkins</span>
-                <span>Jira</span>                            
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Produit et Marketing</h5>
-              <p>
-                <span>UX Design</span>
-                <span><abbr title="Conversion Rate Optimization">CRO</abbr></span>
-                <span><abbr title="Search Engine Optimisation">SEO</abbr></span>
-                <span>Product Owner</span>
-                <span>Photoshop / Illustrator</span>
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Industrie du voyage</h5>
-              <p>
-                <span>Worldspan XMLPro + Universal API</span>
-                <span>Amadeus WBS</span>
-                <span>SynXis SHS</span>
-                <span>Standard OTA</span>
-              </p>
-            </div>
-            <div class="cv-techs clearfix">
-              <h5 class="cv-techs-title">Management</h5>
-              <p>
-                <span>Conduite de projet in-house/offshore</span>
-                <span>Recrutement</span>
-                <span>Gestion d'équipe</span>
-                <span>Formation</span>
-              </p>
-            </div>
+        <h4>Dev, Architecte, Ops, PO, Manager et CTO</h4>
+        <h2>Une approche complète des projets web.</h2>
+        <p class="subtitle">Mon profil hybride me permet de
+          <strong>mettre les outils les plus performants au service de la création de valeur et du succès d'un produit</strong>.</p>
 
-            <div class="cv-contact-cta">
-              <p>
-                <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
-                  <span>Me contacter</span>
-                </a>
-                <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
-                <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
-              </p>
-            </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Dev Back</h5>
+          <p>
+            <span>Symfony 3</span>
+            <span>PHP 7</span>
+            <span>MySQL</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>REST</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Dev Front</h5>
+          <p>
+            <span>Angular 5 + Universal</span>
+            <span>TypeScript / JS / ES2017</span>
+            <span>Redux + RxJs</span>
+            <span>CSS3 / Sass</span>
+            <span>
+              <abbr title="Progressive Web Apps">PWAs</abbr>
+            </span>
+            <span>HTML 5 +
+              <abbr title="Accelerated Mobile Pages">AMP</abbr>
+            </span>
+            <span>Ionic + Cordova</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Infra et outils</h5>
+          <p>
+            <span>Docker</span>
+            <span>Google Cloud Platform</span>
+            <span>Debian</span>
+            <span>Bash</span>
+            <span>Apache</span>
+            <span>Cloudflare</span>
+            <span>Webpack</span>
+            <span>Git</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Qualité</h5>
+          <p>
+            <span>Scrum Master</span>
+            <span>Tests unitaires</span>
+            <span>New Relic</span>
+            <span>Gitlab CI</span>
+            <span>Jenkins</span>
+            <span>Jira</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Produit et Marketing</h5>
+          <p>
+            <span>UX Design</span>
+            <span>
+              <abbr title="Conversion Rate Optimization">CRO</abbr>
+            </span>
+            <span>
+              <abbr title="Search Engine Optimisation">SEO</abbr>
+            </span>
+            <span>Product Owner</span>
+            <span>Photoshop / Illustrator</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Industrie du voyage</h5>
+          <p>
+            <span>Worldspan XMLPro + Universal API</span>
+            <span>Amadeus WBS</span>
+            <span>SynXis SHS</span>
+            <span>Standard OTA</span>
+          </p>
+        </div>
+        <div class="cv-techs clearfix">
+          <h5 class="cv-techs-title">Management</h5>
+          <p>
+            <span>Conduite de projet in-house/offshore</span>
+            <span>Recrutement</span>
+            <span>Gestion d'équipe</span>
+            <span>Formation</span>
+          </p>
+        </div>
+
+        <div class="cv-contact-cta">
+          <p>
+            <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
+              <span>Me contacter</span>
+            </a>
+            <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
+            <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
+          </p>
+        </div>
 
 
       </div>
@@ -206,9 +226,9 @@
               <li>Une relation privilégiée avec les plus grands chaînes hôtelières du monde.</li>
             </ul>
             <p>
-              <strong>En 10 ans, et en s'appuyant sur la plateforme technique que j'ai conçue, Grand Luxury est devenu le 2<sup>ème</sup>
-                apporteur d'affaires mondial pour les Palaces de Paris, Londres et Milan &mdash; avec seulement
-                60 salariés.</strong>
+              <strong>En 10 ans, et en s'appuyant sur la plateforme technique que j'ai conçue, Grand Luxury est devenu le 2
+                <sup>ème</sup>
+                apporteur d'affaires mondial pour les Palaces de Paris, Londres et Milan &mdash; avec seulement 60 salariés.</strong>
             </p>
             <p>On en parle sur :
               <a href="https://www.forbes.fr/luxe/grand-luxury-hotels-une-nouvelle-idee-du-luxe/">Forbes</a> |
@@ -225,15 +245,15 @@
       </div>
     </div>
 
-    <div class="js-nav-publications container" id="publications">
+    <!-- <div class="js-nav-publications container" id="publications">
         
       <h2>Articles, projets &amp; publications</h2>
 
       <div class="row" id="js-publications"></div>
 
     </div>
-        
-    <hr />
+
+    <hr />-->
 
     <div class="js-nav-social container" id="social">
 
@@ -247,78 +267,64 @@
 
           <h3 class="feed-source-title">Retrouvez-moi sur...</h3>
 
-          <div class="feed-source">
-            <div class="feed-icon medium"><span class="fa fa-medium"></span></div>            
+          <!-- <div class="feed-source">
+            <div class="feed-icon medium">
+              <span class="fa fa-medium"></span>
+            </div>
             <h3>Medium</h3>
             <p>
               <a href="https://medium.com/@mickaelmarchal">@mickaelmarchal</a>
             </p>
-            <!-- <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>-->
-          </div>
+          </div> -->
 
           <div class="feed-source">
-            <div class="feed-icon github"><span class="fa fa-github"></span></div>  
+            <div class="feed-icon github">
+              <span class="fa fa-github"></span>
+            </div>
             <h3>Github</h3>
             <p>
               <a href="https://github.com/mickaelmarchal">@mickaelmarchal</a>
             </p>
-            <!-- <ul>
-              <li>10 repositories</li>
-              <li>5 stars</li>
-              <li>130 commits</li>
-           </ul>-->
           </div>
 
           <div class="feed-source">
-            <div class="feed-icon instagram"><span class="fa fa-instagram"></span></div>            
+            <div class="feed-icon instagram">
+              <span class="fa fa-instagram"></span>
+            </div>
             <h3>Instagram</h3>
             <p>
               <a href="https://www.instagram.com/mickamarchal/">@mickamarchal</a>
             </p>
-            <!-- <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>-->
           </div>
 
-          <div class="feed-source">
-            <div class="feed-icon twitter"><span class="fa fa-twitter"></span></div>            
+          <!-- <div class="feed-source">
+            <div class="feed-icon twitter">
+              <span class="fa fa-twitter"></span>
+            </div>
             <h3>Twitter</h3>
             <p>
               <a href="https://twitter.com/mickaelmarchal">@mickaelmarchal</a>
             </p>
-            <!-- <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul>-->
-          </div>
+          </div>-->
 
           <div class="feed-source">
-            <div class="feed-icon pocket"><span class="fa fa-get-pocket"></span></div>            
+            <div class="feed-icon pocket">
+              <span class="fa fa-get-pocket"></span>
+            </div>
             <h3>Pocket</h3>
             <p>
               <a href="https://getpocket.com/@mickaelmarchal">@mickaelmarchal</a>
             </p>
-            <!-- <ul>
-              <li>5 stories</li>
-              <li>5 followers</li>
-            </ul> -->
           </div>
 
           <div class="feed-source">
-            <div class="feed-icon stackoverflow"><span class="fa fa-stack-overflow"></span></div>
+            <div class="feed-icon stackoverflow">
+              <span class="fa fa-stack-overflow"></span>
+            </div>
             <h3>StackOverflow</h3>
             <p>
               <a href="https://stackoverflow.com/users/6403849/micka%c3%abl-marchal?tab=profile">@mickaelmarchal</a>
             </p>
-            <!-- <ul>
-              <li>16 reputation</li>
-              <li>5 answers</li>
-              <li>5 badges earned</li>
-            </ul> -->
           </div>
 
         </div>
@@ -329,7 +335,7 @@
 
     <div class="modal fade" id="js-contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-form-title">
       <div class="modal-dialog" role="document">
-        
+
         <div class="modal-content hidden" id="js-contact-form-loading">
           <div class="modal-header">
             <h3 class="modal-title">Envoi en cours...</h3>
@@ -350,12 +356,11 @@
             <h3 class="modal-title">Oups.</h3>
           </div>
           <div class="modal-body">
-              <p class="contact-error">
-                <span class="fa fa-times" aria-hidden="true"></span>
-                Votre message n'a pu être envoyé, une erreur s'est produite.
-                Mais vous pouvez également me
-                <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a> ;).
-              </p>
+            <p class="contact-error">
+              <span class="fa fa-times" aria-hidden="true"></span>
+              Votre message n'a pu être envoyé, une erreur s'est produite. Mais vous pouvez également me
+              <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a> ;).
+            </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
@@ -369,7 +374,7 @@
             </button>
             <h3 class="modal-title">C'est fait !</h3>
           </div>
-          <div  class="modal-body">
+          <div class="modal-body">
             <p class="contact-success">
               <span class="fa faa-vertical animated fa-thumbs-o-up" aria-hidden="true"></span>
               Votre message a bien été envoyé, merci d'avoir pris le temps de me contacter.
@@ -388,12 +393,12 @@
             </button>
             <h3 class="modal-title" id="contact-form-title">Me contacter</h3>
           </div>
-          
+
           <form action="/send-message" method="post" id="js-contact-form">
             <div class="modal-body">
               <p>Vous pouvez également me
                 <a href="https://www.linkedin.com/in/mickaelmarchal/">contacter via LinkedIn</a>.</p>
-              
+
               <div class="form-group">
                 <label for="name">Votre nom</label>
                 <input type="text" class="form-control" id="name" required placeholder="Elon Musk">
@@ -408,13 +413,13 @@
                 <label for="message">Votre message</label>
                 <textarea class="form-control" id="message" required placeholder="Votre message ici."></textarea>
               </div>
-                  
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Fermer sans envoyer</button>
               <button type="submit" class="btn btn-primary">Envoyer</button>
             </div>
-          </form>  
+          </form>
         </div>
       </div>
     </div>
@@ -426,10 +431,10 @@
       <footer>
         <div class="row">
           <img src="favicon.png" class="footer-logo" alt="Logo du site">
-          <p>&copy; 2001-2017 Mickaël Marchal. Tous droits réservés. &mdash;
-              <a href="" data-toggle="modal" data-target="#js-contact-modal">
-                <em class="fa fa-envelope-o"></em> Contact
-              </a>
+          <p>&copy; 1999-2018 Mickaël Marchal. Tous droits réservés. &mdash;
+            <a href="" data-toggle="modal" data-target="#js-contact-modal">
+              <em class="fa fa-envelope-o"></em> Contact
+            </a>
           </p>
           <div class="legal-terms">
             <p>Site hébergé par Gandi.net - 63-65 boulevard Masséna 75013 Paris - Tel +33 (0) 1 70.37.76.61</p>
@@ -441,17 +446,20 @@
               <a href="https://github.com/alykoshin/gmail-send" rel="nofollow">Gmail-send</a>,
               <a href="http://l-lin.github.io/font-awesome-animation" rel="nofollow">Font Awesome animation</a>.
             </p>
-          </div>  
+          </div>
         </div>
       </footer>
     </div>
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js" integrity="sha256-zG8v+NWiZxmjNi+CvUYnZwKtHzFtdO8cAKUIdB8+U9I=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/locale/fr.js" integrity="sha256-DJpVvSniFq7HyHLFi3n3thaGrgI4XiEsDnQwyY3BnIo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js" integrity="sha256-zG8v+NWiZxmjNi+CvUYnZwKtHzFtdO8cAKUIdB8+U9I="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/locale/fr.js" integrity="sha256-DJpVvSniFq7HyHLFi3n3thaGrgI4XiEsDnQwyY3BnIo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-lazy@1.7.7/jquery.lazy.min.js" crossorigin="anonymous"></script>
 
   <script>
     var $header = $('#js-header'),
@@ -471,7 +479,9 @@
 
       // Get scroll position for sections
       socialOffset = $(".js-nav-social").first().offset().top;
-      publicationsOffset = $(".js-nav-publications").first().offset().top;
+      if ($(".js-nav-publications").first().length) {
+        publicationsOffset = $(".js-nav-publications").first().offset().top;
+      }
 
       // Change animation settings and state of nav menu
       if ($(this).width() >= 1120) {
@@ -481,7 +491,7 @@
         if ($(this).width() > 1920) {
           headerTitleAngle = { start: -5, end: 0 };
         } else {
-          headerTitleAngle = { start: -7, end: 0 };  
+          headerTitleAngle = { start: -7, end: 0 };
         }
         headerTitleHeight = { start: 240, end: 0 };
         headerH1Scaling = { start: 1, end: 0.2 };
@@ -554,7 +564,7 @@
       if (scrollTop > socialOffset - 40) {
         $('.js-nav-link').removeClass('active');
         $('.js-nav-link-social').addClass('active');
-      } else if (scrollTop > publicationsOffset - 80) {
+      } else if (publicationsOffset && scrollTop > publicationsOffset - 80) {
         $('.js-nav-link').removeClass('active');
         $('.js-nav-link-publications').addClass('active');
       } else if (scrollTop > 350) {
@@ -568,19 +578,19 @@
     // Feed builders
     var feedBuilders = {
       pocketAdd: function (data) {
-        
-        var html = '<h3>' + data.title + '</h3>';
-        if(data.excerpt) {
-          html += '<p>' + data.excerpt + '</p>';
+
+        var html = '<h3><a href="' + data.url + '">' + data.title + '</a></h3>';
+        if (data.excerpt) {
+          html += '<p>' + data.excerpt + '<br ><a href="' + data.url + '">' + data.url + '</a></p>';
         }
-        if(data.tags.length) {
+        if (data.tags.length) {
           html += '<p class="tags">';
-          for(var i = 0; i < data.tags.length; i++) {
-            html += '<span><span class="fa fa-circle-o"></span> ' + data.tags[i];
+          for (var i = 0; i < data.tags.length; i++) {
+            html += '<span>' + data.tags[i] + '</span>';
           }
           html += '</p>';
         }
-        
+
         return {
           icon: 'get-pocket',
           className: 'pocket',
@@ -611,10 +621,10 @@
       githubCreate: function (data) {
 
         if (data.createdType === 'branch') {
-          var title = 'Branche '+ data.createdName + ' créée';
+          var title = 'Branche ' + data.createdName + ' créée';
           var action = 'nouvelle branche dans ' + data.repoName;
         } else if (data.type === 'tag') {
-          var title = 'Tag '+ data.createdName + ' créé';
+          var title = 'Tag ' + data.createdName + ' créé';
           var action = 'nouveau tag dans ' + data.repoName;
         } else {
           var title = 'Dépôt ' + data.repoName + ' créé';
@@ -652,14 +662,14 @@
           icon: 'medium',
           className: 'medium',
           action: 'nouvel article publié sur medium.com',
-          html: '<h3>' + data.title + '</h3><p>' + data.excerpt + '… <a href="'+ data.url +'">Lire l\'article &raquo;</a></p>' 
+          html: '<h3><a href="' + data.url + '">' + data.title + '</a></h3><p>' + data.excerpt + '… <a href="' + data.url + '">Lire l\'article &raquo;</a></p>'
         };
       },
 
       tweet: function (data) {
 
         var text = '';
-        for(var i = 0; i < data.tweets.length; i++) {
+        for (var i = 0; i < data.tweets.length; i++) {
           text += '<p class="tweet">' + data.tweets[i].text + '</p>';
         }
 
@@ -674,29 +684,32 @@
       instagramPicture: function (data) {
 
         var html = '';
+        var hasTitleAndLocation = '';
         data.images.forEach((image) => {
-          
-          var title = '';
-          if(image.title) {
-            title = image.title;
-            if(image.location) {
-              title += '<span class="location"><i class="fa fa-map-marker"></i> ' + image.location + '</span>';
-            }
-          } else if (image.location) {
-            title = image.location;
+          if (image.title && image.location) {
+            hasTitleAndLocation = 'has-title-and-location';
           }
-          if(title) {
-            title = '<h3>' + title + '</h3>';
-          }
-        
-          html += '<div class="instagram-picture">' + title
-            + '<p><img src="' + image.url + '" width="' + Math.floor(image.width / 2) + '" height="' + Math.floor(image.height / 2) + '" alt="' + (image.location ? image.location : '') + '" /></p></div>';
+        });
+
+        data.images.forEach((image) => {
+
+          var title = image.title ? image.title : '';
+          var location = image.location ? ('<i class="fa fa-map-marker"></i> ' + image.location) : '';
+
+          html +=
+            '<div class="instagram-picture">'
+            + '  <div class="instagram-picture-header ' + hasTitleAndLocation + '">'
+            + '    <h3 class="instagram-picture-title">' + title + '</h3>'
+            + '    <p class="instagram-picture-location">' + location + '</p>'
+            + '  </div>'
+            + '  <img class="instagram-picture-img lazy" data-src="' + image.url + '" width="' + Math.floor(image.width / 2) + '" height="' + Math.floor(image.height / 2) + '" alt="' + (image.location ? image.location : '') + '" />'
+            + '</div>';
         });
 
         return {
           icon: 'instagram',
           className: 'instagram',
-          action: 'photo' + (data.images.length > 1 ? 's':'') + ' publiée' + (data.images.length > 1 ? 's':'') + ' sur instagram',
+          action: 'photo' + (data.images.length > 1 ? 's' : '') + ' publiée' + (data.images.length > 1 ? 's' : '') + ' sur instagram',
           html: html + '<div class="clearfix"></div>'
         };
       }
@@ -706,26 +719,26 @@
     var publicationsCounter = 0;
     function addPublication(article) {
 
-      if(publicationsCounter >= 6) {
+      if (publicationsCounter >= 6) {
         return;
       }
-      publicationsCounter ++;
+      publicationsCounter++;
 
-      var html = 
-            '<div class="col-sm-4 publication clearfix">'
-          + '    <a href="'+ article.data.url +'">'
-          + '      <img class="publication-img" src="' + article.data.image + '">'
-          + '      <div class="publication-entry">'
-          + '        <h3>' + article.data.title + '</h3>'
-          + '        <p class="date">Publié ' + moment(article.date).fromNow() + ' sur medium.com</p>'
-          + '        <p>' + ((article.data.excerpt.length > 100) ? (article.data.excerpt.substr(0, 100) + '…') : article.data.excerpt)
-          + '          <span class="read-more">Lire la suite &raquo;'
-          + '        </p>'
-          + '      </div>'
-          + '    </a>'
-          + '</div>'
+      var html =
+        '<div class="col-sm-4 publication clearfix">'
+        + '    <a href="' + article.data.url + '">'
+        + '      <img class="publication-img lazy" data-src="' + article.data.image + '" alt="' + article.data.title + '">'
+        + '      <div class="publication-entry">'
+        + '        <h3>' + article.data.title + '</h3>'
+        + '        <p class="date">Publié ' + moment(article.date).fromNow() + ' sur medium.com</p>'
+        + '        <p>' + ((article.data.excerpt.length > 100) ? (article.data.excerpt.substr(0, 100) + '…') : article.data.excerpt)
+        + '          <span class="read-more">Lire la suite &raquo;'
+        + '        </p>'
+        + '      </div>'
+        + '    </a>'
+        + '</div>'
 
-      if(publicationsCounter === 4) {
+      if (publicationsCounter === 4) {
         html = '<div class="clearfix"></div>' + html;
       }
       $('#js-publications').append(html);
@@ -756,15 +769,15 @@
               feedItem = feedBuilders[element.type](element.data);
               feedItems.push(
                 '<li class="feed-item js-feed-item">'
-                + '<div class="feed-icon '+ feedItem.className +'"><span class="fa fa-' + feedItem.icon + '"></span></div>'
-                + '<div class="date"><span title="'+(new Date(element.date)).toLocaleString()+'">' + moment(element.date).fromNow() + '</span>'
+                + '<div class="feed-icon ' + feedItem.className + '"><span class="fa fa-' + feedItem.icon + '"></span></div>'
+                + '<div class="date"><span title="' + (new Date(element.date)).toLocaleString() + '">' + moment(element.date).fromNow() + '</span>'
                 + ' — ' + feedItem.action + '</div>'
                 + feedItem.html
                 + '</li>'
               );
 
               // add medium.com articles to publications list
-              if(element.type === 'mediumArticle') {
+              if (element.type === 'mediumArticle') {
                 addPublication(element);
               }
             }
@@ -775,7 +788,7 @@
             $('.js-feed-item').slice(15).hide();
 
             // show all feed entries
-            $("#js-feed-show-all").click(function() {
+            $("#js-feed-show-all").click(function () {
               $('.js-feed-item').show();
               $('.feed-end').removeClass('hidden');
               $(this).hide();
@@ -784,14 +797,22 @@
 
           // Update scroll position for sections
           socialOffset = $(".js-nav-social").first().offset().top;
-          publicationsOffset = $(".js-nav-publications").first().offset().top;
+          if ($(".js-nav-publications").first().length) {
+            publicationsOffset = $(".js-nav-publications").first().offset().top;
+          }
+
+          // Start Lazy-loading images
+          $('.lazy').lazy({
+            bind: "event",
+          });
+
         });
       } catch (e) {
         console.log(e);
       }
 
       // send message form
-      $("#js-contact-form").submit(function(e) {
+      $("#js-contact-form").submit(function (e) {
         e.preventDefault();
 
         $("#js-contact-form-loading").removeClass("hidden");
@@ -801,18 +822,18 @@
           name: $("#name").val(),
           email: $("#email").val(),
           message: $("#message").val()
-        }).done(function(data) {
-          if(data.success) {
+        }).done(function (data) {
+          if (data.success) {
             $("#js-contact-form-loading").addClass("hidden");
             $("#js-contact-form-success").removeClass("hidden");
-            setTimeout(function() {
+            setTimeout(function () {
               $("#js-contact-modal").modal("hide");
             }, 3000);
           } else {
             $("#js-contact-form-loading").addClass("hidden");
             $("#js-contact-form-error").removeClass("hidden");
           }
-        }).fail(function(err) {
+        }).fail(function (err) {
           $("#js-contact-form-loading").addClass("hidden");
           $("#js-contact-form-error").removeClass("hidden");
         })

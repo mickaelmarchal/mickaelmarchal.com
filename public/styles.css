@@ -4,8 +4,13 @@ body {
   font-size: 16px;
   line-height: 1.3em;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 h1 {
   font-size: 75px;
@@ -17,7 +22,7 @@ h2 {
 
 .btn {
   border-radius: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
   padding: 10px 20px;
@@ -39,7 +44,6 @@ h2 {
   font-weight: inherit;
 }
 
-
 /*** Buttons with arrows on hover ***/
 .btn-arrow {
   width: 200px;
@@ -53,7 +57,7 @@ h2 {
   transition: 200ms;
 }
 .btn-arrow span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -78,8 +82,6 @@ h2 {
 .form-control {
   border-radius: 0;
 }
-
-
 
 /***** MAIN NAV *****/
 
@@ -139,7 +141,6 @@ h2 {
 }
 
 @media screen and (min-width: 1120px) {
-
   .nav-menu-btn {
     display: none;
   }
@@ -187,7 +188,6 @@ h2 {
   }
 }
 
-
 /***** HEADER *****/
 
 .header {
@@ -198,11 +198,19 @@ h2 {
   height: 450px;
   overflow: hidden;
   background: #05bffc; /* Old Browsers */
-  background: -webkit-linear-gradient(bottom left,#05bffc,#efd662); /*Safari 5.1-6*/
-  background: -o-linear-gradient(bottom left,#05bffc,#efd662); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(bottom left,#05bffc,#efd662); /*Fx 3.6-15*/
+  background: -webkit-linear-gradient(
+    bottom left,
+    #05bffc,
+    #efd662
+  ); /*Safari 5.1-6*/
+  background: -o-linear-gradient(
+    bottom left,
+    #05bffc,
+    #efd662
+  ); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom left, #05bffc, #efd662); /*Fx 3.6-15*/
   background: linear-gradient(bottom left, #05bffc, #efd662); /*Standard*/
-  background: url('../fond.png') center center;
+  background: url("../fond.png") center center;
   border-bottom: 3px solid #fff;
   background-size: cover;
 }
@@ -217,10 +225,9 @@ h2 {
   background: #fff;
 }
 
-
 .header-title h1 {
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-size: 50px;
@@ -258,7 +265,6 @@ h2 {
   }
 }
 
-
 /***** MAIN ZONE *****/
 
 .main {
@@ -275,7 +281,6 @@ h2 {
   }
 }
 
-
 /***** SECTION: CV *****/
 
 .cv-overview {
@@ -284,8 +289,15 @@ h2 {
 
 .cv-overview h1 {
   margin: 0;
+  font-size: 40px;
+}
+@media screen and (min-width: 670px) {
+  .cv-overview h1 {
+    font-size: 75px;
+  }
 }
 .cv-overview h1 .subtitle {
+  display: block;
   margin: -8px 0 40px 0;
   font-size: 30px;
 }
@@ -325,7 +337,6 @@ h2 {
   }
 }
 
-
 @media screen and (max-width: 670px) {
   p.cv-overview-cta {
     text-align: center;
@@ -342,10 +353,9 @@ h2 {
   line-height: 3;
 }
 
-
 .cv-details {
   background-color: #79caaf;
-  background-image: url('fond.png');
+  background-image: url("fond.png");
   background-size: cover;
   color: #fff;
 }
@@ -372,13 +382,20 @@ h2 {
   float: left;
   text-align: right;
   width: 170px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   padding: 3px 30px 0 0;
   margin: 0 0 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.cv-techs p {
+  margin-bottom: 20px;
+  margin-left: 170px;
 }
 
-.cv-techs p {
-  margin-left: 170px;
+@media screen and (min-width: 992px) {
+  .cv-techs p {
+    margin-bottom: 10px;
+  }
 }
 
 .cv-techs span,
@@ -395,26 +412,35 @@ h2 {
 
 .separator {
   display: block;
-  border-top:5px solid #05bffc;
+  border-top: 5px solid #05bffc;
   height: 5px;
   background-color: #79caaf;
   border-bottom: 5px solid #efd662;
-
 }
 
 .cv-contact-cta {
   display: inline-block;
   border: 0;
   background: rgba(255, 255, 255, 0.3);
-  padding: 18px 18px 8px;
+  padding: 15px 18px 8px;
   border-radius: 0;
-  margin: 38px 0 8px 150px;
+  margin: 38px 0 0 0;
+}
+.cv-contact-cta p {
+  line-height: 3.1;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .cv-contact-cta {
+    margin: 38px 0 8px 150px;
+    text-align: left;
+  }
 }
 
 .visit-gl {
   margin: 24px 0 0 0;
 }
-
 
 /***** SECTION: PUBLICATIONS *****/
 
@@ -427,7 +453,7 @@ h2 {
   width: 33%;
   min-width: 180px;
   margin-right: 20px;
-  height: auto;  
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -435,8 +461,19 @@ h2 {
     float: none;
     width: 100%;
     margin-right: 0;
+    width: 100%; /* or any custom size */
+    object-fit: cover;
+    height: 210px;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE does not support object-fit, so use auto height to avoid squished images */
+  .publication-img {
+    height: auto !important;
+  }
+}
+
 .publication a {
   display: block;
 }
@@ -459,9 +496,6 @@ h2 {
 .publication .read-more:hover {
   text-decoration: underline;
 }
-
-
-
 
 /***** SECTION: FEED *****/
 
@@ -489,35 +523,83 @@ h2 {
   font-family: sans-serif;
   font-weight: bold;
 }
+.feed-item h3 a,
+.feed-item h3 a:link,
+.feed-item h3 a:active,
+.feed-item h3 a:focus,
+.feed-item h3 a:visited {
+  color: #000;
+}
+
 .feed-item p {
   font-size: 13px;
 }
 .feed-item p:last-child {
   margin-bottom: 0;
 }
+
 .feed-item .instagram-picture {
   float: left;
-  padding: 0 6px 20px 0;
+  margin: 6px 1px 0;
+  width: 320px;
 }
-.feed-item .instagram-picture h3 {
-  margin-bottom: 3px;
+
+.feed-item .instagram-picture-header {
+  height: 18px;
+  margin: 2px 0;
 }
-.feed-item .location {
-  display: inline-block;
-  margin-left: 20px;
-  color: #aaa;
-  font-size: 14px;
+.feed-item .instagram-picture-header.has-title-and-location {
+  height: 34px;
+}
+.feed-item .instagram-picture-header h3 {
   font-weight: normal;
 }
-/* TODO merge with tags from CV */
+
+.feed-item .instagram-picture-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 18px;
+}
+.feed-item
+  .instagram-picture-header.has-title-and-location
+  .instagram-picture-title {
+  height: 18px;
+}
+
+.feed-item .instagram-picture-location {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.feed-item
+  .instagram-picture-header.has-title-and-location
+  .instagram-picture-location {
+  height: 16px;
+  color: #777;
+}
+
+.feed-item .instagram-picture-img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 450px) {
+  .feed-item .instagram-picture {
+    width: 240px;
+  }
+}
+
 .feed-item p.tags > span {
   display: inline-block;
-  border: 1px solid #333;
-  border-radius: 10px 3px 3px 10px;
-  padding: 0 4px;
-  font-size: 10px;
+  background: #ddd;
+  border-radius: 3px;
+  padding: 0 6px;
+  margin: 0 12px 0 0;
+  font-size: 11px;
   color: #333;
-
 }
 
 .feed-item p.commit {
@@ -529,14 +611,12 @@ h2 {
   font-size: 10px;
   line-height: 13px;
   color: #777;
-  margin: 2px 0 0 10px; 
+  margin: 2px 0 0 10px;
 }
 .feed-item p.tweet {
-  font-size: 16px;
-  margin: 0 0 5px 0;
+  font-size: 14px;
+  margin: 0 0 10px 0;
 }
-
-
 
 .feed-icon {
   width: 40px;
@@ -591,8 +671,6 @@ h2 {
   left: -4px;
 }
 
-
-
 .feed-show-all,
 .feed-show-all:hover {
   display: inline-block;
@@ -609,7 +687,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-
 .feed-source {
   margin-bottom: 30px;
 }
@@ -618,7 +695,7 @@ h2 {
   .feed-source {
     width: 47%;
     display: inline-block;
-  }  
+  }
 }
 
 .feed-source .feed-icon {
@@ -647,7 +724,6 @@ h2 {
   font-size: 12px;
 }
 
-
 /***** FOOTER *****/
 .footer {
   margin-bottom: 20px;
@@ -660,7 +736,7 @@ h2 {
   margin: 0 1.4em;
 }
 .footer h3 {
-   margin-top: 0;
+  margin-top: 0;
 }
 .footer-logo {
   display: block;
@@ -686,7 +762,7 @@ h2 {
   line-height: 1.5;
 }
 .contact-loading .fa {
-  color: #05bffc;  
+  color: #05bffc;
 }
 .contact-success .fa {
   color: #17b375;
