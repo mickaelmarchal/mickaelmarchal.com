@@ -8,6 +8,7 @@
 
   <meta name="description" content="Profil et page personnelle de Mickaël Marchal, CTO et développeur full-stack chez Grand Luxury Hotels.">
   <meta name="author" content="Mickaël Marchal">
+  <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="favicon.png">
 
   <!--
@@ -93,7 +94,7 @@
             <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
               <span>Me contacter</span>
             </a>
-            <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
+            <a class="btn btn-default" href="/cv/marchal-mickael-cv-fr-web.pdf">Télécharger mon CV</a>
             <a class="btn btn-default linked-in" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
           </p>
         </div>
@@ -198,7 +199,7 @@
             <a href="" class="btn btn-primary btn-arrow" data-toggle="modal" data-target="#js-contact-modal">
               <span>Me contacter</span>
             </a>
-            <a class="btn btn-default" href="/cv/marchal_mickael_cv_fr_web.pdf">Télécharger mon CV</a>
+            <a class="btn btn-default" href="/cv/marchal-mickael-cv-fr-web.pdf">Télécharger mon CV</a>
             <a class="btn btn-default" href="https://www.linkedin.com/in/mickaelmarchal/">Profil LinkedIn</a>
           </p>
         </div>
@@ -429,24 +430,23 @@
 
     <div class="container footer">
       <footer>
-        <div class="row">
-          <img src="favicon.png" class="footer-logo" alt="Logo du site">
-          <p>&copy; 1999-2018 Mickaël Marchal. Tous droits réservés. &mdash;
-            <a href="" data-toggle="modal" data-target="#js-contact-modal">
-              <em class="fa fa-envelope-o"></em> Contact
-            </a>
+        <img src="favicon.png" class="footer-logo" alt="Logo du site">
+        <p class="copyright">&copy; 1999-2018 Mickaël Marchal. Tous droits réservés. &mdash;
+          <a href="" data-toggle="modal" data-target="#js-contact-modal">
+            <em class="fa fa-envelope-o"></em> Contact
+          </a>
+        </p>
+        <div class="legal-terms">
+          <p>Site hébergé par Gandi.net - 63-65 boulevard Masséna 75013 Paris - Tel +33 (0) 1 70.37.76.61</p>
+          <p>Ce site utilise les projets open-source
+            <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>,
+            <a href="http://fontawesome.io" rel="nofollow">Font Awesome</a>,
+            <a href="https://jquery.com" rel="nofollow">jQuery</a>,
+            <a href="https://momentjs.com" rel="nofollow">moment.js</a>,
+            <a href="https://github.com/alykoshin/gmail-send" rel="nofollow">Gmail-send</a>,
+            <a href="http://l-lin.github.io/font-awesome-animation" rel="nofollow">Font Awesome animation</a>.
           </p>
-          <div class="legal-terms">
-            <p>Site hébergé par Gandi.net - 63-65 boulevard Masséna 75013 Paris - Tel +33 (0) 1 70.37.76.61</p>
-            <p>Ce site utilise les projets open-source
-              <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>,
-              <a href="http://fontawesome.io" rel="nofollow">Font Awesome</a>,
-              <a href="https://jquery.com" rel="nofollow">jQuery</a>,
-              <a href="https://momentjs.com" rel="nofollow">moment.js</a>,
-              <a href="https://github.com/alykoshin/gmail-send" rel="nofollow">Gmail-send</a>,
-              <a href="http://l-lin.github.io/font-awesome-animation" rel="nofollow">Font Awesome animation</a>.
-            </p>
-          </div>
+          <p>Crédits photo: Iconic Bestiary/Shutterstock.com</p>
         </div>
       </footer>
     </div>
@@ -518,8 +518,8 @@
         headerTitleBottom = { start: -240, end: -5 };
         headerTitleAngle = { start: -7, end: 0 };
         headerTitleHeight = { start: 300, end: 0 };
-        headerH1Scaling = { start: 1, end: 0.4 };
-        headerH1Top = { start: -45, end: -58 };
+        headerH1Scaling = { start: 1, end: 0.5 };
+        headerH1Top = { start: -36, end: -51 };
 
         $('.js-nav-menu-btn').removeClass('active');
         $('.js-nav-menu').hide();
@@ -685,13 +685,13 @@
 
         var html = '';
         var hasTitleAndLocation = '';
-        data.images.forEach((image) => {
+        data.images.forEach(function (image) {
           if (image.title && image.location) {
             hasTitleAndLocation = 'has-title-and-location';
           }
         });
 
-        data.images.forEach((image) => {
+        data.images.forEach(function (image) {
 
           var title = image.title ? image.title : '';
           var location = image.location ? ('<i class="fa fa-map-marker"></i> ' + image.location) : '';

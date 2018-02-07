@@ -230,9 +230,9 @@ h2 {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
-  font-size: 50px;
+  font-size: 40px;
   position: relative;
-  top: -45px;
+  top: -36px;
   text-align: center;
   margin: 0;
   white-space: nowrap;
@@ -284,7 +284,12 @@ h2 {
 /***** SECTION: CV *****/
 
 .cv-overview {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 670px) {
+  .cv-overview {
+    margin-bottom: 70px;
+  }
 }
 
 .cv-overview h1 {
@@ -352,12 +357,22 @@ h2 {
   margin-top: 40px;
   line-height: 3;
 }
+@media screen and (max-width: 669px) {
+  .cv-overview-cta a,
+  .cv-contact-cta a {
+    width: 80%;
+  }
+}
 
 .cv-details {
-  background-color: #79caaf;
-  background-image: url("fond.png");
-  background-size: cover;
+  background-color: #05bffc;
   color: #fff;
+}
+@media screen and (min-width: 670px) {
+  .cv-details {
+    background-image: url("fond.png");
+    background-size: cover;
+  }
 }
 
 .cv-details h2 {
@@ -372,24 +387,46 @@ h2 {
 
 .cv-details h4 {
   font-size: 28px;
-  margin: 38px 0 -2px 0;
+  margin: 0 0 -2px 0;
 }
 .cv-details .subtitle {
-  margin: -12px 0 48px 0;
+  margin: -12px 0 20px 0;
+}
+
+@media screen and (min-width: 670px) {
+  .cv-details h4 {
+    margin-top: 38px;
+  }
+  .cv-details .subtitle {
+    margin-bottom: 48px;
+  }
 }
 
 .cv-techs-title {
-  float: left;
-  text-align: right;
-  width: 170px;
-  padding: 3px 30px 0 0;
-  margin: 0 0 1em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 24px;
 }
 .cv-techs p {
-  margin-bottom: 20px;
-  margin-left: 170px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 670px) {
+  .cv-techs-title {
+    float: left;
+    text-align: right;
+    width: 170px;
+    padding: 3px 30px 0 0;
+    margin: 0 0 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+  .cv-techs p {
+    text-align: left;
+    margin-left: 170px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -429,6 +466,12 @@ h2 {
 .cv-contact-cta p {
   line-height: 3.1;
   text-align: center;
+}
+
+@media screen and (max-width: 669px) {
+  .cv-contact-cta {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -728,12 +771,15 @@ h2 {
 .footer {
   margin-bottom: 20px;
 }
+.copyright {
+  margin-left: 120px;
+}
 .legal-terms {
   font-size: 12px;
-  margin: -0.5em 0 0.5em;
+  margin: -0.5em 0 0.5em 120px;
 }
 .legal-terms p {
-  margin: 0 1.4em;
+  margin: 1em 0;
 }
 .footer h3 {
   margin-top: 0;
