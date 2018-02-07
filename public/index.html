@@ -445,8 +445,7 @@
             <a href="https://momentjs.com" rel="nofollow">moment.js</a>,
             <a href="https://github.com/alykoshin/gmail-send" rel="nofollow">Gmail-send</a>,
             <a href="http://l-lin.github.io/font-awesome-animation" rel="nofollow">Font Awesome animation</a>.
-          </p>
-          <p>Crédits photo: Iconic Bestiary/Shutterstock.com</p>
+            <br />Crédits photo: Iconic Bestiary/Shutterstock.com</p>
         </div>
       </footer>
     </div>
@@ -590,6 +589,8 @@
     var feedBuilders = {
       pocketAdd: function (data) {
 
+        data.url = data.url.replace(/\//g, '/&#8203;');
+
         var html = '<h3><a href="' + data.url + '">' + data.title + '</a></h3>';
         if (data.excerpt) {
           html += '<p>' + data.excerpt + '<br ><a href="' + data.url + '">' + data.url + '</a></p>';
@@ -612,7 +613,7 @@
 
       githubPush: function (data) {
 
-        data.repoName = data.repoName.replace('/', '/&#8203;');
+        data.repoName = data.repoName.replace(/\//g, '/&#8203;');
 
         var html = '<h3>Push dans la branche ' + data.branch + ' de ' + data.repoName + '</h3>';
         for (var i = 0; i < Math.min(3, data.messages.length); i++) {
@@ -632,6 +633,8 @@
       },
 
       githubCreate: function (data) {
+
+        data.repoName = data.repoName.replace(/\//g, '/&#8203;');
 
         if (data.createdType === 'branch') {
           var title = 'Branche ' + data.createdName + ' créée';
@@ -653,6 +656,9 @@
       },
 
       stackoverflowAnswer: function (data) {
+
+        data.answerDescription = data.answerDescription.replace(/\//g, '/&#8203;');
+
         return {
           icon: 'stack-overflow',
           className: 'stackoverflow',
@@ -671,6 +677,9 @@
       },
 
       mediumArticle: function (data) {
+
+        data.url = data.url.replace(/\//g, '/&#8203;');
+
         return {
           icon: 'medium',
           className: 'medium',
