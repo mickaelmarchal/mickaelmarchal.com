@@ -601,6 +601,8 @@
 
       githubPush: function (data) {
 
+        data.repoName = data.repoName.replace('/', '/&#8203;');
+
         var html = '<h3>Push dans la branche ' + data.branch + ' de ' + data.repoName + '</h3>';
         for (var i = 0; i < Math.min(3, data.messages.length); i++) {
           html += '<p class="commit">' + data.messages[i] + '</p>';
