@@ -512,10 +512,21 @@
         $('.js-nav-menu-btn').removeClass('active');
         $('.js-nav-menu').hide();
 
-      } else {
+      } else if ($(this).width() >= 400) {
         animateRange = { start: 10, end: 120 };
         headerHeight = { start: 150, end: 55 };
         headerTitleBottom = { start: -240, end: -5 };
+        headerTitleAngle = { start: -7, end: 0 };
+        headerTitleHeight = { start: 300, end: 0 };
+        headerH1Scaling = { start: 1, end: 0.5 };
+        headerH1Top = { start: -36, end: -51 };
+
+        $('.js-nav-menu-btn').removeClass('active');
+        $('.js-nav-menu').hide();
+      } else {
+        animateRange = { start: 10, end: 120 };
+        headerHeight = { start: 100, end: 55 };
+        headerTitleBottom = { start: -280, end: -5 };
         headerTitleAngle = { start: -7, end: 0 };
         headerTitleHeight = { start: 300, end: 0 };
         headerH1Scaling = { start: 1, end: 0.5 };

@@ -268,7 +268,12 @@ h2 {
 /***** MAIN ZONE *****/
 
 .main {
-  margin-top: 150px;
+  margin-top: 120px;
+}
+@media screen and (min-width: 400px) {
+  .main {
+    margin-top: 150px;
+  }
 }
 @media screen and (min-width: 750px) {
   .main {
@@ -286,25 +291,22 @@ h2 {
 .cv-overview {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 670px) {
-  .cv-overview {
-    margin-bottom: 70px;
-  }
-}
-
 .cv-overview h1 {
   margin: 0;
   font-size: 40px;
-}
-@media screen and (min-width: 670px) {
-  .cv-overview h1 {
-    font-size: 75px;
-  }
 }
 .cv-overview h1 .subtitle {
   display: block;
   margin: -8px 0 40px 0;
   font-size: 30px;
+}
+@media screen and (min-width: 670px) {
+  .cv-overview {
+    margin-bottom: 70px;
+  }
+  .cv-overview h1 {
+    font-size: 75px;
+  }
 }
 
 .cv-overview p {
@@ -342,8 +344,12 @@ h2 {
   }
 }
 
+.cv-overview-cta {
+  margin-top: 40px;
+  line-height: 3;
+}
 @media screen and (max-width: 670px) {
-  p.cv-overview-cta {
+  .cv-overview-cta {
     text-align: center;
   }
 }
@@ -351,11 +357,6 @@ h2 {
   .cv-overview-cta .btn.linked-in {
     display: none;
   }
-}
-
-.cv-overview-cta {
-  margin-top: 40px;
-  line-height: 3;
 }
 @media screen and (max-width: 669px) {
   .cv-overview-cta a,
