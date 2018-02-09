@@ -24,7 +24,7 @@ self.addEventListener("install", event => {
 // Activate is when the service worker actually takes over from the previous
 // version, which is a good time to clean up old caches
 self.addEventListener("activate", event => {
-  console.log("Finally active. Ready to serve!");
+  // console.log("Finally active. Ready to serve!");
   event.waitUntil(
     // Get the keys of all the old caches
     caches
@@ -44,7 +44,7 @@ self.addEventListener("activate", event => {
 
 // On fetch, use cache but update the entry with the latest contents from the server.
 self.addEventListener("fetch", function(evt) {
-  console.log("The service worker is serving the asset.");
+  // console.log("The service worker is serving the asset.");
 
   // Try network and if it fails, go for the cached copy.
   evt.respondWith(
