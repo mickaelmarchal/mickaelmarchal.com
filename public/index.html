@@ -9,7 +9,9 @@
   <meta name="description" content="Profil et page personnelle de Mickaël Marchal, CTO et développeur full-stack chez Grand Luxury Hotels.">
   <meta name="author" content="Mickaël Marchal">
   <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
   <link rel="icon" href="favicon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
 
   <!--
   <link rel="alternate" hreflang="fr" href="https://mickaelmarchal.com/fr.html" />
@@ -487,6 +489,19 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery-lazy@1.7.7/jquery.lazy.min.js" crossorigin="anonymous"></script>
 
   <script>
+
+    // Check to make sure the browser supports service workers
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(() => {
+          console.log('Service worker registered');
+        })
+        .catch(err => {
+          console.log('Service worker registration failed: ' + err);
+        });
+    }
+
     var $header = $('#js-header'),
       $body = $(document.body),
       $html = $('html'),
